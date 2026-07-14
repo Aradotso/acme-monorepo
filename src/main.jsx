@@ -7,7 +7,7 @@ const ArrowUpRight = () => (
 )
 
 const Spark = () => (
-  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m8 1 1.1 5.9L15 8l-5.9 1.1L8 15 6.9 9.1 1 8l5.9-1.1L8 1Z" /></svg>
+  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" /></svg>
 )
 
 function App() {
@@ -32,8 +32,10 @@ function App() {
           <a className="text-link" href="#product">See how it works <span>↓</span></a>
         </div>
         <div className="hero-art" aria-hidden="true">
-          <div className="art-orb orb-one" /><div className="art-orb orb-two" /><div className="art-orb orb-three" />
-          <div className="art-card"><span className="card-label">today</span><strong>Make good<br />things happen.</strong><span className="card-line" /></div>
+          <div className="art-blue-field" />
+          <figure className="art-frame art-frame-large"><img src="/images/impression-portrait.jpg" alt="" /></figure>
+          <figure className="art-frame art-frame-small"><img src="/images/impression-blue.jpg" alt="" /></figure>
+          <div className="art-note"><span>01</span><strong>Make good<br />things happen.</strong></div>
         </div>
       </section>
 
