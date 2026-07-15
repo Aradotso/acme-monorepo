@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Windows Desktop Pane Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop-shell" aria-label="Live Windows desktop pane demo">
+      <section class="desktop" aria-label="Windows desktop">
+        <div class="wallpaper-glass"></div>
+
+        <div class="desktop-icons" aria-label="Desktop shortcuts">
+          <button class="desktop-icon active" type="button">
+            <span class="icon-box blue">PC</span>
+            <span>This PC</span>
+          </button>
+          <button class="desktop-icon" type="button">
+            <span class="icon-box teal">ED</span>
+            <span>Edge</span>
+          </button>
+          <button class="desktop-icon" type="button">
+            <span class="icon-box amber">FL</span>
+            <span>Files</span>
+          </button>
+          <button class="desktop-icon" type="button">
+            <span class="icon-box green">XL</span>
+            <span>Sheets</span>
+          </button>
+        </div>
+
+        <section class="window explorer-window" aria-label="File Explorer window">
+          <header class="window-titlebar">
+            <div class="titlebar-label">
+              <span class="folder-glyph"></span>
+              <span>File Explorer</span>
+            </div>
+            <div class="window-controls" aria-label="Window controls">
+              <button type="button" aria-label="Minimize"></button>
+              <button type="button" aria-label="Maximize"></button>
+              <button type="button" aria-label="Close"></button>
+            </div>
+          </header>
+
+          <div class="toolbar">
+            <button type="button" aria-label="Back">‹</button>
+            <button type="button" aria-label="Forward">›</button>
+            <button type="button" aria-label="Refresh">↻</button>
+            <div class="address-bar">Desktop &gt; Projects &gt; ACME Demo</div>
+            <label class="search-box">
+              <span>Search</span>
+              <input type="search" value="pane demo" aria-label="Search files">
+            </label>
+          </div>
+
+          <div class="explorer-body">
+            <nav class="sidebar" aria-label="Folders">
+              <button class="selected" type="button">Quick access</button>
+              <button type="button">Desktop</button>
+              <button type="button">Documents</button>
+              <button type="button">Downloads</button>
+              <button type="button">OneDrive</button>
+            </nav>
+
+            <div class="file-list" aria-label="Project files">
+              <div class="list-head">
+                <span>Name</span>
+                <span>Status</span>
+                <span>Modified</span>
+              </div>
+              <button class="file-row selected" type="button">
+                <span><i class="file-dot design"></i> Desktop pane spec</span>
+                <span>Synced</span>
+                <span>10:42 AM</span>
+              </button>
+              <button class="file-row" type="button">
+                <span><i class="file-dot code"></i> interaction.js</span>
+                <span>Live</span>
+                <span>10:37 AM</span>
+              </button>
+              <button class="file-row" type="button">
+                <span><i class="file-dot asset"></i> wallpaper.png</span>
+                <span>Local</span>
+                <span>Yesterday</span>
+              </button>
+              <button class="file-row" type="button">
+                <span><i class="file-dot note"></i> meeting-notes.md</span>
+                <span>Synced</span>
+                <span>Monday</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="live-pane" aria-label="Live desktop pane">
+          <header>
+            <div>
+              <p>Live pane</p>
+              <h1>Windows desktop</h1>
+            </div>
+            <span class="live-dot">Live</span>
+          </header>
+
+          <div class="preview-frame">
+            <div class="mini-window">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="activity-card">
+              <strong>File Explorer</strong>
+              <span>Desktop pane spec selected</span>
+            </div>
+            <div class="pulse-ring"></div>
+          </div>
+
+          <div class="pane-metrics">
+            <div>
+              <span>FPS</span>
+              <strong id="fpsValue">60</strong>
+            </div>
+            <div>
+              <span>Latency</span>
+              <strong id="latencyValue">18 ms</strong>
+            </div>
+            <div>
+              <span>Sync</span>
+              <strong id="syncValue">99%</strong>
+            </div>
+          </div>
+
+          <div class="pane-feed" aria-label="Live activity feed">
+            <p><span></span> Cursor moved across Explorer</p>
+            <p><span></span> Preview stream refreshed</p>
+            <p><span></span> Selection state mirrored</p>
+          </div>
+        </aside>
+
+        <nav class="taskbar" aria-label="Taskbar">
+          <button class="start-button" type="button" aria-label="Start"></button>
+          <button class="taskbar-app active" type="button">Explorer</button>
+          <button class="taskbar-app" type="button">Edge</button>
+          <button class="taskbar-app" type="button">Terminal</button>
+          <div class="system-tray">
+            <span>ENG</span>
+            <time id="clock" datetime="10:42">10:42</time>
+          </div>
+        </nav>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
