@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Live Windows desktop pane demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="desktop" aria-label="Live Windows desktop pane demo">
+      <section class="workspace" aria-label="Desktop workspace">
+        <aside class="desktop-icons" aria-label="Desktop shortcuts">
+          <button type="button" data-open="dashboard">
+            <span class="shortcut-icon pc"></span>
+            This PC
+          </button>
+          <button type="button" data-open="files">
+            <span class="shortcut-icon folder"></span>
+            Projects
+          </button>
+          <button type="button" data-open="terminal">
+            <span class="shortcut-icon terminal"></span>
+            Terminal
+          </button>
+          <button type="button" data-open="settings">
+            <span class="shortcut-icon gear"></span>
+            Settings
+          </button>
+        </aside>
+
+        <section class="live-window" id="window" aria-label="Live desktop pane window">
+          <header class="titlebar" id="titlebar">
+            <div class="window-brand">
+              <span class="app-glyph"></span>
+              <strong>Desktop Pane</strong>
+            </div>
+            <div class="window-actions" aria-label="Window controls">
+              <button type="button" id="minimize" aria-label="Minimize window">_</button>
+              <button type="button" id="maximize" aria-label="Maximize window">□</button>
+              <button type="button" id="close" aria-label="Close window">×</button>
+            </div>
+          </header>
+
+          <div class="window-layout">
+            <nav class="rail" aria-label="Pane navigation">
+              <button class="active" type="button" data-panel="dashboard">Dashboard</button>
+              <button type="button" data-panel="files">Files</button>
+              <button type="button" data-panel="terminal">Terminal</button>
+              <button type="button" data-panel="settings">Settings</button>
+            </nav>
+
+            <section class="pane" aria-live="polite">
+              <header class="pane-header">
+                <div>
+                  <span class="kicker">Live workspace</span>
+                  <h1 id="pane-title">Operations dashboard</h1>
+                </div>
+                <div class="connection">
+                  <span></span>
+                  Connected
+                </div>
+              </header>
+
+              <div class="stats" id="stats"></div>
+
+              <section class="feed" aria-label="Live activity feed">
+                <header>
+                  <strong>Activity feed</strong>
+                  <span id="feed-state">streaming</span>
+                </header>
+                <div id="feed-lines" class="feed-lines"></div>
+              </section>
+            </section>
+          </div>
+        </section>
+
+        <section class="start-menu" id="start-menu" aria-label="Start menu" hidden>
+          <header>
+            <span class="avatar">A</span>
+            <div>
+              <strong>Acme Desktop</strong>
+              <span>Live demo session</span>
+            </div>
+          </header>
+          <div class="start-grid">
+            <button type="button" data-panel="dashboard">Dashboard</button>
+            <button type="button" data-panel="files">Files</button>
+            <button type="button" data-panel="terminal">Terminal</button>
+            <button type="button" data-panel="settings">Settings</button>
+          </div>
+        </section>
+      </section>
+
+      <footer class="taskbar" aria-label="Windows taskbar">
+        <button class="start-button" id="start-button" type="button" aria-label="Start">
+          <span></span>
+        </button>
+        <label class="search" aria-label="Search">
+          <span>⌕</span>
+          <input type="search" placeholder="Search" />
+        </label>
+        <nav class="taskbar-apps" aria-label="Pinned apps">
+          <button class="active" type="button" data-panel="dashboard" aria-label="Desktop Pane"></button>
+          <button type="button" data-panel="files" aria-label="File Explorer"></button>
+          <button type="button" data-panel="terminal" aria-label="Terminal"></button>
+          <button type="button" data-panel="settings" aria-label="Settings"></button>
+        </nav>
+        <div class="system-tray">
+          <span>Wi-Fi</span>
+          <span>100%</span>
+          <time id="clock" datetime="">12:00 PM</time>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
