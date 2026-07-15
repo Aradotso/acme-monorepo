@@ -103,9 +103,18 @@ const paneSubtitle = document.querySelector("#pane-subtitle");
 const paneEyebrow = document.querySelector("#pane-eyebrow");
 const viewTitle = document.querySelector("#view-title");
 const shuffle = document.querySelector("#shuffle");
+const liveCount = document.querySelector("#live-count");
+const cpuMeter = document.querySelector("#cpu-meter");
+const memoryMeter = document.querySelector("#memory-meter");
+const syncMeter = document.querySelector("#sync-meter");
+const windowPane = document.querySelector(".window");
+const minimizeWindow = document.querySelector("#minimize-window");
+const restoreWindow = document.querySelector("#restore-window");
 
 let activeApp = "finder";
 let activeView = "recents";
+let selectedIndex = 0;
+let tick = 0;
 
 function renderClock() {
   const now = new Date();
@@ -117,19 +126,34 @@ function renderPane() {
   const app = datasets[activeApp];
   const rows = app.views[activeView] ?? app.views.recents;
 
+  selectedIndex = Math.min(selectedIndex, rows.length - 1);
   paneTitle.textContent = app.title;
   paneSubtitle.textContent = app.subtitle;
   paneEyebrow.textContent = app.eyebrow;
   viewTitle.textContent = activeView[0].toUpperCase() + activeView.slice(1);
+  liveCount.textContent = rows.length;
 
-  grid.replaceChildren(...rows.map(([title, detail, badge]) => {
+  grid.replaceChildren(...rows.map(([title, detail, badge], index) => {
     const card = document.createElement("article");
-    card.className = "file-card";
+    card.className = `file-card${index === selectedIndex ? " selected" : ""}`;
+    card.tabIndex = 0;
+    card.setAttribute("aria-label", `${title}, ${detail}, ${badge}`);
     card.innerHTML = `
       <strong>${title}</strong>
       <p>${detail}</p>
       <span class="file-badge">${badge}</span>
     `;
+    card.addEventListener("click", () => {
+      selectedIndex = index;
+      renderPane();
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectedIndex = index;
+        renderPane();
+      }
+    });
     return card;
   }));
 
@@ -142,6 +166,7 @@ function renderPane() {
 appButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activeApp = button.dataset.app;
+    selectedIndex = 0;
     renderPane();
   });
 });
@@ -149,6 +174,7 @@ appButtons.forEach((button) => {
 viewButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activeView = button.dataset.view;
+    selectedIndex = 0;
     viewButtons.forEach((item) => item.classList.toggle("selected", item === button));
     renderPane();
   });
@@ -158,10 +184,32 @@ shuffle.addEventListener("click", () => {
   const views = Object.keys(datasets[activeApp].views);
   const nextIndex = (views.indexOf(activeView) + 1) % views.length;
   activeView = views[nextIndex];
+  selectedIndex = 0;
   viewButtons.forEach((item) => item.classList.toggle("selected", item.dataset.view === activeView));
   renderPane();
 });
 
+minimizeWindow.addEventListener("click", () => {
+  windowPane.classList.add("minimized");
+  restoreWindow.hidden = false;
+});
+
+restoreWindow.addEventListener("click", () => {
+  windowPane.classList.remove("minimized");
+  restoreWindow.hidden = true;
+});
+
+function renderMeters() {
+  const cpu = 16 + ((tick * 7) % 32);
+  const memory = (5.8 + ((tick % 7) * 0.2)).toFixed(1);
+  cpuMeter.textContent = `${cpu}%`;
+  memoryMeter.textContent = `${memory} GB`;
+  syncMeter.textContent = tick % 5 === 0 ? "Syncing" : "Synced";
+  tick += 1;
+}
+
 renderClock();
+renderMeters();
 renderPane();
 setInterval(renderClock, 1000);
+setInterval(renderMeters, 1600);

@@ -189,12 +189,19 @@ button {
 }
 
 .toolbar-button {
-  min-width: 72px;
+  min-width: 36px;
   min-height: 30px;
+  padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.66);
   cursor: pointer;
+}
+
+.toolbar-actions {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
 }
 
 .window-body {
@@ -271,6 +278,38 @@ h1 {
   font-weight: 700;
 }
 
+.live-pill strong {
+  min-width: 1.5ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.metrics-row div {
+  min-height: 64px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.metrics-row span {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.metrics-row small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .file-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -283,6 +322,15 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.64);
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.file-card:hover,
+.file-card.selected {
+  border-color: rgba(47, 125, 246, 0.5);
+  box-shadow: 0 12px 28px rgba(47, 125, 246, 0.16);
+  transform: translateY(-2px);
 }
 
 .file-card strong {
@@ -306,6 +354,31 @@ h1 {
   color: #1554b7;
   font-size: 12px;
   font-weight: 700;
+}
+
+.restore-chip {
+  position: absolute;
+  left: 50%;
+  bottom: 94px;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 16px 42px rgba(15, 24, 39, 0.2);
+  transform: translateX(-50%);
+  backdrop-filter: blur(18px);
+  cursor: pointer;
+}
+
+.window.minimized {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(36px) scale(0.96);
+}
+
+.window {
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .dock {
@@ -383,12 +456,12 @@ h1 {
   }
 
   .titlebar {
-    grid-template-columns: 68px 1fr 64px;
+    grid-template-columns: 68px 1fr 92px;
     padding: 0 10px;
   }
 
   .toolbar-button {
-    min-width: 62px;
+    min-width: 32px;
     font-size: 12px;
   }
 
@@ -408,7 +481,11 @@ h1 {
   }
 
   .pane-content {
-    padding: 18px 18px 118px;
+    padding: 18px 18px 150px;
+  }
+
+  .metrics-row {
+    grid-template-columns: 1fr;
   }
 
   .file-grid {

@@ -28,7 +28,7 @@
           </div>
         </header>
 
-        <div class="desktop-grid">
+        <div class="desktop-grid" aria-label="Desktop shortcuts">
           <button class="desktop-icon active" type="button" data-app="finder" aria-label="Open Finder pane">
             <span class="icon icon-folder"></span>
             <span>Projects</span>
@@ -54,7 +54,10 @@
               <span id="pane-title">Projects</span>
               <small id="pane-subtitle">Live workspace</small>
             </div>
-            <button class="toolbar-button" id="shuffle" type="button">Refresh</button>
+            <div class="toolbar-actions" aria-label="Window controls">
+              <button class="toolbar-button" id="minimize-window" type="button" aria-label="Minimize pane">–</button>
+              <button class="toolbar-button" id="shuffle" type="button">Refresh</button>
+            </div>
           </div>
 
           <div class="window-body">
@@ -71,12 +74,27 @@
                   <p class="eyebrow" id="pane-eyebrow">Now viewing</p>
                   <h1 id="view-title">Recents</h1>
                 </div>
-                <div class="live-pill"><span></span> Live</div>
+                <div class="live-pill"><span></span> Live <strong id="live-count">0</strong></div>
+              </div>
+              <div class="metrics-row" aria-label="Live desktop metrics">
+                <div>
+                  <span id="cpu-meter">18%</span>
+                  <small>CPU</small>
+                </div>
+                <div>
+                  <span id="memory-meter">6.1 GB</span>
+                  <small>Memory</small>
+                </div>
+                <div>
+                  <span id="sync-meter">Synced</span>
+                  <small>Status</small>
+                </div>
               </div>
               <div class="file-grid" id="file-grid" aria-live="polite"></div>
             </div>
           </div>
         </section>
+        <button class="restore-chip" id="restore-window" type="button" hidden>Show desktop pane</button>
 
         <nav class="dock" aria-label="Dock">
           <button class="dock-icon finder selected" type="button" data-app="finder" aria-label="Finder"></button>
