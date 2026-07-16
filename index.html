@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cosmic Beans — bright coffee for curious people.">
+  <title>Cosmic Beans — Coffee for curious people</title>
+  <style>
+    :root {
+      --ink: #2c1740;
+      --cream: #fff7e8;
+      --coral: #ff7657;
+      --gold: #ffd166;
+      --mint: #9de3c2;
+      --lavender: #b9a5ef;
+      --berry: #873d75;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    .shell { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; }
+    .brand { color: var(--ink); font: 800 1.25rem/1 Arial, sans-serif; letter-spacing: .08em; text-decoration: none; }
+    .brand span { color: var(--coral); }
+    nav a { color: var(--ink); font: 700 .78rem/1 Arial, sans-serif; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    nav a:hover { color: var(--coral); }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 580px;
+      padding: 64px 7% 72px;
+      overflow: hidden;
+      border-radius: 28px;
+      background: var(--coral);
+    }
+    .hero::before, .hero::after { content: ''; position: absolute; border-radius: 50%; opacity: .8; }
+    .hero::before { width: 310px; height: 310px; right: -72px; top: -90px; background: var(--gold); }
+    .hero::after { width: 190px; height: 190px; right: 22%; bottom: -82px; background: var(--lavender); }
+    .orbit { position: absolute; right: 11%; top: 26%; width: 240px; height: 240px; border: 2px solid var(--ink); border-radius: 50%; transform: rotate(-24deg); }
+    .orbit::after { content: '✦'; position: absolute; top: -20px; left: 44%; font: 2rem Arial, sans-serif; }
+    .kicker { position: relative; z-index: 1; margin: 0; font: 700 .78rem/1.3 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { position: relative; z-index: 1; align-self: center; max-width: 720px; margin: 24px 0 0; font-size: clamp(4.25rem, 10vw, 8.6rem); font-weight: 400; line-height: .86; letter-spacing: -.075em; }
+    h1 em { color: var(--cream); font-style: italic; }
+    .hero-foot { position: relative; z-index: 1; display: flex; align-items: end; justify-content: space-between; align-self: end; gap: 24px; }
+    .tagline { max-width: 310px; margin: 0; font-size: 1.25rem; line-height: 1.35; }
+    .badge { display: grid; place-items: center; width: 104px; height: 104px; border: 2px solid var(--ink); border-radius: 50%; background: var(--gold); font: 800 .72rem/1.3 Arial, sans-serif; letter-spacing: .06em; text-align: center; text-transform: uppercase; transform: rotate(9deg); }
+
+    .menu { padding: 88px 3% 100px; }
+    .menu-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px; }
+    .menu-heading h2 { margin: 0; font-size: clamp(2.7rem, 6vw, 5rem); font-weight: 400; letter-spacing: -.06em; }
+    .menu-heading p { margin: 0; font: 700 .72rem/1.3 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .menu-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
+    .menu-item { min-height: 220px; padding: 24px; border: 2px solid var(--ink); border-radius: 20px; }
+    .menu-item:nth-child(1) { background: var(--gold); }
+    .menu-item:nth-child(2) { background: var(--mint); }
+    .menu-item:nth-child(3) { color: var(--cream); background: var(--berry); }
+    .menu-number { margin: 0 0 44px; font: 700 .75rem/1 Arial, sans-serif; }
+    .menu-item h3 { margin: 0 0 8px; font-size: 2rem; font-weight: 400; letter-spacing: -.04em; }
+    .menu-item p { max-width: 230px; margin: 0; font-size: 1rem; line-height: 1.4; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 24px 0 34px; border-top: 2px solid var(--ink); font: 700 .72rem/1.4 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    footer p { margin: 0; }
+
+    @media (max-width: 700px) {
+      .shell { padding: 0 18px; }
+      header { padding: 22px 0; }
+      .hero { min-height: 600px; padding: 40px 28px 44px; }
+      .orbit { right: -38px; top: 31%; }
+      h1 { font-size: clamp(4rem, 19vw, 6.5rem); }
+      .hero-foot { align-items: end; }
+      .badge { width: 82px; height: 82px; font-size: .6rem; }
+      .menu { padding: 66px 0 72px; }
+      .menu-heading { display: block; }
+      .menu-heading p { margin-top: 10px; }
+      .menu-list { grid-template-columns: 1fr; }
+      .menu-item { min-height: 170px; }
+      .menu-number { margin-bottom: 28px; }
+      footer { display: block; }
+      footer p + p { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="/" aria-label="Cosmic Beans home">COSMIC<span>✦</span>BEANS</a>
+      <nav aria-label="Primary navigation"><a href="#menu">Today’s orbit</a></nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="orbit" aria-hidden="true"></div>
+        <p class="kicker">Coffee shop / Est. somewhere in the milky way</p>
+        <h1 id="hero-title">Coffee for <em>curious</em> people.</h1>
+        <div class="hero-foot">
+          <p class="tagline">Small-batch brews, big morning energy, and a little bit of stardust in every cup.</p>
+          <div class="badge" aria-label="Open daily from 7 AM to 6 PM">Open<br>daily<br>7—6</div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu" aria-labelledby="menu-title">
+        <div class="menu-heading"><h2 id="menu-title">Today’s orbit</h2><p>Three ways to reach lift-off</p></div>
+        <ul class="menu-list">
+          <li class="menu-item"><p class="menu-number">01 / Hot</p><h3>Moonshot Latte</h3><p>Espresso, toasted vanilla, and silky oat milk.</p></li>
+          <li class="menu-item"><p class="menu-number">02 / Cold</p><h3>Comet Cold Brew</h3><p>Slow-steeped, bright, and smooth over crystal-clear ice.</p></li>
+          <li class="menu-item"><p class="menu-number">03 / Sweet</p><h3>Galaxy Bun</h3><p>A warm cardamom swirl with a constellation of sugar.</p></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer><p>Cosmic Beans · 42 Nebula Lane</p><p>Come curious, leave caffeinated ✦</p></footer>
+  </div>
+</body>
+</html>
