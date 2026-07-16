@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Windows Desktop Pane Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop-shell" aria-label="Live Windows desktop pane demo">
+      <section class="desktop" id="desktop">
+        <div class="ambient-grid" aria-hidden="true"></div>
+
+        <header class="top-strip">
+          <div>
+            <p class="eyebrow">Acme workspace</p>
+            <h1>Live desktop pane</h1>
+          </div>
+          <div class="system-chips" aria-label="System status">
+            <span id="netStatus">Network live</span>
+            <span id="clock">--:--</span>
+          </div>
+        </header>
+
+        <article class="window primary-window" data-window style="--x: 4%; --y: 15%; --w: 55%;">
+          <div class="titlebar">
+            <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>Operations center</strong>
+            <div class="window-actions" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <div class="window-body split">
+            <section class="metric-panel">
+              <p>Throughput</p>
+              <strong id="throughput">1,284</strong>
+              <span>events / min</span>
+              <div class="sparkline" id="sparkline" aria-hidden="true"></div>
+            </section>
+            <section class="feed-panel">
+              <div class="panel-heading">
+                <h2>Live incidents</h2>
+                <button type="button" id="resolveBtn">Resolve next</button>
+              </div>
+              <ol class="incident-list" id="incidentList"></ol>
+            </section>
+          </div>
+          <button class="resize-handle" type="button" aria-label="Resize operations window"></button>
+        </article>
+
+        <article class="window side-window" data-window style="--x: 63%; --y: 18%; --w: 31%;">
+          <div class="titlebar">
+            <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>Pane preview</strong>
+            <div class="window-actions" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <div class="window-body">
+            <div class="preview-grid" id="previewGrid" aria-label="Pane preview activity"></div>
+            <div class="status-row">
+              <span class="pulse"></span>
+              <span id="paneStatus">Syncing 24 panes</span>
+            </div>
+          </div>
+          <button class="resize-handle" type="button" aria-label="Resize preview window"></button>
+        </article>
+
+        <article class="window console-window" data-window style="--x: 18%; --y: 64%; --w: 62%;">
+          <div class="titlebar">
+            <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>Event stream</strong>
+            <div class="window-actions" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <div class="window-body">
+            <pre id="consoleLog" aria-live="polite"></pre>
+          </div>
+          <button class="resize-handle" type="button" aria-label="Resize event stream window"></button>
+        </article>
+
+        <nav class="taskbar" aria-label="Desktop taskbar">
+          <button class="start-button" type="button" aria-label="Start menu">
+            <span></span><span></span><span></span><span></span>
+          </button>
+          <button type="button" data-focus-window="primary-window">Ops</button>
+          <button type="button" data-focus-window="side-window">Preview</button>
+          <button type="button" data-focus-window="console-window">Stream</button>
+          <div class="taskbar-spacer"></div>
+          <span id="taskbarClock">--:--</span>
+        </nav>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
