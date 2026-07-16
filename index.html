@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cosmic Beans coffee shop — small-batch coffee for curious humans.">
+  <title>Cosmic Beans — Coffee for curious humans</title>
+  <style>
+    :root {
+      --ink: #24152e;
+      --cream: #fff7df;
+      --pink: #ff7b9c;
+      --orange: #ffb84d;
+      --violet: #9c7cff;
+      --mint: #b9f2d0;
+      --line: rgba(36, 21, 46, .16);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .logo { font-size: 1.1rem; letter-spacing: .03em; }
+    .logo span { display: inline-block; margin-right: 7px; font-size: 1.35rem; }
+    .nav-link { border-bottom: 2px solid var(--ink); padding-bottom: 3px; }
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 560px;
+      padding: 76px 7% 88px;
+      overflow: hidden;
+      border-radius: 30px;
+      background: linear-gradient(120deg, var(--pink), #ff9b68 48%, var(--orange));
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 247, 223, .2);
+    }
+    .hero::before { width: 320px; height: 320px; right: -55px; top: -70px; }
+    .hero::after { width: 180px; height: 180px; right: 28%; bottom: -80px; }
+    .eyebrow, .menu-label, .menu-item h3, .button {
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 26px; font-size: .78rem; }
+    h1 { position: relative; z-index: 1; max-width: 770px; margin: 0; font-size: clamp(4rem, 10vw, 8.6rem); line-height: .86; letter-spacing: -.07em; }
+    h1 em { color: var(--cream); font-style: normal; }
+    .hero-foot { position: relative; z-index: 1; display: flex; align-items: end; justify-content: space-between; gap: 25px; align-self: end; max-width: 650px; }
+    .tagline { max-width: 400px; margin: 0; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.15; }
+    .button { display: inline-block; padding: 16px 20px; border: 2px solid var(--ink); border-radius: 99px; font-size: .72rem; white-space: nowrap; background: var(--cream); transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-3px) rotate(-2deg); background: var(--mint); }
+    .menu-section { padding: 92px 0 110px; }
+    .menu-header { display: flex; justify-content: space-between; gap: 30px; align-items: end; margin-bottom: 32px; }
+    .menu-label { margin: 0; font-size: .75rem; }
+    h2 { margin: 0; font-size: clamp(2.8rem, 6vw, 5.6rem); line-height: .9; letter-spacing: -.06em; }
+    .menu-note { max-width: 230px; margin: 0; font-size: 1rem; line-height: 1.25; }
+    .menu-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--ink); }
+    .menu-item { padding: 26px 22px 28px 0; border-bottom: 2px solid var(--ink); }
+    .menu-item + .menu-item { padding-left: 22px; border-left: 1px solid var(--line); }
+    .menu-item h3 { margin: 0 0 15px; font-size: .8rem; }
+    .menu-item p { min-height: 48px; margin: 0 0 22px; font-size: 1.2rem; line-height: 1.15; }
+    .price { font-family: Arial, sans-serif; font-size: .85rem; font-weight: 800; }
+    footer { padding: 22px 0 30px; border-top: 1px solid var(--line); font-family: Arial, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    @media (max-width: 650px) {
+      .shell { width: min(100% - 28px, 1120px); }
+      header { padding: 20px 0; }
+      .hero { min-height: 600px; padding: 48px 26px 38px; border-radius: 22px; }
+      .hero-foot, .menu-header { display: block; }
+      .tagline { margin-bottom: 28px; }
+      .menu-section { padding: 70px 0 80px; }
+      .menu-note { margin-top: 20px; }
+      .menu-list { grid-template-columns: 1fr; }
+      .menu-item, .menu-item + .menu-item { padding: 24px 0; border-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="logo" href="#top" aria-label="Cosmic Beans home"><span>☄</span>Cosmic Beans</a>
+      <a class="nav-link" href="#menu">See the menu</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Small-batch coffee / Big universe</p>
+        <h1 id="hero-title">Good coffee<br>for <em>curious</em><br>humans.</h1>
+        <div class="hero-foot">
+          <p class="tagline">A colorful little coffee shop orbiting the best beans in the galaxy.</p>
+          <a class="button" href="#menu">Explore the menu ↓</a>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="menu-header">
+          <div>
+            <p class="menu-label">01 / Today’s transmission</p>
+            <h2 id="menu-title">Fuel your<br>orbit.</h2>
+          </div>
+          <p class="menu-note">Three house favorites, brewed fresh and served with a little gravitational pull.</p>
+        </div>
+        <div class="menu-list">
+          <article class="menu-item">
+            <h3>01 — The Supernova</h3>
+            <p>Espresso, orange zest, and a bright flash of tonic.</p>
+            <span class="price">$6.00</span>
+          </article>
+          <article class="menu-item">
+            <h3>02 — Moon Milk</h3>
+            <p>Velvety vanilla oat latte with a cinnamon constellation.</p>
+            <span class="price">$5.50</span>
+          </article>
+          <article class="menu-item">
+            <h3>03 — Dark Matter</h3>
+            <p>Cold brew, cacao, and a pinch of sea salt. Deep and dreamy.</p>
+            <span class="price">$5.00</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Cosmic Beans</span> · Open daily for interstellar mornings</footer>
+  </div>
+</body>
+</html>
