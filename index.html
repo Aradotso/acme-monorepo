@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Beans</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #fff8ea;
+      --muted: #f6d8b7;
+      --espresso: #24110f;
+      --plum: #4b185f;
+      --coral: #ff6f61;
+      --gold: #ffd166;
+      --mint: #7fffd4;
+      --sky: #74c0fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 209, 102, 0.36), transparent 24rem),
+        radial-gradient(circle at 82% 14%, rgba(127, 255, 212, 0.28), transparent 22rem),
+        radial-gradient(circle at 70% 86%, rgba(255, 111, 97, 0.34), transparent 25rem),
+        linear-gradient(135deg, #1d1029 0%, #381648 42%, #22110f 100%);
+    }
+
+    main {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 48px 20px;
+    }
+
+    .landing {
+      width: min(1060px, 100%);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero {
+      padding: 24px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 248, 234, 0.32);
+      border-radius: 999px;
+      color: var(--mint);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(36, 17, 15, 0.38);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(4rem, 11vw, 8.6rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+      text-wrap: balance;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .tagline {
+      max-width: 640px;
+      margin: 28px 0 0;
+      font-size: clamp(1.25rem, 2.8vw, 2rem);
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .menu {
+      margin: 0;
+      padding: 26px;
+      list-style: none;
+      border: 1px solid rgba(255, 248, 234, 0.22);
+      border-radius: 8px;
+      background: rgba(36, 17, 15, 0.66);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(12px);
+    }
+
+    .menu li {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 248, 234, 0.16);
+      font-size: 1.15rem;
+    }
+
+    .menu li:last-child {
+      border-bottom: 0;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--coral);
+      box-shadow: 0 0 18px currentColor;
+    }
+
+    .menu li:nth-child(2) .dot {
+      background: var(--gold);
+    }
+
+    .menu li:nth-child(3) .dot {
+      background: var(--sky);
+    }
+
+    .item {
+      font-weight: 800;
+    }
+
+    .price {
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        place-items: start center;
+      }
+
+      .landing {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .menu {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="landing" aria-label="Cosmic Beans landing page">
+      <div class="hero">
+        <span class="badge">Small batch orbit-roasted coffee</span>
+        <h1>Cosmic Beans</h1>
+        <p class="tagline">Bright brews, stardust pastries, and warm neighborhood gravity from sunrise to moonrise.</p>
+      </div>
+
+      <ul class="menu" aria-label="Featured menu">
+        <li>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="item">Nebula Nitro Cold Brew</span>
+          <span class="price">$5</span>
+        </li>
+        <li>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="item">Solar Flare Cortado</span>
+          <span class="price">$4</span>
+        </li>
+        <li>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="item">Moonbeam Mocha</span>
+          <span class="price">$6</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
