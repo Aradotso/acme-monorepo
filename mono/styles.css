@@ -1,9 +1,9 @@
 :root {
-  --ink: #171717;
-  --muted: #6f6f6f;
-  --line: #d6d6d6;
-  --paper: #f4f4f2;
-  --white: #fff;
+  --ink: #f3f0e8;
+  --muted: #a6a198;
+  --line: #3b3a36;
+  --paper: #11110f;
+  --white: #fffaf0;
   --max: 1240px;
 }
 
@@ -47,7 +47,7 @@ h1, h2, h3, p { margin-top: 0; }
 h1 { max-width: 940px; margin-bottom: 0; font-size: clamp(4rem, 10.3vw, 9.6rem); font-weight: 500; letter-spacing: -.085em; line-height: .87; }
 h1 em { font-style: normal; color: var(--muted); }
 .hero-bottom { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
-.intro { max-width: 330px; margin: 0; color: #444; font-size: 1.05rem; line-height: 1.35; }
+.intro { max-width: 330px; margin: 0; color: #c1bdb3; font-size: 1.05rem; line-height: 1.35; }
 .circle-link { display: grid; place-items: center; width: 72px; height: 72px; border: 1px solid var(--ink); border-radius: 50%; font-size: 1.5rem; }
 .circle-link:hover { background: var(--ink); color: var(--white); transform: rotate(-10deg); }
 
@@ -58,7 +58,7 @@ h2 { max-width: 570px; margin: -.2em 0 0; font-size: clamp(3rem, 6.5vw, 6rem); f
 .feature-card { position: relative; min-height: 300px; padding: 22px 24px 28px 0; border-right: 1px solid var(--line); transition: background-color .35s ease, padding .35s ease; }
 .feature-card + .feature-card { padding-left: 24px; }
 .feature-card:last-child { border-right: 0; }
-.feature-card:hover { padding-top: 30px; background: rgba(255,255,255,.52); }
+.feature-card:hover { padding-top: 30px; background: rgba(255,250,240,.08); }
 .feature-number { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .1em; }
 h3 { margin: 52px 0 16px; font-size: 2rem; font-weight: 500; letter-spacing: -.055em; }
 .feature-card > p:not(.feature-number) { max-width: 250px; margin-bottom: 0; color: var(--muted); }
