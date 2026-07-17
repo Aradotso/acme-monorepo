@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Pulse page you are looking for is not available.">
+  <title>Pulse — Signal not found</title>
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --white: #f4f4f0;
+      --muted: #858585;
+      --blue: #3b9cff;
+      --line: #292929;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    a { color: inherit; text-decoration: none; }
+    .site-header, main, .site-footer {
+      width: min(calc(100% - 64px), var(--max));
+      margin-inline: auto;
+    }
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -.06em;
+    }
+    .brand-mark {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 5px 0 0 -2px var(--black), 5px 0 0 0 var(--white);
+    }
+    .header-link, .eyebrow, .footer-meta { color: var(--muted); }
+    .header-link { font-size: .75rem; }
+    .header-link span, .button span { margin-left: 8px; color: var(--white); }
+    .eyebrow {
+      margin: 0;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .not-found {
+      position: relative;
+      isolation: isolate;
+      min-height: min(750px, calc(100vh - 91px));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 92px 0 54px;
+    }
+    .not-found::before {
+      position: absolute;
+      z-index: -1;
+      inset: 18px -80px 24px;
+      background-image: linear-gradient(to right, rgba(244, 244, 240, .055) 1px, transparent 1px), linear-gradient(to bottom, rgba(244, 244, 240, .055) 1px, transparent 1px);
+      background-size: 64px 64px;
+      content: "";
+      mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+      pointer-events: none;
+    }
+    h1, p { margin-top: 0; }
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(8rem, 25vw, 21rem);
+      font-weight: 500;
+      letter-spacing: -.11em;
+      line-height: .78;
+    }
+    h1 span { color: var(--blue); }
+    .message {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      width: 245px;
+      margin-left: auto;
+    }
+    .message-line { width: 22px; height: 1px; flex: 0 0 auto; margin-top: 10px; background: var(--white); }
+    .message p { margin: 0; color: #b8b8b3; font-size: .95rem; line-height: 1.35; }
+    .not-found-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    .button {
+      padding: 14px 18px;
+      border: 1px solid var(--white);
+      font-size: .78rem;
+      transition: background .2s ease, color .2s ease;
+    }
+    .button:hover { background: var(--white); color: var(--black); }
+    .button:hover span { color: var(--black); }
+    .status { margin: 0; color: var(--muted); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+    .status span { margin-right: 10px; color: var(--blue); font-size: 1rem; }
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 28px 0 48px;
+      border-top: 1px solid var(--white);
+    }
+    .footer-meta { margin: 0; font-size: .72rem; text-align: right; }
+
+    @media (max-width: 700px) {
+      .site-header, main, .site-footer { width: min(calc(100% - 40px), var(--max)); }
+      .site-header { padding: 22px 0; }
+      .header-link { font-size: .68rem; }
+      .not-found { min-height: 650px; padding: 66px 0 38px; }
+      h1 { margin: 110px 0 54px; font-size: clamp(8rem, 42vw, 16rem); }
+      .message { width: 235px; }
+      .status { font-size: .62rem; }
+      .site-footer { display: block; padding-bottom: 32px; }
+      .footer-meta { margin-top: 48px; text-align: left; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Pulse home"><span class="brand-mark" aria-hidden="true"></span>pulse</a>
+    <a class="header-link" href="mailto:hello@pulse.tools">Get in touch <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="not-found" aria-labelledby="page-title">
+      <p class="eyebrow">Signal interrupted · 404</p>
+      <div>
+        <h1 id="page-title">4<span>0</span>4.</h1>
+        <div class="message">
+          <span class="message-line" aria-hidden="true"></span>
+          <p>This signal has drifted out of view. Let’s get you back to what matters.</p>
+        </div>
+      </div>
+      <div class="not-found-bottom">
+        <a class="button" href="./">Back to Pulse <span aria-hidden="true">↗</span></a>
+        <p class="status"><span aria-hidden="true">↓</span> Nothing to see here</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="eyebrow">Pulse / Signal, simplified</p>
+    <p class="footer-meta">© 2025 Pulse<br>Built for the curious</p>
+  </footer>
+</body>
+</html>
