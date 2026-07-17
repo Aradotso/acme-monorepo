@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cosmic Beans</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8efe1;
+      --muted: #cbbda7;
+      --paper: #120f1b;
+      --panel: rgba(32, 25, 44, 0.78);
+      --accent: #ffb15c;
+      --accent-deep: #7a4cf1;
+      --line: rgba(255, 255, 255, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 177, 92, 0.24), transparent 28rem),
+        radial-gradient(circle at 82% 8%, rgba(122, 76, 241, 0.25), transparent 32rem),
+        linear-gradient(145deg, #151020 0%, #21172d 48%, #0f0b18 100%);
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      align-content: space-between;
+      gap: 64px;
+      padding: 52px 0 44px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    main {
+      display: grid;
+      gap: 68px;
+    }
+
+    .hero {
+      max-width: 820px;
+      padding-top: 7vh;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(4rem, 10vw, 8.6rem);
+      line-height: 0.9;
+      letter-spacing: 0;
+    }
+
+    .tagline {
+      max-width: 620px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .detail {
+      min-height: 142px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(18px);
+    }
+
+    .detail strong {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .detail p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .signup {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1fr);
+      gap: 28px;
+      align-items: end;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    }
+
+    .signup h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.35rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 14px;
+      align-items: end;
+    }
+
+    label {
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 0 14px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.08);
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 177, 92, 0.18);
+    }
+
+    button {
+      min-height: 48px;
+      border: 0;
+      border-radius: 8px;
+      padding: 0 20px;
+      color: #191017;
+      background: var(--accent);
+      font: inherit;
+      font-weight: 800;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ffc885;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: min(100% - 28px, 680px);
+        gap: 48px;
+        padding-top: 34px;
+      }
+
+      header,
+      .details,
+      .signup,
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        display: grid;
+        gap: 8px;
+      }
+
+      .hero {
+        padding-top: 3vh;
+      }
+
+      .signup {
+        align-items: stretch;
+        padding: 22px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">Cosmic Beans</div>
+      <div>Small-batch coffee for orbital mornings</div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Cosmic Beans</h1>
+        <p class="tagline">Nebula-roasted coffee, brewed for early launches, late landings, and every bright idea in between.</p>
+      </section>
+
+      <section class="details" aria-label="Coffee highlights">
+        <article class="detail">
+          <strong>Roasted daily</strong>
+          <p>Seasonal beans are dialed in each morning for clean sweetness and deep aroma.</p>
+        </article>
+        <article class="detail">
+          <strong>Zero-gravity blends</strong>
+          <p>Balanced espresso, luminous cold brew, and pour-overs with a clean finish.</p>
+        </article>
+        <article class="detail">
+          <strong>Open early</strong>
+          <p>Fuel up before sunrise with pastries, batch brew, and a seat by the stars.</p>
+        </article>
+      </section>
+    </main>
+
+    <section class="signup" aria-labelledby="signup-heading">
+      <h2 id="signup-heading">Join the launch list.</h2>
+      <form action="#" method="post">
+        <label for="name">Your name
+          <input id="name" name="name" type="text" autocomplete="name">
+        </label>
+        <label for="email">Email
+          <input id="email" name="email" type="text" autocomplete="email">
+        </label>
+        <button type="submit">Join the crew</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
