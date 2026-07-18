@@ -56,6 +56,7 @@ button {
   padding: 0 18px;
   box-shadow: 0 10px 28px rgba(97, 43, 167, .16);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 button.primary,
@@ -592,14 +593,20 @@ pre {
     justify-content: flex-start;
   }
 
-  .topbar,
   .workspace-grid,
   .context {
     grid-template-columns: 1fr;
   }
 
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
   .topbar-actions {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: end;
   }
 
   .chat-hero {
