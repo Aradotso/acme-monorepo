@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace vaporwave interface concept.">
+  <title>Ara Workspace - Vaporwave Pastel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="horizon" aria-hidden="true"></div>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Sessions">
+      <header class="brand">
+        <div class="logo">A</div>
+        <div>
+          <p class="kicker">Ara cloud</p>
+          <h1>Workspace</h1>
+        </div>
+      </header>
+
+      <button class="new-session">+ New session</button>
+
+      <nav class="session-list" aria-label="Recent sessions">
+        <a class="session active" href="#">
+          <span>Repo engineer</span>
+          <small>Acme monorepo · live</small>
+        </a>
+        <a class="session" href="#">
+          <span>Deploy review</span>
+          <small>Vercel logs · 12 min ago</small>
+        </a>
+        <a class="session" href="#">
+          <span>Billing polish</span>
+          <small>Stripe route · yesterday</small>
+        </a>
+        <a class="session" href="#">
+          <span>Design audit</span>
+          <small>Dashboard UI · Jul 16</small>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Yume dev mode</p>
+        <span>connected</span>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <section class="chat" aria-label="Session chat">
+        <header class="topbar">
+          <div>
+            <p class="kicker">main session</p>
+            <h2>Repo engineer for Acme</h2>
+          </div>
+          <div class="top-actions" aria-label="Session actions">
+            <button>Files</button>
+            <button>Logs</button>
+            <button class="primary">Run</button>
+          </div>
+        </header>
+
+        <div class="messages">
+          <article class="message user-message">
+            <p class="meta">You · 09:42</p>
+            <p>Redesign the Ara app main UI as a completely new standalone alternative. Keep the same features and content, but make the art direction vaporwave pastel.</p>
+          </article>
+
+          <article class="message ara-message">
+            <div class="bust" aria-hidden="true">
+              <span class="head"></span>
+              <span class="neck"></span>
+              <span class="torso"></span>
+            </div>
+            <div>
+              <p class="meta">Ara · live</p>
+              <p>I found the workspace surface and created a new branch. I am preserving the same session flow: context, file status, terminal output, artifacts, and composer.</p>
+            </div>
+          </article>
+
+          <article class="message ara-message compact">
+            <p class="meta">Tool output</p>
+            <pre><code>branch: ui-variants/vaporwave
+route: /ui-variants/vaporwave/
+status: designing responsive workspace</code></pre>
+          </article>
+
+          <article class="message user-message short">
+            <p class="meta">You · now</p>
+            <p>Ship complete, working, responsive code.</p>
+          </article>
+        </div>
+
+        <form class="composer">
+          <button type="button" aria-label="Attach file">⌘</button>
+          <label>
+            <span>Prompt Ara</span>
+            <textarea rows="3">Refine the artifact panel and verify mobile layout.</textarea>
+          </label>
+          <button class="send" type="button">Send</button>
+        </form>
+      </section>
+
+      <aside class="inspector" aria-label="Workspace context">
+        <section class="panel hero-panel">
+          <p class="kicker">artifact preview</p>
+          <div class="sun" aria-hidden="true"></div>
+          <h3>Vaporwave workspace</h3>
+          <p>Pastel gradients, neon dividers, grid horizon depth, Japanese display accents, and marble-bust nostalgia applied to the full app frame.</p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h3>Run status</h3>
+            <span class="pill">active</span>
+          </div>
+          <ul class="status-list">
+            <li><span></span>Read repo context</li>
+            <li><span></span>Create standalone variant</li>
+            <li><span></span>Capture evidence</li>
+            <li><span></span>Open pull request</li>
+          </ul>
+        </section>
+
+        <section class="panel files">
+          <div class="panel-heading">
+            <h3>Changed files</h3>
+            <span>2</span>
+          </div>
+          <p>ui-variants/vaporwave/index.html</p>
+          <p>ui-variants/vaporwave/styles.css</p>
+        </section>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
