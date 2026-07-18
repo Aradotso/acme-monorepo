@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace interface in an Art Deco luxe visual direction.">
+  <title>Ara Workspace — Art Deco Luxe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <a class="brand" href="#workspace" aria-label="Ara workspace home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>
+          <strong>Ara</strong>
+          <small>Workspace</small>
+        </span>
+      </a>
+
+      <nav class="nav-list" aria-label="Primary">
+        <a class="active" href="#workspace">Sessions</a>
+        <a href="#plan">Plans</a>
+        <a href="#files">Files</a>
+        <a href="#activity">Activity</a>
+      </nav>
+
+      <section class="session-list" aria-labelledby="session-list-title">
+        <div class="section-title">
+          <p id="session-list-title">Recent rooms</p>
+          <button type="button" aria-label="Start new session">+</button>
+        </div>
+        <a class="session active" href="#chat">
+          <span class="session-kicker">Live</span>
+          <strong>Acme monorepo UI</strong>
+          <small>Art direction and branch setup</small>
+        </a>
+        <a class="session" href="#chat">
+          <span class="session-kicker">Queued</span>
+          <strong>Billing settings audit</strong>
+          <small>Tests and route review</small>
+        </a>
+        <a class="session" href="#chat">
+          <span class="session-kicker">Done</span>
+          <strong>Landing polish</strong>
+          <small>Responsive capture attached</small>
+        </a>
+      </section>
+
+      <div class="sidebar-footer">
+        <p class="eyebrow">Repository</p>
+        <strong>Aradotso/acme-monorepo</strong>
+        <small>Branch ui-variants/art-deco</small>
+      </div>
+    </aside>
+
+    <main class="workspace" id="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Primary workspace</p>
+          <h1>Session command room</h1>
+        </div>
+        <div class="topbar-actions" aria-label="Session actions">
+          <button type="button">Preview</button>
+          <button type="button">Share</button>
+          <button class="gold" type="button">Open PR</button>
+        </div>
+      </header>
+
+      <section class="hero-panel" aria-label="Session overview">
+        <div class="fan" aria-hidden="true"></div>
+        <div>
+          <p class="eyebrow">Ara is working</p>
+          <h2>Redesign the main in-app workspace as Art Deco luxe.</h2>
+          <p>Keep the session, chat, plan, files, activity, preview, and pull request workflow intact while replacing the entire visual language.</p>
+        </div>
+        <dl class="stats" aria-label="Session status">
+          <div>
+            <dt>State</dt>
+            <dd>In progress</dd>
+          </div>
+          <div>
+            <dt>Checks</dt>
+            <dd>2 pending</dd>
+          </div>
+          <div>
+            <dt>Preview</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </section>
+
+      <div class="work-grid">
+        <section class="chat-card" id="chat" aria-labelledby="chat-title">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Conversation</p>
+              <h2 id="chat-title">Chat with Ara</h2>
+            </div>
+            <span class="status-pill">Synced</span>
+          </div>
+
+          <div class="messages">
+            <article class="message user">
+              <p class="meta">Adi · 10:14</p>
+              <p>Redesign the Ara app main UI as Art Deco luxe. Keep the same features and content, but make it a standalone alternative.</p>
+            </article>
+            <article class="message agent">
+              <p class="meta">Ara · 10:16</p>
+              <p>I found the current surface, created the variant branch, and am building the workspace route with the same session workflow reimagined around emerald lacquer, navy panels, gold geometry, and fan motifs.</p>
+            </article>
+            <article class="message agent compact">
+              <p class="meta">Ara · now</p>
+              <ul>
+                <li>Baseline captured</li>
+                <li>Standalone route added</li>
+                <li>Responsive verification next</li>
+              </ul>
+            </article>
+          </div>
+
+          <form class="composer">
+            <label for="prompt">Message Ara</label>
+            <div>
+              <textarea id="prompt" rows="3">Review the visual pass and prepare the PR body with evidence.</textarea>
+              <button type="button">Send</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="inspector" aria-label="Session context">
+          <section class="panel" id="plan">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Plan</p>
+                <h2>Run steps</h2>
+              </div>
+            </div>
+            <ol class="plan-list">
+              <li class="done"><span></span>Find current UI</li>
+              <li class="done"><span></span>Create branch</li>
+              <li class="active"><span></span>Build Art Deco route</li>
+              <li><span></span>Capture evidence</li>
+              <li><span></span>Commit and PR</li>
+            </ol>
+          </section>
+
+          <section class="panel" id="files">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Files</p>
+                <h2>Changed</h2>
+              </div>
+            </div>
+            <div class="file-list">
+              <p><strong>index.html</strong><span>Workspace structure</span></p>
+              <p><strong>styles.css</strong><span>Art Deco system</span></p>
+            </div>
+          </section>
+
+          <section class="panel" id="activity">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Activity</p>
+                <h2>Signals</h2>
+              </div>
+            </div>
+            <div class="activity-list">
+              <p><span></span>Desktop preview updated</p>
+              <p><span></span>Mobile layout reflowed</p>
+              <p><span></span>PR evidence ready</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
