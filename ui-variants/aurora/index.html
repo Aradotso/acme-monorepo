@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aurora workspace UI concept for Ara.">
+  <title>Ara Aurora Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
+  <div class="aurora aurora-three" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <a class="brand" href="#workspace" aria-label="Ara workspace home">
+        <span class="brand-mark">A</span>
+        <span>
+          <strong>Ara</strong>
+          <small>Workspace</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a class="active" href="#workspace">Session</a>
+        <a href="#principles">Principles</a>
+        <a href="#artifact">Artifacts</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <section class="session-stack" aria-labelledby="sessions-title">
+        <div class="section-label" id="sessions-title">Sessions</div>
+        <a class="session-card active" href="#workspace">
+          <span class="session-dot"></span>
+          <span>
+            <strong>Make room for what matters</strong>
+            <small>Independent studio / 2024-now</small>
+          </span>
+        </a>
+        <a class="session-card" href="#principles">
+          <span class="session-dot quiet"></span>
+          <span>
+            <strong>Less noise. More signal.</strong>
+            <small>Approach and principles</small>
+          </span>
+        </a>
+      </section>
+
+      <div class="sidebar-footer">
+        <span class="status-light"></span>
+        <span>Calm mode active</span>
+      </div>
+    </aside>
+
+    <main class="workspace" id="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Primary in-app workspace</p>
+          <h1>Ara session for Mono Studio</h1>
+        </div>
+        <div class="topbar-actions" aria-label="Session actions">
+          <button type="button">Share</button>
+          <button type="button" class="primary-button">Deploy</button>
+        </div>
+      </header>
+
+      <section class="content-grid" aria-label="Session workspace">
+        <div class="conversation-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Live thread</p>
+              <h2>Make room for what matters.</h2>
+            </div>
+            <span class="pill">Ready</span>
+          </div>
+
+          <div class="message-list" aria-label="Conversation messages">
+            <article class="message user-message">
+              <div class="avatar">M</div>
+              <div class="bubble">
+                <p>We shape calm, considered digital experiences for people doing meaningful work.</p>
+              </div>
+            </article>
+            <article class="message agent-message">
+              <div class="avatar">A</div>
+              <div class="bubble">
+                <p>Every choice has a reason. I am turning the studio direction into a clear workspace with a soft aurora visual system.</p>
+              </div>
+            </article>
+            <article class="message agent-message">
+              <div class="avatar">A</div>
+              <div class="bubble">
+                <p>Current focus: preserve the same content, make the interface feel airy, responsive, and ready for repeated session work.</p>
+                <div class="progress-track" aria-label="Session progress">
+                  <span style="width: 72%"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <form class="composer">
+            <label for="prompt">Message Ara</label>
+            <div class="composer-box">
+              <input id="prompt" name="prompt" value="Refine the Mono workspace with more signal and less noise.">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="artifact-panel" id="artifact" aria-label="Workspace artifact">
+          <div class="preview-card">
+            <div class="preview-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="preview-body">
+              <p class="eyebrow">Artifact preview</p>
+              <h2>Less noise.<br>More signal.</h2>
+              <p>Quiet does not mean invisible. Distinctive work starts with a point of view.</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid" aria-label="Workspace metrics">
+            <article>
+              <strong>3</strong>
+              <span>Principles</span>
+            </article>
+            <article>
+              <strong>01</strong>
+              <span>Approach</span>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <section class="principles-panel" id="principles" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Our approach</p>
+          <h2 id="principles-title">Less noise. More signal.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span>01</span>
+            <h3>Clarity</h3>
+            <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
+          </article>
+          <article class="feature-card">
+            <span>02</span>
+            <h3>Character</h3>
+            <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
+          </article>
+          <article class="feature-card">
+            <span>03</span>
+            <h3>Care</h3>
+            <p>Built to last, with details that reward attention and respect for the everyday.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="contact-panel" id="contact">
+        <div>
+          <p class="eyebrow">Start a conversation</p>
+          <a href="mailto:hello@mono.studio">hello@mono.studio</a>
+        </div>
+        <p>New York · London · Everywhere · © 2024 Mono Studio</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
