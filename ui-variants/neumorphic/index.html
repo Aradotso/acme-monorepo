@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace UI concept in a soft neumorphic visual direction.">
+  <title>Ara Workspace - Neumorphic UI Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="workspace" aria-label="Ara workspace">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand-row">
+        <a class="brand" href="#" aria-label="Ara home">A</a>
+        <button class="icon-button" type="button" aria-label="Create session">+</button>
+      </div>
+
+      <div class="search-shell">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" value="" aria-label="Search sessions" placeholder="Search">
+      </div>
+
+      <nav class="session-list" aria-label="Sessions">
+        <a class="session-pill active" href="#">
+          <span class="session-dot"></span>
+          <span>
+            <strong>Payment settings refactor</strong>
+            <small>Running checks</small>
+          </span>
+        </a>
+        <a class="session-pill" href="#">
+          <span class="session-dot"></span>
+          <span>
+            <strong>Onboarding polish</strong>
+            <small>Ready for review</small>
+          </span>
+        </a>
+        <a class="session-pill" href="#">
+          <span class="session-dot"></span>
+          <span>
+            <strong>Dashboard empty states</strong>
+            <small>Draft branch</small>
+          </span>
+        </a>
+        <a class="session-pill" href="#">
+          <span class="session-dot"></span>
+          <span>
+            <strong>API timeout trace</strong>
+            <small>Needs context</small>
+          </span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer soft-panel">
+        <p>Repository</p>
+        <strong>Aradotso/acme-monorepo</strong>
+        <span>main → ara workspace</span>
+      </div>
+    </aside>
+
+    <section class="main-panel" aria-label="Current session">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Ara session</p>
+          <h1>Payment settings refactor</h1>
+        </div>
+        <div class="top-actions" aria-label="Session actions">
+          <button class="pill-button pressed" type="button">Plan</button>
+          <button class="pill-button" type="button">Diff</button>
+          <button class="pill-button icon-only" type="button" aria-label="More actions">•••</button>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <section class="conversation soft-panel" aria-label="Conversation">
+          <div class="conversation-meta">
+            <span class="status-light"></span>
+            <span>Working in branch <strong>ara/session-payment-settings</strong></span>
+          </div>
+
+          <article class="message user-message">
+            <div class="avatar">U</div>
+            <div class="bubble inset">
+              <p>Move billing controls into a clearer settings flow, keep the current permissions, and open a PR when it is verified.</p>
+            </div>
+          </article>
+
+          <article class="message agent-message">
+            <div class="avatar ara-avatar">A</div>
+            <div class="bubble">
+              <p>I found the account settings surface and traced the permission checks. I am splitting the billing panel into plan, invoices, and payment method sections while keeping the existing API calls intact.</p>
+              <div class="artifact-row" aria-label="Active artifacts">
+                <span>settings/billing.tsx</span>
+                <span>billing-permissions.test.ts</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="message agent-message">
+            <div class="avatar ara-avatar">A</div>
+            <div class="bubble progress-bubble">
+              <div class="progress-head">
+                <span>Validation</span>
+                <strong>3 of 4</strong>
+              </div>
+              <div class="progress-track"><span style="width: 76%"></span></div>
+              <ul class="check-list">
+                <li><span>✓</span> Unit tests passed</li>
+                <li><span>✓</span> Typecheck passed</li>
+                <li><span>✓</span> Desktop capture saved</li>
+                <li><span>•</span> Mobile capture running</li>
+              </ul>
+            </div>
+          </article>
+
+          <form class="composer inset" aria-label="Message composer">
+            <textarea aria-label="Send Ara a message" placeholder="Ask Ara to adjust the implementation, inspect a file, or open the PR.">Tighten the mobile spacing before you commit.</textarea>
+            <div class="composer-actions">
+              <button class="mini-button" type="button" aria-label="Attach file">⌘</button>
+              <button class="mini-button" type="button" aria-label="Voice input">◌</button>
+              <button class="send-button" type="submit" aria-label="Send message">↑</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="right-rail" aria-label="Session details">
+          <section class="soft-panel status-card">
+            <p class="kicker">Current step</p>
+            <h2>Verify layout</h2>
+            <p>Desktop looks stable. Mobile capture is checking text wrapping, touch targets, and panel order.</p>
+            <button class="wide-button" type="button">Open preview</button>
+          </section>
+
+          <section class="soft-panel">
+            <div class="panel-title">
+              <h2>Task plan</h2>
+              <span>4</span>
+            </div>
+            <ol class="task-list">
+              <li class="done">Read settings UI</li>
+              <li class="done">Refactor sections</li>
+              <li class="active">Verify browser</li>
+              <li>Commit and PR</li>
+            </ol>
+          </section>
+
+          <section class="soft-panel metrics-card">
+            <div>
+              <span>Files</span>
+              <strong>8</strong>
+            </div>
+            <div>
+              <span>Tests</span>
+              <strong>42</strong>
+            </div>
+            <div>
+              <span>Risk</span>
+              <strong>Low</strong>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
