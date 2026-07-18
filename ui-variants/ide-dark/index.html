@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A developer IDE dark-mode redesign of the Ara app workspace.">
+  <title>Ara Workspace IDE Dark</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell" id="top">
+    <aside class="activity-rail" aria-label="Workspace tools">
+      <a class="rail-logo" href="#top" aria-label="Ara workspace home">A</a>
+      <nav class="rail-nav" aria-label="Primary tools">
+        <a class="rail-button active" href="#session" aria-label="Session">⌘</a>
+        <a class="rail-button" href="#principles" aria-label="Files">⌬</a>
+        <a class="rail-button" href="#terminal" aria-label="Terminal">▣</a>
+        <a class="rail-button" href="#contact" aria-label="Contact">↗</a>
+      </nav>
+      <span class="rail-status" aria-label="Connected"></span>
+    </aside>
+
+    <aside class="file-tree" aria-label="Project files">
+      <div class="tree-header">
+        <span>Explorer</span>
+        <button type="button" aria-label="New file">+</button>
+      </div>
+      <div class="repo-name">ara-workspace</div>
+      <nav class="tree-group" aria-label="Workspace navigation">
+        <a class="tree-item open" href="#session"><span class="chevron">⌄</span> session</a>
+        <a class="tree-file active" href="#session"><span class="dot cyan"></span> workspace.tsx</a>
+        <a class="tree-file" href="#principles"><span class="dot green"></span> principles.json</a>
+        <a class="tree-file" href="#terminal"><span class="dot yellow"></span> terminal.log</a>
+        <a class="tree-file" href="#contact"><span class="dot pink"></span> contact.md</a>
+      </nav>
+      <div class="tree-panel">
+        <span class="panel-label">Branch</span>
+        <strong>ui-variants/ide-dark</strong>
+      </div>
+      <div class="tree-panel">
+        <span class="panel-label">Mode</span>
+        <strong>Developer IDE / dark</strong>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="titlebar">
+        <div class="window-controls" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <nav class="tabs" aria-label="Open files">
+          <a class="tab active" href="#session">workspace.tsx</a>
+          <a class="tab" href="#principles">principles.json</a>
+          <a class="tab" href="#terminal">terminal.log</a>
+        </nav>
+        <a class="deploy-link" href="#contact">hello@mono.studio</a>
+      </header>
+
+      <section class="editor-grid" id="session" aria-labelledby="hero-title">
+        <article class="editor-pane hero-pane">
+          <div class="pane-toolbar">
+            <span>workspace.tsx</span>
+            <span class="muted">Independent studio / 2024-now</span>
+          </div>
+          <ol class="code-lines" aria-label="Opening code">
+            <li><code><span class="token-key">export default</span> <span class="token-fn">function</span> Workspace() {'{'}</code></li>
+            <li><code>  <span class="token-key">return</span> (</code></li>
+            <li><code>    &lt;<span class="token-tag">main</span> intent=<span class="token-string">"clear-thinking"</span>&gt;</code></li>
+          </ol>
+          <div class="hero-copy">
+            <p class="eyebrow">Independent studio / 2024-now</p>
+            <h1 id="hero-title">Make room<br>for <span>what matters.</span></h1>
+            <p>We shape calm, considered digital experiences for people doing meaningful work.</p>
+          </div>
+          <ol class="code-lines bottom" start="28" aria-label="Closing code">
+            <li><code>    &lt;/<span class="token-tag">main</span>&gt;</code></li>
+            <li><code>  )</code></li>
+            <li><code>{'}'}</code></li>
+          </ol>
+        </article>
+
+        <aside class="inspector-pane" aria-label="Session inspector">
+          <div class="pane-toolbar">
+            <span>Runtime</span>
+            <span class="status-pill">ready</span>
+          </div>
+          <dl class="metrics">
+            <div><dt>Focus</dt><dd>signal</dd></div>
+            <div><dt>Noise</dt><dd>reduced</dd></div>
+            <div><dt>Output</dt><dd>meaningful work</dd></div>
+          </dl>
+          <div class="mini-terminal">
+            <p><span>$</span> ara session inspect</p>
+            <p class="terminal-ok">workspace loaded</p>
+            <p class="terminal-ok">principles linked</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="principles" id="principles" aria-labelledby="principles-title">
+        <div class="section-title">
+          <p class="eyebrow">01 / Our approach</p>
+          <h2 id="principles-title">Less noise. More signal.</h2>
+        </div>
+        <div class="cards">
+          <article class="feature-card">
+            <span class="file-badge">01</span>
+            <h3>Clarity</h3>
+            <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
+          </article>
+          <article class="feature-card">
+            <span class="file-badge">02</span>
+            <h3>Character</h3>
+            <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
+          </article>
+          <article class="feature-card">
+            <span class="file-badge">03</span>
+            <h3>Care</h3>
+            <p>Built to last, with details that reward attention and respect for the everyday.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="terminal-dock" id="terminal" aria-label="Terminal output">
+        <div class="pane-toolbar">
+          <span>terminal.log</span>
+          <span class="muted">zsh</span>
+        </div>
+        <div class="terminal-grid">
+          <p><span class="prompt">$</span> mono init conversation</p>
+          <p><span class="token-string">Start a conversation</span> -> <a href="mailto:hello@mono.studio">hello@mono.studio</a></p>
+          <p><span class="prompt">$</span> locate team</p>
+          <p>New York · London · Everywhere</p>
+        </div>
+      </section>
+
+      <footer class="statusbar" id="contact">
+        <span>Ara Workspace</span>
+        <span>UTF-8</span>
+        <span>dark-mode</span>
+        <span>© 2024 Mono Studio</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
