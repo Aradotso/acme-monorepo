@@ -3,150 +3,214 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ara workspace noir UI variant.">
-  <title>Ara — Noir Workspace</title>
+  <meta name="description" content="Ara monochrome noir workspace UI concept.">
+  <title>Ara Workspace — Monochrome Noir</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
-  <div class="app-shell">
+  <div class="workspace-shell">
     <aside class="sidebar" aria-label="Workspace navigation">
-      <a class="brand" href="#top" aria-label="Ara home">
-        <span class="brand-mark">A</span>
-        <span>Ara</span>
-      </a>
+      <div class="brand-row">
+        <a class="brand" href="#" aria-label="Ara home">A</a>
+        <button class="icon-button" type="button" aria-label="Create session">+</button>
+      </div>
 
-      <button class="new-session" type="button">New session</button>
-
-      <nav class="nav-stack" aria-label="Primary">
-        <a class="active" href="#workspace">Workspace</a>
-        <a href="#sessions">Sessions</a>
-        <a href="#repo">Repository</a>
-        <a href="#settings">Settings</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a class="nav-item active" href="#">
+          <span class="nav-icon" aria-hidden="true">◆</span>
+          Sessions
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">◼</span>
+          Repos
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">◎</span>
+          Automations
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">◌</span>
+          Memory
+        </a>
       </nav>
 
-      <section class="session-list" id="sessions" aria-labelledby="sessions-title">
-        <h2 id="sessions-title">Active sessions</h2>
-        <a class="session-card active" href="#thread">
-          <span class="session-kicker">Running</span>
-          <strong>Main UI redesign</strong>
-          <span>Branch ui-variants/noir</span>
+      <section class="session-list" aria-labelledby="recent-title">
+        <div class="section-label" id="recent-title">Recent sessions</div>
+        <a class="session-link current" href="#">
+          <span class="session-name">Repo engineer</span>
+          <span class="session-meta">Acme monorepo · live</span>
         </a>
-        <a class="session-card" href="#thread">
-          <span class="session-kicker">Review</span>
-          <strong>Landing polish</strong>
-          <span>Waiting on checks</span>
+        <a class="session-link" href="#">
+          <span class="session-name">Checkout repair</span>
+          <span class="session-meta">2 commits · 24m ago</span>
         </a>
-        <a class="session-card" href="#thread">
-          <span class="session-kicker">Done</span>
-          <strong>Docs cleanup</strong>
-          <span>Merged yesterday</span>
+        <a class="session-link" href="#">
+          <span class="session-name">Landing variants</span>
+          <span class="session-meta">PR opened · yesterday</span>
         </a>
       </section>
 
-      <div class="sidebar-foot">
-        <span class="status-dot"></span>
-        <span>Repo connected</span>
+      <div class="sidebar-footer">
+        <div>
+          <span class="section-label">Connected</span>
+          <strong>GitHub</strong>
+        </div>
+        <span class="status-dot" aria-label="Connected"></span>
       </div>
     </aside>
 
-    <main class="workspace" id="top">
-      <header class="topbar" id="workspace">
+    <main class="main-stage">
+      <header class="topbar">
         <div>
-          <p class="eyebrow">Aradotso / acme-monorepo</p>
-          <h1>Ara workspace</h1>
+          <p class="eyebrow">Ara workspace</p>
+          <h1>Repo engineer for Acme</h1>
         </div>
         <div class="topbar-actions" aria-label="Session actions">
-          <button type="button">Preview</button>
-          <button type="button">Share</button>
+          <button class="ghost-button" type="button">Share</button>
+          <button class="accent-button" type="button">Open PR</button>
         </div>
       </header>
 
-      <section class="command-strip" aria-label="Run summary">
-        <div>
-          <span class="metric">09</span>
-          <span>Files scanned</span>
+      <section class="command-strip" aria-label="Session summary">
+        <div class="command-card">
+          <span class="metric">Branch</span>
+          <strong>ui-variants/noir</strong>
         </div>
-        <div>
-          <span class="metric">03</span>
-          <span>Checks queued</span>
+        <div class="command-card">
+          <span class="metric">Runtime</span>
+          <strong>Static preview</strong>
         </div>
-        <div>
-          <span class="metric accent">Live</span>
-          <span>Browser preview</span>
+        <div class="command-card hot">
+          <span class="metric">Focus</span>
+          <strong>Monochrome noir</strong>
         </div>
       </section>
 
       <div class="work-grid">
-        <section class="thread-panel" id="thread" aria-labelledby="thread-title">
+        <section class="thread-panel" aria-labelledby="thread-title">
           <div class="panel-heading">
             <div>
-              <p class="eyebrow">Session / chat</p>
-              <h2 id="thread-title">Main UI redesign</h2>
+              <p class="eyebrow">Live session</p>
+              <h2 id="thread-title">Chat</h2>
             </div>
-            <span class="run-state">In progress</span>
+            <span class="recording-light">Recording context</span>
           </div>
 
           <article class="message user-message">
-            <p class="message-label">You</p>
-            <p>Redesign the Ara app main workspace as a completely new monochrome noir alternative. Keep the same features and ship it working.</p>
+            <div class="avatar">U</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>User</strong>
+                <time datetime="2026-07-18T00:00:00Z">Today</time>
+              </div>
+              <p>Redesign the Ara app main UI as a completely new standalone alternative. Art direction: monochrome noir, high contrast, cinematic tension.</p>
+            </div>
           </article>
 
           <article class="message ara-message">
-            <p class="message-label">Ara</p>
-            <p>I found the current static UI, created the standalone noir route, and am preserving the workspace structure: session list, chat thread, status, preview, repository context, and final PR flow.</p>
+            <div class="avatar">A</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>Ara</strong>
+                <span>Working</span>
+              </div>
+              <p>I found the existing surface, isolated a new branch, and am building the replacement route without touching the current page.</p>
+              <div class="tool-output">
+                <div class="tool-line">
+                  <span>01</span>
+                  <code>Inspect repo structure</code>
+                  <b>done</b>
+                </div>
+                <div class="tool-line">
+                  <span>02</span>
+                  <code>Create standalone UI variant</code>
+                  <b>active</b>
+                </div>
+                <div class="tool-line">
+                  <span>03</span>
+                  <code>Capture responsive evidence</code>
+                  <b>queued</b>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <ol class="event-stream" aria-label="Run events">
-            <li>
-              <span>01</span>
-              <p><strong>Read repository</strong> Static workspace identified from the checked-out UI surface.</p>
-            </li>
-            <li>
-              <span>02</span>
-              <p><strong>Created variant</strong> New files live under <code>ui-variants/noir</code>.</p>
-            </li>
-            <li>
-              <span>03</span>
-              <p><strong>Visual pass</strong> High-contrast noir treatment with grain, hard shadows, and one red accent.</p>
-            </li>
-          </ol>
+          <article class="message ara-message compact">
+            <div class="avatar">A</div>
+            <div class="message-body">
+              <div class="message-meta">
+                <strong>Ara</strong>
+                <span>Plan</span>
+              </div>
+              <p>Preserve the core workspace content: navigation, repository context, session thread, task state, command actions, and final handoff.</p>
+            </div>
+          </article>
 
           <form class="composer" aria-label="Message composer">
-            <label for="prompt">Message Ara</label>
-            <div>
-              <textarea id="prompt" rows="3" placeholder="Ask for a change, inspect a file, or run a check."></textarea>
-              <button type="button">Send</button>
+            <label class="sr-only" for="message">Message Ara</label>
+            <textarea id="message" rows="3" placeholder="Ask Ara to inspect, change, test, or ship this repo..."></textarea>
+            <div class="composer-footer">
+              <div class="chips" aria-label="Attached context">
+                <span>repo</span>
+                <span>branch</span>
+                <span>browser</span>
+              </div>
+              <button class="send-button" type="button">Send</button>
             </div>
           </form>
         </section>
 
-        <aside class="inspector" id="repo" aria-label="Repository context">
-          <section class="preview-frame">
-            <div class="preview-bar">
-              <span></span><span></span><span></span>
+        <aside class="context-rail" aria-label="Workspace context">
+          <section class="context-panel spotlight">
+            <div class="panel-heading small">
+              <p class="eyebrow">Objective</p>
+              <span class="sharp-mark" aria-hidden="true"></span>
             </div>
-            <div class="preview-scene">
-              <div class="scanline"></div>
-              <p>NOIR UI</p>
-            </div>
+            <h2>Ship a complete UI variant.</h2>
+            <p>Standalone route, responsive code, visual verification, commit, push, and pull request.</p>
           </section>
 
-          <section class="context-block">
-            <p class="eyebrow">Context</p>
-            <h2>Working tree</h2>
-            <ul class="file-list">
-              <li><span>+</span> ui-variants/noir/index.html</li>
-              <li><span>+</span> ui-variants/noir/styles.css</li>
-              <li><span>•</span> mono/index.html</li>
-            </ul>
+          <section class="context-panel">
+            <div class="panel-heading small">
+              <p class="eyebrow">Repository</p>
+              <span>main app</span>
+            </div>
+            <dl class="repo-list">
+              <div>
+                <dt>Owner</dt>
+                <dd>Aradotso</dd>
+              </div>
+              <div>
+                <dt>Repo</dt>
+                <dd>acme-monorepo</dd>
+              </div>
+              <div>
+                <dt>Path</dt>
+                <dd>/ui-variants/noir</dd>
+              </div>
+            </dl>
           </section>
 
-          <section class="context-block">
-            <p class="eyebrow">Next steps</p>
-            <div class="check-row"><span></span>Responsive capture</div>
-            <div class="check-row"><span></span>Commit branch</div>
-            <div class="check-row"><span></span>Open PR</div>
+          <section class="context-panel">
+            <div class="panel-heading small">
+              <p class="eyebrow">Activity</p>
+              <span>now</span>
+            </div>
+            <ol class="activity-list">
+              <li>
+                <span></span>
+                <p><strong>Read</strong> current project files and runbook context.</p>
+              </li>
+              <li>
+                <span></span>
+                <p><strong>Design</strong> new workspace system with noir styling.</p>
+              </li>
+              <li>
+                <span></span>
+                <p><strong>Verify</strong> desktop and mobile browser captures.</p>
+              </li>
+            </ol>
           </section>
         </aside>
       </div>
