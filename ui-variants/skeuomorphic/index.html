@@ -3,148 +3,155 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ara workspace UI concept with tactile skeuomorphic materials.">
-  <title>Ara Workspace — Skeuomorphic Variant</title>
+  <meta name="description" content="Ara workspace skeuomorphic UI variant.">
+  <title>Ara Workspace - Skeuomorphic Tactile</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="bench" aria-label="Ara app workspace">
-    <aside class="satchel" aria-label="Session navigation">
-      <header class="brand-plate">
-        <div class="brand-mark" aria-hidden="true">A</div>
-        <div>
-          <p>Ara</p>
-          <span>Workbench</span>
-        </div>
-      </header>
-
-      <section class="session-block" aria-labelledby="sessions-title">
-        <div class="rail-heading">
-          <h2 id="sessions-title">Sessions</h2>
-          <button type="button" aria-label="Create session">+</button>
-        </div>
-        <nav class="session-list" aria-label="Recent sessions">
-          <a class="session active" href="#thread">
-            <span class="pin"></span>
-            <strong>Acme monorepo</strong>
-            <small>Main UI redesign</small>
-          </a>
-          <a class="session" href="#thread">
-            <span class="pin"></span>
-            <strong>Release checks</strong>
-            <small>CI and deploy notes</small>
-          </a>
-          <a class="session" href="#thread">
-            <span class="pin"></span>
-            <strong>Billing issue</strong>
-            <small>Trace Stripe webhook</small>
-          </a>
-        </nav>
+  <div class="workbench" aria-label="Ara primary workspace">
+    <aside class="satchel" aria-label="Workspace navigation">
+      <section class="brand-badge" aria-label="Ara">
+        <span class="rivet top-left"></span>
+        <span class="rivet top-right"></span>
+        <p class="eyebrow">Ara</p>
+        <h1>Repo engineer</h1>
+        <p class="badge-copy">Acme monorepo session mounted on a tactile command desk.</p>
       </section>
 
-      <section class="tool-drawer" aria-labelledby="tools-title">
-        <h2 id="tools-title">Workspace Tools</h2>
-        <label class="toggle">
-          <input type="checkbox" checked>
-          <span></span>
-          Browser
-        </label>
-        <label class="toggle">
-          <input type="checkbox" checked>
-          <span></span>
-          Terminal
-        </label>
-        <label class="toggle">
-          <input type="checkbox">
-          <span></span>
-          Logs
-        </label>
+      <nav class="sessions" aria-label="Sessions">
+        <a class="session is-active" href="#">
+          <span class="lamp green"></span>
+          <span>
+            <strong>Acme monorepo</strong>
+            <small>Working branch live</small>
+          </span>
+          <em>03</em>
+        </a>
+        <a class="session" href="#">
+          <span class="lamp amber"></span>
+          <span>
+            <strong>Design review</strong>
+            <small>Preview waiting</small>
+          </span>
+          <em>01</em>
+        </a>
+        <a class="session" href="#">
+          <span class="lamp steel"></span>
+          <span>
+            <strong>Release notes</strong>
+            <small>Draft saved</small>
+          </span>
+          <em>12</em>
+        </a>
+      </nav>
+
+      <section class="mode-bank" aria-label="Workspace modes">
+        <button class="switch is-on" type="button" aria-pressed="true"><span></span>Code</button>
+        <button class="switch" type="button" aria-pressed="false"><span></span>Review</button>
+      </section>
+
+      <section class="tool-roll" aria-label="Workspace tools">
+        <button type="button">Files</button>
+        <button type="button">Tests</button>
+        <button type="button">Preview</button>
+        <button type="button">PR</button>
       </section>
     </aside>
 
-    <section class="console" id="thread" aria-label="Chat and execution thread">
-      <header class="top-rail">
-        <div>
-          <p class="eyebrow">Primary workspace</p>
-          <h1>Repo engineer for Aradotso/acme-monorepo</h1>
+    <main class="desk" aria-label="Active session">
+      <header class="instrument-panel">
+        <div class="branch-plate">
+          <p class="eyebrow">Branch</p>
+          <h2>ui-variants/skeuomorphic</h2>
+          <small>Static standalone workspace alternative</small>
         </div>
-        <div class="status-cluster" aria-label="Run status">
-          <span class="meter"><i style="width: 72%"></i></span>
-          <strong>Working</strong>
+        <div class="gauge" aria-label="Verification progress">
+          <span class="needle"></span>
+          <strong>86%</strong>
+          <small>verified</small>
+        </div>
+        <div class="toggle-stack" aria-label="Run settings">
+          <label><input type="checkbox" checked> Browser</label>
+          <label><input type="checkbox" checked> Commit</label>
+          <label><input type="checkbox"> Deploy</label>
         </div>
       </header>
 
-      <div class="work-grid">
-        <section class="thread-panel" aria-labelledby="chat-title">
-          <div class="panel-cap">
-            <h2 id="chat-title">Session Thread</h2>
-            <span>Live</span>
+      <section class="main-grid">
+        <article class="ledger" aria-labelledby="thread-title">
+          <div class="metal-cap">
+            <span class="screw"></span>
+            <h3 id="thread-title">Session thread</h3>
+            <span class="screw"></span>
           </div>
 
-          <article class="message user">
-            <span class="avatar">U</span>
-            <div class="bubble">
-              <p>Redesign the Ara app main UI as a standalone alternative with tactile skeuomorphic materials.</p>
-            </div>
-          </article>
+          <div class="message user">
+            <p class="speaker">Adi</p>
+            <p>Redesign the Ara app main UI as a standalone tactile alternative. Keep the same workspace features, but make the whole thing feel physical.</p>
+          </div>
 
-          <article class="message agent">
-            <span class="avatar">A</span>
-            <div class="bubble">
-              <p>I’ll find the current interface, preserve the workspace functions, and build the variant under <code>ui-variants/skeuomorphic</code>.</p>
-            </div>
-          </article>
+          <div class="message ara">
+            <p class="speaker">Ara</p>
+            <p>I found the static workspace surface and mounted the core session flow here: session list, active chat, command composer, artifacts, verification, preview, and pull request state.</p>
+          </div>
 
-          <article class="message agent">
-            <span class="avatar">A</span>
-            <div class="bubble stitched">
-              <p>Implementation is in progress: branch, responsive layout, visual verification, commit, push, and PR.</p>
-              <ul>
-                <li>Session list and active thread</li>
-                <li>Tool toggles and run status</li>
-                <li>Artifacts, tasks, and composer</li>
-              </ul>
-            </div>
-          </article>
+          <div class="message ara note">
+            <p class="speaker">Ara</p>
+            <p>The interface is rebuilt as stitched leather, brushed metal, felt work mats, inset paper, beveled controls, glowing lamps, and analog progress instruments.</p>
+          </div>
 
-          <form class="composer" aria-label="Message composer">
-            <label for="prompt">Send Ara a task</label>
-            <div>
-              <textarea id="prompt" rows="3">Keep the same features, but make the workspace feel like a physical command bench.</textarea>
+          <form class="composer" aria-label="Send message">
+            <label for="prompt">Command</label>
+            <div class="composer-row">
+              <input id="prompt" name="prompt" value="Ship complete, working, responsive code." aria-label="Command prompt">
               <button type="button">Send</button>
             </div>
           </form>
-        </section>
+        </article>
 
-        <aside class="instrument-panel" aria-label="Run details">
-          <section class="gauge-card" aria-labelledby="run-title">
-            <div class="knob" aria-hidden="true"></div>
-            <div>
-              <p class="eyebrow">Run state</p>
-              <h2 id="run-title">Building UI</h2>
-              <p>Static route, responsive CSS, browser capture, and pull request.</p>
+        <aside class="right-rail" aria-label="Workspace details">
+          <section class="preview-case">
+            <div class="metal-cap">
+              <span class="screw"></span>
+              <h3>Live preview</h3>
+              <span class="screw"></span>
+            </div>
+            <div class="preview-glass" aria-label="Preview miniature">
+              <div class="mini-nav"></div>
+              <div class="mini-thread">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </section>
 
-          <section class="artifact-box" aria-labelledby="artifacts-title">
-            <h2 id="artifacts-title">Artifacts</h2>
-            <a href="#">after-skeuomorphic-desktop.png</a>
-            <a href="#">after-skeuomorphic-mobile.png</a>
-            <a href="#">Pull request draft</a>
+          <section class="artifact-drawer" aria-labelledby="artifact-title">
+            <h3 id="artifact-title">Artifacts</h3>
+            <ul>
+              <li><span class="pin"></span>index.html rewritten</li>
+              <li><span class="pin"></span>styles.css tactile system</li>
+              <li><span class="pin"></span>desktop and mobile shots</li>
+            </ul>
           </section>
 
-          <section class="task-board" aria-labelledby="tasks-title">
-            <h2 id="tasks-title">Checklist</h2>
-            <ol>
-              <li><span></span> Inspect UI source</li>
-              <li><span></span> Create variant route</li>
-              <li><span></span> Verify in browser</li>
-              <li><span></span> Commit and open PR</li>
-            </ol>
+          <section class="controls" aria-label="Agent controls">
+            <h3>Run controls</h3>
+            <div class="knobs">
+              <div class="knob"><span></span><small>Focus</small></div>
+              <div class="knob mid"><span></span><small>Risk</small></div>
+              <div class="knob high"><span></span><small>Speed</small></div>
+            </div>
           </section>
         </aside>
-      </div>
-    </section>
-  </main>
+      </section>
+
+      <footer class="status-strip" aria-label="Repository status">
+        <div><span class="lamp green"></span><strong>Code changed</strong><small>2 files</small></div>
+        <div><span class="lamp green"></span><strong>Visual pass</strong><small>Responsive</small></div>
+        <div><span class="lamp amber"></span><strong>PR package</strong><small>Evidence ready</small></div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
