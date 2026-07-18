@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A dense Ara workspace variant for terminal-speed session work.">
+  <title>Ara Workspace — Pro Dense UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="terminal-grid" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="command-rail" aria-label="Primary workspace navigation">
+      <a class="brand" href="#top" aria-label="Ara workspace home">
+        <span>A</span>
+        <strong>ARA</strong>
+      </a>
+      <nav>
+        <a class="active" href="#session">S01</a>
+        <a href="#ledger">LDG</a>
+        <a href="#queue">RUN</a>
+        <a href="#systems">SYS</a>
+      </nav>
+      <div class="rail-status">
+        <span></span>
+        <p>LIVE</p>
+      </div>
+    </aside>
+
+    <main id="top" class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Independent studio / 2024-now</p>
+          <h1>Make room for what matters.</h1>
+        </div>
+        <div class="market-strip" aria-label="Workspace signal ticker">
+          <span>CLARITY <b>98.4</b> +4.2</span>
+          <span>NOISE <b>03.1</b> -8.8</span>
+          <span>CARE <b>77.0</b> +1.6</span>
+          <span>CHARACTER <b>61.5</b> +3.0</span>
+        </div>
+      </header>
+
+      <section class="workspace-grid" id="session" aria-label="Ara app dense workspace">
+        <section class="panel session-panel" aria-labelledby="session-title">
+          <div class="panel-head">
+            <div>
+              <p class="kicker">Session / Active workspace</p>
+              <h2 id="session-title">Signal brief</h2>
+            </div>
+            <button type="button">⌘K</button>
+          </div>
+
+          <div class="chat-log" aria-label="Session transcript">
+            <article class="message user">
+              <span>USER</span>
+              <p>Shape calm, considered digital experiences for people doing meaningful work.</p>
+            </article>
+            <article class="message ara">
+              <span>ARA</span>
+              <p>Complexity triaged into clear choices, compact status, and fast next actions.</p>
+            </article>
+            <article class="message ara">
+              <span>ARA</span>
+              <p>Quiet does not mean invisible. The interface keeps character visible through rhythm, contrast, and precision.</p>
+            </article>
+          </div>
+
+          <form class="composer" aria-label="Workspace command composer">
+            <label for="command">Command</label>
+            <input id="command" value="/focus less-noise more-signal" aria-label="Command input">
+            <button type="button">Run</button>
+          </form>
+        </section>
+
+        <section class="panel ledger-panel" id="ledger" aria-labelledby="ledger-title">
+          <div class="panel-head compact">
+            <div>
+              <p class="kicker">01 / Our approach</p>
+              <h2 id="ledger-title">Principle ledger</h2>
+            </div>
+            <span class="timestamp">14:32:08Z</span>
+          </div>
+          <div class="data-table" role="table" aria-label="Principles">
+            <div class="row head" role="row">
+              <span>ID</span><span>Signal</span><span>Impact</span><span>State</span>
+            </div>
+            <div class="row" role="row">
+              <span>01</span><strong>Clarity</strong><span>Every choice has a reason</span><mark>READY</mark>
+            </div>
+            <div class="row" role="row">
+              <span>02</span><strong>Character</strong><span>Quiet does not mean invisible</span><mark>LIVE</mark>
+            </div>
+            <div class="row" role="row">
+              <span>03</span><strong>Care</strong><span>Details reward attention</span><mark>LOCKED</mark>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel metrics-panel" aria-labelledby="metrics-title">
+          <div class="panel-head compact">
+            <div>
+              <p class="kicker">Workspace telemetry</p>
+              <h2 id="metrics-title">Operating range</h2>
+            </div>
+          </div>
+          <div class="metrics">
+            <div><span>Focus</span><strong>94%</strong><i style="--w:94%"></i></div>
+            <div><span>Noise</span><strong>06%</strong><i style="--w:6%"></i></div>
+            <div><span>Signal</span><strong>88%</strong><i style="--w:88%"></i></div>
+            <div><span>Care</span><strong>91%</strong><i style="--w:91%"></i></div>
+          </div>
+        </section>
+
+        <section class="panel queue-panel" id="queue" aria-labelledby="queue-title">
+          <div class="panel-head compact">
+            <div>
+              <p class="kicker">Run queue</p>
+              <h2 id="queue-title">Next actions</h2>
+            </div>
+            <span class="count">3</span>
+          </div>
+          <ol class="task-list">
+            <li><span>01</span><p>Turn complexity into simple, useful moments.</p></li>
+            <li><span>02</span><p>Build details that respect the everyday.</p></li>
+            <li><span>03</span><p>Start a conversation when the work needs a human handoff.</p></li>
+          </ol>
+        </section>
+
+        <section class="panel systems-panel" id="systems" aria-labelledby="systems-title">
+          <div class="panel-head compact">
+            <div>
+              <p class="kicker">Contact / Network</p>
+              <h2 id="systems-title">System endpoints</h2>
+            </div>
+          </div>
+          <dl>
+            <div><dt>Email</dt><dd><a href="mailto:hello@mono.studio">hello@mono.studio</a></dd></div>
+            <div><dt>Region</dt><dd>New York · London · Everywhere</dd></div>
+            <div><dt>Studio</dt><dd>Mono Studio © 2024</dd></div>
+          </dl>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
