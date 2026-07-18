@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace cyberpunk UI variant.">
+  <title>Ara Workspace — Cyberpunk Neon Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand glitch" href="#workspace" data-text="ARA">ARA</a>
+    <nav class="primary-nav" aria-label="Workspace navigation">
+      <a href="#sessions">Sessions</a>
+      <a href="#workspace">Chat</a>
+      <a href="#systems">Systems</a>
+    </nav>
+    <div class="topbar-actions" aria-label="Workspace actions">
+      <button type="button" class="icon-button" aria-label="Search workspace">⌕</button>
+      <button type="button" class="status-button">Live run</button>
+    </div>
+  </header>
+
+  <main class="shell" id="workspace">
+    <aside class="session-rail" id="sessions" aria-label="Session list">
+      <div class="panel-heading">
+        <p class="eyebrow">Neural sessions</p>
+        <button type="button" class="mini-button">+</button>
+      </div>
+
+      <div class="profile-chip">
+        <span class="avatar">A</span>
+        <div>
+          <strong>Repo engineer</strong>
+          <span>Aradotso / acme-monorepo</span>
+        </div>
+      </div>
+
+      <ol class="session-list">
+        <li>
+          <a class="session-card active" href="#workspace">
+            <span class="session-code">RUN-2C26</span>
+            <strong>Cyberpunk main UI</strong>
+            <small>Design pass active</small>
+          </a>
+        </li>
+        <li>
+          <a class="session-card" href="#workspace">
+            <span class="session-code">RUN-1F90</span>
+            <strong>Landing alt archive</strong>
+            <small>Static verification</small>
+          </a>
+        </li>
+        <li>
+          <a class="session-card" href="#workspace">
+            <span class="session-code">RUN-0A44</span>
+            <strong>Runbook sync</strong>
+            <small>Environment notes</small>
+          </a>
+        </li>
+      </ol>
+    </aside>
+
+    <section class="chat-deck" aria-labelledby="chat-title">
+      <div class="deck-header">
+        <div>
+          <p class="eyebrow">Primary workspace</p>
+          <h1 id="chat-title" class="glitch" data-text="Session interface">Session interface</h1>
+        </div>
+        <div class="telemetry-strip" aria-label="Run status">
+          <span><b>Branch</b> ui-variants/cyberpunk</span>
+          <span><b>Mode</b> Build</span>
+          <span><b>Signal</b> 98%</span>
+        </div>
+      </div>
+
+      <div class="hud-grid" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="messages" aria-label="Chat transcript">
+        <article class="message user-message">
+          <div class="message-meta">
+            <span>User</span>
+            <time datetime="2026-07-18T00:00:00Z">00:00</time>
+          </div>
+          <p>Redesign the Ara app main UI as a completely new standalone alternative. Art direction: cyberpunk neon.</p>
+        </article>
+
+        <article class="message agent-message">
+          <div class="message-meta">
+            <span>Ara</span>
+            <time datetime="2026-07-18T00:01:00Z">00:01</time>
+          </div>
+          <p>I found the workspace surface, preserved the existing route, and opened a dedicated variant branch. The redesign keeps session context, chat history, run status, evidence, and action controls visible in one dense cockpit.</p>
+          <div class="task-stack" aria-label="Task progress">
+            <span class="task done">Locate UI</span>
+            <span class="task live">Build variant</span>
+            <span class="task">Verify</span>
+            <span class="task">Open PR</span>
+          </div>
+        </article>
+
+        <article class="message tool-message">
+          <div class="message-meta">
+            <span>System trace</span>
+            <time datetime="2026-07-18T00:03:00Z">00:03</time>
+          </div>
+          <pre><code>route: /ui-variants/cyberpunk/
+viewport: responsive
+theme: dark neon / magenta cyan / glitch HUD
+status: compiling visual language</code></pre>
+        </article>
+      </div>
+
+      <form class="composer" aria-label="Message composer">
+        <label class="sr-only" for="prompt">Message Ara</label>
+        <textarea id="prompt" rows="3" placeholder="Transmit next instruction..."></textarea>
+        <div class="composer-actions">
+          <button type="button">Attach</button>
+          <button type="button">Voice</button>
+          <button type="submit" class="send-button">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="system-panel" id="systems" aria-label="Workspace systems">
+      <section class="panel-card">
+        <p class="eyebrow">Run matrix</p>
+        <dl class="metrics">
+          <div><dt>Files</dt><dd>2</dd></div>
+          <div><dt>Checks</dt><dd>4</dd></div>
+          <div><dt>PR</dt><dd>Queued</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel-card">
+        <p class="eyebrow">Evidence feed</p>
+        <div class="evidence-grid">
+          <span>Before desktop</span>
+          <span>Before mobile</span>
+          <span>After desktop</span>
+          <span>After mobile</span>
+        </div>
+      </section>
+
+      <section class="panel-card command-card">
+        <p class="eyebrow">Command core</p>
+        <button type="button">Run tests</button>
+        <button type="button">Capture UI</button>
+        <button type="button">Open pull request</button>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>
