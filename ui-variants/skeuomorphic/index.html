@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace UI concept with tactile skeuomorphic materials.">
+  <title>Ara Workspace — Skeuomorphic Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="bench" aria-label="Ara app workspace">
+    <aside class="satchel" aria-label="Session navigation">
+      <header class="brand-plate">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div>
+          <p>Ara</p>
+          <span>Workbench</span>
+        </div>
+      </header>
+
+      <section class="session-block" aria-labelledby="sessions-title">
+        <div class="rail-heading">
+          <h2 id="sessions-title">Sessions</h2>
+          <button type="button" aria-label="Create session">+</button>
+        </div>
+        <nav class="session-list" aria-label="Recent sessions">
+          <a class="session active" href="#thread">
+            <span class="pin"></span>
+            <strong>Acme monorepo</strong>
+            <small>Main UI redesign</small>
+          </a>
+          <a class="session" href="#thread">
+            <span class="pin"></span>
+            <strong>Release checks</strong>
+            <small>CI and deploy notes</small>
+          </a>
+          <a class="session" href="#thread">
+            <span class="pin"></span>
+            <strong>Billing issue</strong>
+            <small>Trace Stripe webhook</small>
+          </a>
+        </nav>
+      </section>
+
+      <section class="tool-drawer" aria-labelledby="tools-title">
+        <h2 id="tools-title">Workspace Tools</h2>
+        <label class="toggle">
+          <input type="checkbox" checked>
+          <span></span>
+          Browser
+        </label>
+        <label class="toggle">
+          <input type="checkbox" checked>
+          <span></span>
+          Terminal
+        </label>
+        <label class="toggle">
+          <input type="checkbox">
+          <span></span>
+          Logs
+        </label>
+      </section>
+    </aside>
+
+    <section class="console" id="thread" aria-label="Chat and execution thread">
+      <header class="top-rail">
+        <div>
+          <p class="eyebrow">Primary workspace</p>
+          <h1>Repo engineer for Aradotso/acme-monorepo</h1>
+        </div>
+        <div class="status-cluster" aria-label="Run status">
+          <span class="meter"><i style="width: 72%"></i></span>
+          <strong>Working</strong>
+        </div>
+      </header>
+
+      <div class="work-grid">
+        <section class="thread-panel" aria-labelledby="chat-title">
+          <div class="panel-cap">
+            <h2 id="chat-title">Session Thread</h2>
+            <span>Live</span>
+          </div>
+
+          <article class="message user">
+            <span class="avatar">U</span>
+            <div class="bubble">
+              <p>Redesign the Ara app main UI as a standalone alternative with tactile skeuomorphic materials.</p>
+            </div>
+          </article>
+
+          <article class="message agent">
+            <span class="avatar">A</span>
+            <div class="bubble">
+              <p>I’ll find the current interface, preserve the workspace functions, and build the variant under <code>ui-variants/skeuomorphic</code>.</p>
+            </div>
+          </article>
+
+          <article class="message agent">
+            <span class="avatar">A</span>
+            <div class="bubble stitched">
+              <p>Implementation is in progress: branch, responsive layout, visual verification, commit, push, and PR.</p>
+              <ul>
+                <li>Session list and active thread</li>
+                <li>Tool toggles and run status</li>
+                <li>Artifacts, tasks, and composer</li>
+              </ul>
+            </div>
+          </article>
+
+          <form class="composer" aria-label="Message composer">
+            <label for="prompt">Send Ara a task</label>
+            <div>
+              <textarea id="prompt" rows="3">Keep the same features, but make the workspace feel like a physical command bench.</textarea>
+              <button type="button">Send</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="instrument-panel" aria-label="Run details">
+          <section class="gauge-card" aria-labelledby="run-title">
+            <div class="knob" aria-hidden="true"></div>
+            <div>
+              <p class="eyebrow">Run state</p>
+              <h2 id="run-title">Building UI</h2>
+              <p>Static route, responsive CSS, browser capture, and pull request.</p>
+            </div>
+          </section>
+
+          <section class="artifact-box" aria-labelledby="artifacts-title">
+            <h2 id="artifacts-title">Artifacts</h2>
+            <a href="#">after-skeuomorphic-desktop.png</a>
+            <a href="#">after-skeuomorphic-mobile.png</a>
+            <a href="#">Pull request draft</a>
+          </section>
+
+          <section class="task-board" aria-labelledby="tasks-title">
+            <h2 id="tasks-title">Checklist</h2>
+            <ol>
+              <li><span></span> Inspect UI source</li>
+              <li><span></span> Create variant route</li>
+              <li><span></span> Verify in browser</li>
+              <li><span></span> Commit and open PR</li>
+            </ol>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
