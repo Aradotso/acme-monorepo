@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace UI variant in a glossy Y2K chrome and aero style.">
+  <title>Ara Workspace — Y2K Chrome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aero-sky" aria-hidden="true">
+    <span class="flare flare-one"></span>
+    <span class="flare flare-two"></span>
+    <span class="bubble bubble-one"></span>
+    <span class="bubble bubble-two"></span>
+    <span class="bubble bubble-three"></span>
+  </div>
+
+  <main class="workspace" aria-label="Ara workspace">
+    <aside class="sidebar" aria-label="Sessions">
+      <a class="brand" href="#top" aria-label="Ara home">
+        <span class="brand-orb">A</span>
+        <span>
+          <strong>Ara</strong>
+          <small>workspace</small>
+        </span>
+      </a>
+
+      <button class="chrome-button new-session" type="button">New session</button>
+
+      <nav class="session-list" aria-label="Session list">
+        <a class="session active" href="#top">
+          <span class="session-glow"></span>
+          <strong>Make room for what matters</strong>
+          <small>Independent studio / 2024-now</small>
+        </a>
+        <a class="session" href="#principles">
+          <span class="session-glow"></span>
+          <strong>Less noise. More signal.</strong>
+          <small>Approach review</small>
+        </a>
+        <a class="session" href="#contact">
+          <span class="session-glow"></span>
+          <strong>Start a conversation</strong>
+          <small>Contact handoff</small>
+        </a>
+      </nav>
+
+      <div class="status-pod" aria-label="Workspace status">
+        <span class="status-light"></span>
+        <div>
+          <strong>Ready</strong>
+          <small>3 panels synced</small>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat-shell" id="top" aria-labelledby="workspace-title">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Primary in-app workspace</p>
+          <h1 id="workspace-title">Make room for <span>what matters.</span></h1>
+        </div>
+        <div class="window-controls" aria-label="Window controls">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <div class="main-grid">
+        <section class="conversation panel" aria-label="Conversation">
+          <div class="panel-bar">
+            <span>Session / Chat</span>
+            <span class="pill">Live</span>
+          </div>
+
+          <article class="message user-message">
+            <div class="avatar">U</div>
+            <div class="message-card">
+              <p>Shape a calm, considered digital experience for people doing meaningful work.</p>
+            </div>
+          </article>
+
+          <article class="message ara-message">
+            <div class="avatar">A</div>
+            <div class="message-card">
+              <p>Every choice has a reason. I will turn the complexity into simple, useful moments while keeping the original content intact.</p>
+              <div class="mini-actions">
+                <button type="button">Apply</button>
+                <button type="button">Review</button>
+                <button type="button">Share</button>
+              </div>
+            </div>
+          </article>
+
+          <section class="principles-strip" id="principles" aria-label="Principles">
+            <article>
+              <span>01</span>
+              <h2>Clarity</h2>
+              <p>Complex work becomes simple, useful moments.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h2>Character</h2>
+              <p>Quiet still carries a distinctive point of view.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h2>Care</h2>
+              <p>Details reward attention and respect the everyday.</p>
+            </article>
+          </section>
+
+          <form class="composer" aria-label="Message composer">
+            <label for="prompt">Message Ara</label>
+            <div>
+              <input id="prompt" type="text" value="Less noise. More signal." aria-label="Prompt">
+              <button class="send-button" type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="inspector" aria-label="Session inspector">
+          <section class="panel">
+            <div class="panel-bar">
+              <span>Run details</span>
+              <span class="pill">Chrome</span>
+            </div>
+            <div class="meter">
+              <span style="width: 72%"></span>
+            </div>
+            <dl class="details">
+              <div>
+                <dt>Approach</dt>
+                <dd>Less noise</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>More signal</dd>
+              </div>
+              <div>
+                <dt>Mode</dt>
+                <dd>Considered</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="panel contact-card" id="contact">
+            <p class="eyebrow">Start a conversation</p>
+            <a href="mailto:hello@mono.studio">hello@mono.studio</a>
+            <small>New York · London · Everywhere</small>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
