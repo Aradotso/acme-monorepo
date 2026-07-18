@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cosmic Beans coffee — small-batch roasts for curious minds.">
+  <title>Cosmic Beans — Coffee for curious minds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="orbit orbit-one" aria-hidden="true"></div>
+  <div class="orbit orbit-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Cosmic Beans home">
+      <span class="wordmark-mark" aria-hidden="true">✦</span>
+      <span>Cosmic<br>Beans</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#story">Our orbit</a>
+      <a class="nav-join" href="#join">Join the crew <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Small batch / Big universe</p>
+        <h1 id="hero-title">Good coffee<br>for <em>curious</em><br>minds.</h1>
+        <p class="tagline">Roasted beyond the ordinary.<br>Find your daily dose of wonder.</p>
+        <a class="scroll-cue" href="#join"><span class="scroll-line" aria-hidden="true"></span> Explore the orbit</a>
+      </div>
+
+      <div class="coffee-system" aria-label="A cosmic coffee bean in orbit">
+        <div class="planet-glow" aria-hidden="true"></div>
+        <div class="bean-planet">
+          <span class="bean-highlight" aria-hidden="true"></span>
+          <span class="bean-seam" aria-hidden="true"></span>
+        </div>
+        <div class="moon moon-one" aria-hidden="true"></div>
+        <div class="moon moon-two" aria-hidden="true"></div>
+        <span class="system-label label-top">Origin: Everywhere</span>
+        <span class="system-label label-bottom">Roast level: ∞</span>
+      </div>
+    </section>
+
+    <section class="join-section" id="join" aria-labelledby="join-title">
+      <div class="join-intro" id="story">
+        <p class="eyebrow">02 / Join the orbit</p>
+        <h2 id="join-title">Stay in the<br><em>loop.</em></h2>
+        <p>New drops, field notes, and a little more magic in your inbox. No spam, just good things brewing.</p>
+      </div>
+
+      <form class="signup-form" action="#join" method="get">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Nova Star" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="you@theuniverse.com" required>
+        </div>
+        <button type="submit">Join the crew <span aria-hidden="true">↗</span></button>
+        <p class="form-note"><span aria-hidden="true">✦</span> We respect your orbit. Unsubscribe anytime.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Cosmic Beans © 2024</span>
+    <span>Made on Earth · Shipped across the stars</span>
+  </footer>
+</body>
+</html>
