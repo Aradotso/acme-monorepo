@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace UI concept in a Swiss international typographic style.">
+  <title>Ara Workspace - Swiss UI Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail" aria-label="Workspace navigation">
+      <a class="brand" href="#top" aria-label="Ara workspace home">
+        <span>Ara</span>
+        <strong>01</strong>
+      </a>
+      <nav class="rail-nav" aria-label="Primary">
+        <a class="active" href="#sessions">Sessions</a>
+        <a href="#files">Files</a>
+        <a href="#deploys">Deploys</a>
+        <a href="#settings">Settings</a>
+      </nav>
+      <button class="new-session" type="button">New session</button>
+    </aside>
+
+    <main class="workspace" id="top">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Acme monorepo / Main workspace</p>
+          <h1>Repo engineer session</h1>
+        </div>
+        <div class="topbar-meta" aria-label="Session metadata">
+          <span>Branch: ui-variants/swiss</span>
+          <span>Model: Ara agent</span>
+          <span class="live">Running</span>
+        </div>
+      </header>
+
+      <section class="workgrid" aria-label="Ara application workspace">
+        <section class="session-list" id="sessions" aria-labelledby="sessions-title">
+          <div class="panel-heading">
+            <p class="kicker">Queue</p>
+            <h2 id="sessions-title">Sessions</h2>
+          </div>
+          <article class="session-card selected">
+            <span class="index">001</span>
+            <div>
+              <h3>Redesign main UI</h3>
+              <p>Swiss / international typographic direction.</p>
+            </div>
+            <span class="state">Active</span>
+          </article>
+          <article class="session-card">
+            <span class="index">002</span>
+            <div>
+              <h3>Inspect build output</h3>
+              <p>Static server verification and capture.</p>
+            </div>
+            <span class="state muted">Idle</span>
+          </article>
+          <article class="session-card">
+            <span class="index">003</span>
+            <div>
+              <h3>Open pull request</h3>
+              <p>Commit, push, and attach visual evidence.</p>
+            </div>
+            <span class="state muted">Next</span>
+          </article>
+
+          <div class="metrics" aria-label="Workspace metrics">
+            <div>
+              <span>18</span>
+              <p>Files read</p>
+            </div>
+            <div>
+              <span>04</span>
+              <p>Checks</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="conversation" aria-labelledby="conversation-title">
+          <div class="panel-heading chat-heading">
+            <div>
+              <p class="kicker">Thread</p>
+              <h2 id="conversation-title">Session chat</h2>
+            </div>
+            <button class="icon-button" type="button" aria-label="More session actions">+</button>
+          </div>
+
+          <div class="message user">
+            <p class="speaker">User</p>
+            <p>Redesign the Ara app main UI as a standalone alternative. Keep the same features and content, but make the visual language Swiss: strict grid, Helvetica-style type, generous whitespace, red accent, objective clarity.</p>
+          </div>
+          <div class="message agent">
+            <p class="speaker">Ara</p>
+            <p>I found the existing rendered surface, created a new variant branch, and am building a responsive workspace interface with session navigation, chat, status, files, and artifacts.</p>
+          </div>
+          <div class="message agent status-message">
+            <p class="speaker">Ara</p>
+            <div class="status-grid">
+              <span>Plan</span>
+              <strong>Implement standalone UI</strong>
+              <span>Validation</span>
+              <strong>Desktop and mobile capture</strong>
+              <span>Delivery</span>
+              <strong>Commit, push, PR</strong>
+            </div>
+          </div>
+
+          <form class="composer" aria-label="Message composer">
+            <label for="prompt">Message Ara</label>
+            <textarea id="prompt" rows="3">Refine the workspace and verify it in-browser.</textarea>
+            <div class="composer-actions">
+              <button type="button">Attach</button>
+              <button type="button">Run</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="context-panel" aria-label="Session context">
+          <section class="run-card">
+            <div class="panel-heading">
+              <p class="kicker">Run state</p>
+              <h2>Objective clarity</h2>
+            </div>
+            <ol class="run-list">
+              <li><span></span>Locate UI surface</li>
+              <li><span></span>Create variant branch</li>
+              <li><span></span>Build Swiss workspace</li>
+              <li><span></span>Verify and ship</li>
+            </ol>
+          </section>
+
+          <section class="files-card" id="files">
+            <div class="panel-heading">
+              <p class="kicker">Changed files</p>
+              <h2>Working set</h2>
+            </div>
+            <a href="index.html">ui-variants/swiss/index.html</a>
+            <a href="styles.css">ui-variants/swiss/styles.css</a>
+          </section>
+
+          <section class="artifact-card" id="deploys">
+            <p class="kicker">Artifact</p>
+            <h2>Responsive preview</h2>
+            <div class="artifact-frame" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
