@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace skeuomorphic UI variant.">
+  <title>Ara Workspace — Skeuomorphic Tactile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bench" aria-label="Ara workspace">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand-plate">
+        <div class="rivets" aria-hidden="true"><span></span><span></span></div>
+        <p class="eyebrow">Ara</p>
+        <h1>Workspace</h1>
+      </div>
+
+      <nav class="session-list" aria-label="Sessions">
+        <a class="session active" href="#">
+          <span class="session-light"></span>
+          <span>
+            <strong>Acme monorepo</strong>
+            <small>Repo engineer active</small>
+          </span>
+        </a>
+        <a class="session" href="#">
+          <span class="session-light amber"></span>
+          <span>
+            <strong>Design review</strong>
+            <small>Waiting for preview</small>
+          </span>
+        </a>
+        <a class="session" href="#">
+          <span class="session-light steel"></span>
+          <span>
+            <strong>Release notes</strong>
+            <small>Draft saved</small>
+          </span>
+        </a>
+      </nav>
+
+      <div class="toggle-panel" aria-label="Workspace modes">
+        <button class="toggle on" type="button" aria-pressed="true">
+          <span></span>
+          Code
+        </button>
+        <button class="toggle" type="button" aria-pressed="false">
+          <span></span>
+          Review
+        </button>
+      </div>
+    </aside>
+
+    <main class="console">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Branch</p>
+          <h2>ui-variants/skeuomorphic</h2>
+        </div>
+        <div class="meter" aria-label="Session progress">
+          <span class="meter-needle"></span>
+          <strong>73%</strong>
+          <small>verified</small>
+        </div>
+      </header>
+
+      <section class="workspace-grid">
+        <article class="chat-ledger" aria-labelledby="chat-title">
+          <div class="panel-cap">
+            <span class="screw"></span>
+            <h3 id="chat-title">Session thread</h3>
+            <span class="screw"></span>
+          </div>
+
+          <div class="message user">
+            <p class="speaker">Adi</p>
+            <p>Redesign the Ara app main UI as a standalone tactile alternative. Keep the same workspace features, but make the whole thing feel physical.</p>
+          </div>
+
+          <div class="message ara">
+            <p class="speaker">Ara</p>
+            <p>I found the available static UI surface and created a separate variant for the in-app workspace: session list, active chat, command composer, artifacts, verification, and repo status.</p>
+          </div>
+
+          <div class="message ara pinned">
+            <p class="speaker">Ara</p>
+            <p>Working branch is mounted on stitched leather, brushed metal, felt panels, inset paper, beveled buttons, and physical indicator lights.</p>
+          </div>
+
+          <form class="composer" aria-label="Send message">
+            <label for="prompt">Command</label>
+            <div class="composer-row">
+              <input id="prompt" name="prompt" value="Ship complete, working, responsive code." aria-label="Command prompt">
+              <button type="button">Send</button>
+            </div>
+          </form>
+        </article>
+
+        <aside class="right-rail" aria-label="Workspace details">
+          <section class="artifact-card">
+            <div class="panel-cap">
+              <span class="screw"></span>
+              <h3>Preview</h3>
+              <span class="screw"></span>
+            </div>
+            <div class="artifact-window">
+              <div class="mini-sidebar"></div>
+              <div class="mini-chat">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="status-card">
+            <h3>Run controls</h3>
+            <div class="knob-row" aria-label="Agent settings">
+              <div class="knob"><span></span><small>Focus</small></div>
+              <div class="knob"><span></span><small>Risk</small></div>
+              <div class="knob"><span></span><small>Speed</small></div>
+            </div>
+            <ul class="checklist">
+              <li><span></span> Code changed</li>
+              <li><span></span> Visual pass</li>
+              <li><span></span> PR ready</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
