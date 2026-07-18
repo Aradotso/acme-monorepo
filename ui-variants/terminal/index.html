@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara terminal workspace UI variant.">
+  <title>Ara Workspace — Terminal Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <main class="terminal-shell" aria-label="Ara terminal workspace">
+    <header class="topbar">
+      <a class="brand" href="#workspace" aria-label="Ara workspace home">
+        <span class="prompt">ARA</span><span class="cursor"></span>
+      </a>
+      <nav aria-label="Workspace controls">
+        <a href="#sessions">Sessions</a>
+        <a href="#console">Console</a>
+        <a href="#artifacts">Artifacts</a>
+      </nav>
+      <div class="system-readout" aria-label="System status">
+        <span>main online</span>
+        <span>latency 24ms</span>
+      </div>
+    </header>
+
+    <section class="workspace" id="workspace">
+      <aside class="session-rail panel" id="sessions" aria-label="Session list">
+        <div class="panel-title">/sessions</div>
+        <button class="session active" type="button">
+          <span class="session-id">#02a01677</span>
+          <span class="session-copy">Redesign main UI</span>
+        </button>
+        <button class="session" type="button">
+          <span class="session-id">#build</span>
+          <span class="session-copy">Static preview</span>
+        </button>
+        <button class="session" type="button">
+          <span class="session-id">#review</span>
+          <span class="session-copy">Visual evidence</span>
+        </button>
+        <div class="rail-meter" aria-label="Workspace progress">
+          <span>context</span>
+          <div><i style="width: 78%"></i></div>
+          <span>78%</span>
+        </div>
+      </aside>
+
+      <section class="chat-panel panel" aria-labelledby="chat-title">
+        <div class="panel-title" id="chat-title">/thread/aracli</div>
+        <div class="message user">
+          <p class="meta">user@workspace</p>
+          <p>Redesign the Ara app MAIN UI as a completely new standalone alternative. Art direction: terminal / TUI, green phosphor CRT, monospace grid, ASCII borders, blinking cursor, scanline texture.</p>
+        </div>
+        <div class="message ara">
+          <p class="meta">ara@agent</p>
+          <p>Reading the existing surface, keeping the same session workflow, and rebuilding the visual language as a high-contrast command environment.</p>
+          <pre aria-label="Action log">[ok] inspect repository
+[ok] branch ui-variants/terminal
+[run] compose terminal workspace
+[next] capture evidence + open PR</pre>
+        </div>
+        <form class="composer" id="console" aria-label="Command composer">
+          <label for="command">command</label>
+          <div class="input-line">
+            <span aria-hidden="true">$</span>
+            <input id="command" name="command" value="ship --variant terminal --responsive" aria-label="Command input">
+            <button type="button">send</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="side-stack">
+        <section class="panel status-panel" aria-labelledby="status-title">
+          <div class="panel-title" id="status-title">/status</div>
+          <dl>
+            <div><dt>branch</dt><dd>ui-variants/terminal</dd></div>
+            <div><dt>mode</dt><dd>phosphor crt</dd></div>
+            <div><dt>viewport</dt><dd>responsive</dd></div>
+            <div><dt>state</dt><dd class="hot">active</dd></div>
+          </dl>
+        </section>
+        <section class="panel artifacts" id="artifacts" aria-labelledby="artifacts-title">
+          <div class="panel-title" id="artifacts-title">/artifacts</div>
+          <ul>
+            <li><span>index.html</span><b>ready</b></li>
+            <li><span>styles.css</span><b>ready</b></li>
+            <li><span>desktop.png</span><b>queued</b></li>
+            <li><span>mobile.png</span><b>queued</b></li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
