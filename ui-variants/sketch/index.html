@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A hand-drawn Ara workspace concept.">
+  <title>Ara Sketch Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="workspace-shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <a class="brand" href="#top" aria-label="Ara workspace home">
+        <span class="brand-mark">A</span>
+        <span>Ara</span>
+      </a>
+
+      <nav class="sketch-nav">
+        <a class="is-active" href="#session">Session</a>
+        <a href="#repo">Repo</a>
+        <a href="#activity">Activity</a>
+        <a href="#settings">Settings</a>
+      </nav>
+
+      <section class="sticky-note yellow">
+        <p class="note-kicker">Current goal</p>
+        <strong>Redesign the main workspace UI</strong>
+        <span>Keep chat, files, tasks, preview, and source control visible.</span>
+      </section>
+
+      <section class="mini-card">
+        <p class="note-kicker">Branch</p>
+        <code>ui-variants/sketch</code>
+      </section>
+    </aside>
+
+    <main class="app-board" id="top">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Primary in-app workspace</p>
+          <h1>Ara session with a whiteboard soul</h1>
+        </div>
+        <div class="top-actions" aria-label="Session actions">
+          <button type="button">Share</button>
+          <button type="button" class="primary-action">Open PR</button>
+        </div>
+      </header>
+
+      <section class="hero-strip" aria-label="Session status">
+        <div class="status-pill">
+          <span class="dot"></span>
+          Working
+        </div>
+        <p>Sketchy, tactile, and human while keeping the full engineering workspace in reach.</p>
+        <span class="doodle-arrow" aria-hidden="true">↝</span>
+      </section>
+
+      <div class="workspace-grid">
+        <section class="chat-panel panel" id="session" aria-labelledby="chat-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Thread</p>
+              <h2 id="chat-title">Session chat</h2>
+            </div>
+            <span class="hand-label">live notes</span>
+          </div>
+
+          <article class="message user-message">
+            <p class="message-meta">Adi · 09:16</p>
+            <p>Redesign the Ara app main UI as a hand-drawn sketch / whiteboard alternative.</p>
+          </article>
+
+          <article class="message ara-message">
+            <p class="message-meta">Ara · working</p>
+            <p>I found the static workspace surface, created a new branch, and am building a standalone sketch variant without replacing the current UI.</p>
+          </article>
+
+          <article class="message ara-message pinned">
+            <p class="message-meta">Ara · next</p>
+            <p>Verify responsive layout, capture before and after screenshots, then commit, push, and open the PR.</p>
+          </article>
+
+          <form class="composer" aria-label="Message composer">
+            <label for="prompt">Ask Ara</label>
+            <div class="composer-row">
+              <input id="prompt" type="text" value="Make it warmer, messier, and still useful">
+              <button type="button">Send</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="side-stack" aria-label="Workspace context">
+          <article class="panel" id="repo">
+            <div class="panel-heading compact">
+              <h2>Repo map</h2>
+              <span class="scribble">3 files</span>
+            </div>
+            <ul class="file-list">
+              <li><span>mono/</span><em>current site</em></li>
+              <li><span>ui-variants/sketch/</span><em>new app UI</em></li>
+              <li><span>README.md</span><em>project note</em></li>
+            </ul>
+          </article>
+
+          <article class="panel task-panel" id="activity">
+            <div class="panel-heading compact">
+              <h2>Plan</h2>
+              <span class="scribble">marker pass</span>
+            </div>
+            <ol class="task-list">
+              <li class="done">Find the existing UI</li>
+              <li class="done">Create standalone branch</li>
+              <li class="active">Build sketch workspace</li>
+              <li>Verify and ship</li>
+            </ol>
+          </article>
+
+          <article class="sticky-note pink">
+            <p class="note-kicker">Design language</p>
+            <strong>Pencil borders, marker swipes, sticky notes, wobbly headings.</strong>
+            <span>Everything should feel annotated by a person.</span>
+          </article>
+        </section>
+      </div>
+
+      <section class="bottom-grid" aria-label="Workspace tools">
+        <article class="panel preview-panel">
+          <div class="browser-doodle">
+            <span></span><span></span><span></span>
+          </div>
+          <h2>Live preview</h2>
+          <p>The preview area keeps product context visible while the thread stays central.</p>
+          <div class="preview-lines" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h2>Source control</h2>
+          <p class="commit-copy">One focused commit, co-authored, pushed to the sketch variant branch.</p>
+          <div class="marker-row">
+            <span>Commit</span>
+            <span>Push</span>
+            <span>PR</span>
+          </div>
+        </article>
+
+        <article class="panel" id="settings">
+          <h2>Controls</h2>
+          <div class="toggle-list">
+            <label><input type="checkbox" checked> Browser evidence</label>
+            <label><input type="checkbox" checked> Responsive layout</label>
+            <label><input type="checkbox"> Dark marker mode</label>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
