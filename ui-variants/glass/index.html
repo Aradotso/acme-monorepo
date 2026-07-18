@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace glassmorphism UI variant.">
+  <title>Ara Workspace - Glass UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+  <div class="aurora aurora-three"></div>
+
+  <main class="workspace" aria-label="Ara workspace">
+    <aside class="sidebar glass-panel" aria-label="Sessions">
+      <div class="brand-row">
+        <a class="brand" href="#workspace" aria-label="Ara home">
+          <span class="brand-mark">A</span>
+          <span>Ara</span>
+        </a>
+        <button class="icon-button" type="button" aria-label="New session">+</button>
+      </div>
+
+      <div class="search-field">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" value="" aria-label="Search sessions" placeholder="Search sessions">
+      </div>
+
+      <nav class="session-nav" aria-label="Session list">
+        <a class="session-card active" href="#workspace">
+          <span class="session-status live"></span>
+          <span>
+            <strong>Repo engineer</strong>
+            <small>Redesign main workspace UI</small>
+          </span>
+        </a>
+        <a class="session-card" href="#workspace">
+          <span class="session-status"></span>
+          <span>
+            <strong>Landing page variant</strong>
+            <small>Japanese minimal concept</small>
+          </span>
+        </a>
+        <a class="session-card" href="#workspace">
+          <span class="session-status"></span>
+          <span>
+            <strong>IDE dark preview</strong>
+            <small>Standalone route shipped</small>
+          </span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div>
+          <p class="label">Workspace</p>
+          <strong>Aradotso/acme-monorepo</strong>
+        </div>
+        <span class="sync-pill">Synced</span>
+      </div>
+    </aside>
+
+    <section class="main-panel glass-panel" id="workspace" aria-labelledby="workspace-title">
+      <header class="topbar">
+        <div>
+          <p class="label">Active session</p>
+          <h1 id="workspace-title">Repo engineer for Aradotso/acme-monorepo</h1>
+        </div>
+        <div class="topbar-actions" aria-label="Session actions">
+          <button class="ghost-button" type="button">Preview</button>
+          <button class="primary-button" type="button">Open PR</button>
+        </div>
+      </header>
+
+      <section class="status-strip" aria-label="Session status">
+        <article>
+          <span class="metric-dot blue"></span>
+          <div>
+            <p class="label">Branch</p>
+            <strong>ui-variants/glass</strong>
+          </div>
+        </article>
+        <article>
+          <span class="metric-dot green"></span>
+          <div>
+            <p class="label">State</p>
+            <strong>Implementing</strong>
+          </div>
+        </article>
+        <article>
+          <span class="metric-dot violet"></span>
+          <div>
+            <p class="label">Surface</p>
+            <strong>Main workspace</strong>
+          </div>
+        </article>
+      </section>
+
+      <div class="chat-shell">
+        <section class="conversation" aria-label="Conversation">
+          <article class="message user-message">
+            <div class="message-meta">
+              <strong>User</strong>
+              <span>9:42 AM</span>
+            </div>
+            <p>Redesign the Ara app MAIN UI as a completely new standalone alternative. Art direction: glassmorphism.</p>
+          </article>
+
+          <article class="message agent-message">
+            <div class="message-meta">
+              <strong>Ara</strong>
+              <span>Now</span>
+            </div>
+            <p>I found the available static workspace surface and created a new standalone route that preserves the session, chat, status, action, and context patterns while shifting the interface into frosted translucent panels and luminous layered depth.</p>
+            <div class="tool-stack" aria-label="Recent work">
+              <div>
+                <span class="tool-icon">✓</span>
+                <span>Created glass workspace variant</span>
+              </div>
+              <div>
+                <span class="tool-icon">↗</span>
+                <span>Preparing browser verification</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <form class="composer" aria-label="Message composer">
+          <textarea aria-label="Message Ara" placeholder="Ask Ara to inspect, edit, run, or ship something..."></textarea>
+          <div class="composer-actions">
+            <button class="chip" type="button">Attach</button>
+            <button class="chip" type="button">Mode: Code</button>
+            <button class="send-button" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <aside class="inspector glass-panel" aria-label="Workspace context">
+      <section class="context-block">
+        <div class="panel-heading">
+          <p class="label">Context</p>
+          <button class="icon-button compact" type="button" aria-label="Refresh context">↻</button>
+        </div>
+        <div class="repo-card">
+          <span class="repo-icon">⌘</span>
+          <div>
+            <strong>acme-monorepo</strong>
+            <small>Fresh checkout · static app</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="context-block">
+        <p class="label">Changed files</p>
+        <ul class="file-list">
+          <li><span>HTML</span> ui-variants/glass/index.html</li>
+          <li><span>CSS</span> ui-variants/glass/styles.css</li>
+        </ul>
+      </section>
+
+      <section class="context-block">
+        <p class="label">Run log</p>
+        <ol class="timeline">
+          <li>
+            <span></span>
+            <p>Branch created</p>
+          </li>
+          <li>
+            <span></span>
+            <p>UI variant implemented</p>
+          </li>
+          <li>
+            <span></span>
+            <p>Responsive verification pending</p>
+          </li>
+        </ol>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>
