@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Memphis 80s alternative for the Ara workspace UI.">
+  <title>Ara Workspace — Memphis Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <aside class="workspace-rail" aria-label="Workspace navigation">
+      <a class="brand-stamp" href="#top" aria-label="Ara home">
+        <span>A</span>
+        <i aria-hidden="true"></i>
+      </a>
+      <nav class="rail-nav" aria-label="Primary navigation">
+        <a class="active" href="#session" aria-label="Current session">◆</a>
+        <a href="#principles" aria-label="Principles">●</a>
+        <a href="#contact" aria-label="Contact">▲</a>
+      </nav>
+      <div class="rail-ticket" aria-hidden="true">1984</div>
+    </aside>
+
+    <main class="app-workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Independent studio / 2024-now</p>
+          <h1>Ara workspace</h1>
+        </div>
+        <div class="topbar-actions" aria-label="Workspace actions">
+          <button type="button">Share</button>
+          <button type="button">Export</button>
+        </div>
+      </header>
+
+      <section class="session-grid" id="session" aria-labelledby="session-title">
+        <div class="session-panel hero-panel">
+          <div class="confetti-field" aria-hidden="true">
+            <span class="shape zig"></span>
+            <span class="shape dot"></span>
+            <span class="shape bean"></span>
+            <span class="shape ring"></span>
+            <span class="shape slash"></span>
+          </div>
+          <p class="eyebrow">Main session / live workspace</p>
+          <h2 id="session-title">Make room<br>for <em>what matters.</em></h2>
+          <p class="intro">We shape calm, considered digital experiences for people doing meaningful work.</p>
+          <a class="jump-button" href="#principles" aria-label="Explore our principles">
+            <span>Explore</span>
+            <b aria-hidden="true">↓</b>
+          </a>
+        </div>
+
+        <aside class="session-panel chat-panel" aria-label="Session conversation">
+          <div class="panel-header">
+            <span class="status-light"></span>
+            <p>Session feed</p>
+          </div>
+          <ol class="message-stack">
+            <li class="message user">
+              <span>You</span>
+              <p>Turn the noise down, keep the signal.</p>
+            </li>
+            <li class="message ara">
+              <span>Ara</span>
+              <p>Every choice has a reason. Complexity becomes useful moments.</p>
+            </li>
+            <li class="message user">
+              <span>You</span>
+              <p>Make it distinctive, but still focused.</p>
+            </li>
+          </ol>
+          <form class="composer" aria-label="Message composer">
+            <label for="prompt">Message Ara</label>
+            <div>
+              <input id="prompt" type="text" value="Built to last, with details that reward attention." readonly>
+              <button type="button" aria-label="Send message">↗</button>
+            </div>
+          </form>
+        </aside>
+      </section>
+
+      <section class="principles" id="principles" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Our approach</p>
+          <h2 id="principles-title">Less noise.<br>More signal.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <p class="feature-number">01</p>
+            <h3>Clarity</h3>
+            <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
+            <span class="feature-mark" aria-hidden="true">+</span>
+          </article>
+          <article class="feature-card">
+            <p class="feature-number">02</p>
+            <h3>Character</h3>
+            <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
+            <span class="feature-mark" aria-hidden="true">+</span>
+          </article>
+          <article class="feature-card">
+            <p class="feature-number">03</p>
+            <h3>Care</h3>
+            <p>Built to last, with details that reward attention and respect for the everyday.</p>
+            <span class="feature-mark" aria-hidden="true">+</span>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer" id="contact">
+        <div>
+          <p class="eyebrow">Start a conversation</p>
+          <a class="footer-email" href="mailto:hello@mono.studio">hello@mono.studio <span>↗</span></a>
+        </div>
+        <div class="footer-meta">
+          <p>New York · London · Everywhere</p>
+          <p>© 2024 Mono Studio</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
