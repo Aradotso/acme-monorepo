@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace UI concept in a retro-futurist space age visual language.">
+  <title>Ara Space Age Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="nav-panel" aria-label="Workspace navigation">
+      <a class="brand" href="#workspace" aria-label="Ara workspace">
+        <span class="brand-mark">A</span>
+        <span>Ara</span>
+      </a>
+
+      <nav class="nav-stack" aria-label="Primary">
+        <a class="nav-item active" href="#workspace">
+          <span class="nav-orbit" aria-hidden="true"></span>
+          Workspace
+        </a>
+        <a class="nav-item" href="#sessions">
+          <span class="nav-orbit" aria-hidden="true"></span>
+          Sessions
+        </a>
+        <a class="nav-item" href="#artifacts">
+          <span class="nav-orbit" aria-hidden="true"></span>
+          Artifacts
+        </a>
+        <a class="nav-item" href="#settings">
+          <span class="nav-orbit" aria-hidden="true"></span>
+          Settings
+        </a>
+      </nav>
+
+      <div class="mission-card">
+        <p class="overline">Orbit</p>
+        <strong>Acme monorepo</strong>
+        <span>Branch: ui-variants/space-age</span>
+      </div>
+    </aside>
+
+    <main class="workspace" id="workspace">
+      <header class="topbar">
+        <div>
+          <p class="overline">Primary in-app workspace</p>
+          <h1>Ara mission control</h1>
+        </div>
+        <div class="topbar-actions" aria-label="Workspace actions">
+          <button type="button">Sync</button>
+          <button type="button" class="primary">New session</button>
+        </div>
+      </header>
+
+      <section class="control-grid" aria-label="Session overview">
+        <article class="status-screen">
+          <div class="screen-header">
+            <div>
+              <p class="overline">Live session</p>
+              <h2>Repo engineer</h2>
+            </div>
+            <span class="signal">Online</span>
+          </div>
+          <div class="orbit-visual" aria-hidden="true">
+            <span class="planet"></span>
+            <span class="ring ring-one"></span>
+            <span class="ring ring-two"></span>
+            <span class="satellite"></span>
+          </div>
+          <dl class="stats">
+            <div>
+              <dt>Goal</dt>
+              <dd>Redesign main UI</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Building</dd>
+            </div>
+            <div>
+              <dt>Checks</dt>
+              <dd>2 pending</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="sessions" id="sessions">
+          <div class="section-title">
+            <p class="overline">Sessions</p>
+            <button type="button" aria-label="Filter sessions">◌</button>
+          </div>
+          <a class="session active" href="#chat">
+            <span class="session-dot"></span>
+            <span>
+              <strong>Space Age UI variant</strong>
+              <small>Designing standalone workspace</small>
+            </span>
+          </a>
+          <a class="session" href="#chat">
+            <span class="session-dot"></span>
+            <span>
+              <strong>Evidence capture</strong>
+              <small>Desktop and mobile screenshots</small>
+            </span>
+          </a>
+          <a class="session" href="#chat">
+            <span class="session-dot"></span>
+            <span>
+              <strong>Pull request prep</strong>
+              <small>Commit, push, open review</small>
+            </span>
+          </a>
+        </article>
+
+        <section class="chat-screen" id="chat" aria-label="Chat transcript">
+          <div class="screen-header">
+            <div>
+              <p class="overline">Transmission</p>
+              <h2>Session chat</h2>
+            </div>
+            <span class="signal amber">Recording</span>
+          </div>
+
+          <div class="transcript">
+            <article class="message user">
+              <span class="avatar">U</span>
+              <div>
+                <p>Redesign the Ara app main UI as a retro-futurist space age workspace.</p>
+                <small>Keep the same features and content, ship responsive code.</small>
+              </div>
+            </article>
+            <article class="message ara">
+              <span class="avatar">A</span>
+              <div>
+                <p>I found the existing surface and created a standalone variant so the current app stays intact.</p>
+                <small>Branch: ui-variants/space-age</small>
+              </div>
+            </article>
+            <article class="message ara">
+              <span class="avatar">A</span>
+              <div>
+                <p>The workspace keeps project navigation, session history, chat, run status, artifacts, and activity.</p>
+                <small>Visual language: orbital curves, rounded-square screens, warm orange, teal, and atomic motifs.</small>
+              </div>
+            </article>
+          </div>
+
+          <form class="composer">
+            <label for="prompt">Message Ara</label>
+            <div class="composer-row">
+              <textarea id="prompt" rows="3">Inspect the responsive layout and prepare the pull request.</textarea>
+              <button type="button" aria-label="Send message">➜</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="side-stack">
+          <article class="panel" id="artifacts">
+            <div class="section-title">
+              <p class="overline">Artifacts</p>
+              <button type="button" aria-label="Open artifacts">□</button>
+            </div>
+            <ul class="artifact-list">
+              <li><span>HTML</span><strong>Workspace shell</strong></li>
+              <li><span>CSS</span><strong>Space age system</strong></li>
+              <li><span>Media</span><strong>Before / after captures</strong></li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <p class="overline">Activity</p>
+            <ol class="timeline">
+              <li><span></span>Repository scanned</li>
+              <li><span></span>Baseline captured</li>
+              <li><span></span>Responsive UI built</li>
+              <li><span></span>Review preparing</li>
+            </ol>
+          </article>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
