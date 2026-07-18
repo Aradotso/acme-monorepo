@@ -3,66 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A quiet space for clear thinking.">
-  <title>Mono — Make room for what matters</title>
+  <meta name="description" content="Cosmic Beans — coffee for curious minds. Join the crew.">
+  <title>Cosmic Beans — Coffee for curious minds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Mono home">M<span>—</span></a>
-    <nav aria-label="Primary navigation">
-      <a href="#principles">Principles</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Cosmic Beans home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Cosmic<br>Beans</span>
+      </a>
+      <p class="header-note">Small batch / Big universe</p>
+      <a class="header-link" href="#join">Join the crew <span aria-hidden="true">↗</span></a>
+    </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow reveal">Independent studio / 2024—now</p>
-      <h1 id="hero-title" class="reveal reveal-delay-1">Make room<br>for <em>what matters.</em></h1>
-      <div class="hero-bottom reveal reveal-delay-2">
-        <p class="intro">We shape calm, considered digital experiences for people doing meaningful work.</p>
-        <a class="circle-link" href="#principles" aria-label="Explore our principles"><span>↓</span></a>
-      </div>
-    </section>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Coffee for curious minds</p>
+          <h1 id="hero-title">Find your<br><em>orbit.</em></h1>
+          <p class="tagline">Bright roasts, deep thoughts, and a little more wonder in every cup.</p>
+        </div>
 
-    <section class="principles" id="principles" aria-labelledby="principles-title">
-      <div class="section-heading">
-        <p class="eyebrow">01 / Our approach</p>
-        <h2 id="principles-title">Less noise.<br>More signal.</h2>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <p class="feature-number">01</p>
-          <h3>Clarity</h3>
-          <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
-          <span class="feature-mark" aria-hidden="true">+</span>
-        </article>
-        <article class="feature-card">
-          <p class="feature-number">02</p>
-          <h3>Character</h3>
-          <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
-          <span class="feature-mark" aria-hidden="true">+</span>
-        </article>
-        <article class="feature-card">
-          <p class="feature-number">03</p>
-          <h3>Care</h3>
-          <p>Built to last, with details that reward attention and respect for the everyday.</p>
-          <span class="feature-mark" aria-hidden="true">+</span>
-        </article>
-      </div>
-    </section>
-  </main>
+        <div class="hero-art" aria-label="Illustration of a steaming coffee cup floating in space" role="img">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="star star-one">✦</div>
+          <div class="star star-two">✦</div>
+          <div class="star star-three">·</div>
+          <div class="planet" aria-hidden="true">
+            <div class="planet-shine"></div>
+            <div class="cup">
+              <span class="cup-steam steam-one"></span>
+              <span class="cup-steam steam-two"></span>
+              <span class="cup-steam steam-three"></span>
+              <span class="cup-body"></span>
+              <span class="cup-handle"></span>
+            </div>
+          </div>
+          <p class="art-caption">Roasted on Earth<br>Enjoyed everywhere</p>
+        </div>
+      </section>
 
-  <footer class="site-footer" id="contact">
-    <div>
-      <p class="eyebrow">Start a conversation</p>
-      <a class="footer-email" href="mailto:hello@mono.studio">hello@mono.studio <span>↗</span></a>
-    </div>
-    <div class="footer-meta">
-      <p>New York · London · Everywhere</p>
-      <p>© 2024 Mono Studio</p>
-    </div>
-  </footer>
+      <section class="join-section" id="join" aria-labelledby="join-title">
+        <div class="join-intro">
+          <p class="eyebrow">The signal is strong</p>
+          <h2 id="join-title">Stay in the<br><em>loop.</em></h2>
+          <p>Get first sips, secret drops, and field notes from the Cosmic Beans crew.</p>
+        </div>
+        <form class="signup-form" action="#joined" method="post">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Nova Star" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@somewhere.space" required>
+          </div>
+          <button type="submit">Join the crew <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2024 Cosmic Beans</p>
+      <p>Made for the morning people &amp; night thinkers.</p>
+      <a href="#top" aria-label="Back to top">↑</a>
+    </footer>
+  </div>
 </body>
 </html>
