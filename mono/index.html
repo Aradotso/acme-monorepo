@@ -60,14 +60,14 @@
         <button type="submit">Subscribe</button>
       </form>
       <p id="signup-status"></p>
-      <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank">privacy note</a>.</p>
+      <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank" rel="noopener noreferrer">privacy note</a>.</p>
     </section>
     <script>
       document.getElementById("signup-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const email = document.getElementById("signup-email").value;
-        document.getElementById("signup-status").innerHTML =
-          "Thanks! We'll write to <b>" + email + "</b> soon.";
+        document.getElementById("signup-status").textContent =
+          "Thanks! We'll write to " + email + " soon.";
       });
     </script>
 
