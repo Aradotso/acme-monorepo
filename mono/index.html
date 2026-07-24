@@ -52,6 +52,25 @@
         </article>
       </div>
     </section>
+  
+    <section class="signup" id="signup">
+      <h2>Get the monthly letter</h2>
+      <form id="signup-form">
+        <input type="email" id="signup-email" placeholder="you@studio.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="signup-status"></p>
+      <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank">privacy note</a>.</p>
+    </section>
+    <script>
+      document.getElementById("signup-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("signup-email").value;
+        document.getElementById("signup-status").innerHTML =
+          "Thanks! We'll write to <b>" + email + "</b> soon.";
+      });
+    </script>
+
   </main>
 
   <footer class="site-footer" id="contact">
