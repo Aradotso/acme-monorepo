@@ -71,14 +71,19 @@
         <button type="submit">Send</button>
       </form>
       <p id="contact-status"></p>
-      <p class="contact-note">Prefer email? Write us via the <a href="https://mono.example.com/studio" target="_blank">studio page</a>.</p>
+      <p class="contact-note">Prefer email? Write us via the <a href="https://mono.example.com/studio" target="_blank" rel="noopener noreferrer">studio page</a>.</p>
     </section>
     <script>
       document.getElementById("contact-form").addEventListener("submit", (e) => {
         e.preventDefault();
-        const name = document.getElementById("contact-name").value;
-        document.getElementById("contact-status").innerHTML =
-          "Thanks, <b>" + name + "</b> — we read every note.";
+        const name = document.getElementById("contact-name").value.trim();
+        if (!name) return;
+        const status = document.getElementById("contact-status");
+        status.textContent = "Thanks, ";
+        const strong = document.createElement("b");
+        strong.textContent = name;
+        status.appendChild(strong);
+        status.appendChild(document.createTextNode(" — we read every note."));
       });
     </script>
     <script>
