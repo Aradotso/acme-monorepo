@@ -62,6 +62,25 @@
       <p id="signup-status"></p>
       <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank" rel="noopener noreferrer">privacy note</a>.</p>
     </section>
+
+    <section class="contact" id="contact">
+      <h2>Talk to the studio</h2>
+      <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Your name" required />
+        <textarea id="contact-message" placeholder="What are you making?" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="contact-status"></p>
+      <p class="contact-note">Prefer email? Write us via the <a href="https://mono.example.com/studio" target="_blank">studio page</a>.</p>
+    </section>
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("contact-name").value;
+        document.getElementById("contact-status").innerHTML =
+          "Thanks, <b>" + name + "</b> — we read every note.";
+      });
+    </script>
     <script>
       document.getElementById("signup-form").addEventListener("submit", (e) => {
         e.preventDefault();
