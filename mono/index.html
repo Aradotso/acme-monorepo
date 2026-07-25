@@ -78,12 +78,13 @@
         e.preventDefault();
         const name = document.getElementById("contact-name").value.trim();
         if (!name) return;
-        const status = document.getElementById("contact-status");
-        status.textContent = "Thanks, ";
         const strong = document.createElement("b");
         strong.textContent = name;
-        status.appendChild(strong);
-        status.appendChild(document.createTextNode(" — we read every note."));
+        document.getElementById("contact-status").replaceChildren(
+          document.createTextNode("Thanks, "),
+          strong,
+          document.createTextNode(" — we read every note."),
+        );
       });
     </script>
     <script>
