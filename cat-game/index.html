@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small browser game about a cat collecting treats.">
+  <title>Snack Cat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell" aria-labelledby="game-title">
+    <section class="hud-panel" aria-label="Game status">
+      <div>
+        <p class="eyebrow">Tiny arcade</p>
+        <h1 id="game-title">Snack Cat</h1>
+      </div>
+      <div class="stats" aria-live="polite">
+        <div>
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>Best</span>
+          <strong id="best-score">0</strong>
+        </div>
+        <div>
+          <span>Time</span>
+          <strong id="time-left">30</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="play-area" aria-label="Snack Cat game">
+      <canvas id="game-canvas" width="960" height="600" aria-label="Move the cat to collect treats and dodge puddles"></canvas>
+      <div class="overlay" id="game-overlay">
+        <p id="overlay-title">Ready?</p>
+        <span id="overlay-copy">Use arrow keys, WASD, or the buttons to collect treats.</span>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Game controls">
+      <button class="control-button" id="start-button" type="button">Start</button>
+      <div class="d-pad" aria-label="Move cat">
+        <button type="button" data-move="up" aria-label="Move up">↑</button>
+        <button type="button" data-move="left" aria-label="Move left">←</button>
+        <button type="button" data-move="down" aria-label="Move down">↓</button>
+        <button type="button" data-move="right" aria-label="Move right">→</button>
+      </div>
+      <button class="control-button secondary" id="reset-button" type="button">Reset</button>
+    </section>
+  </main>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
