@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1018">
+  <meta name="description" content="A playable 3D chess arena with a local chess engine.">
+  <title>Caissa / 3D Chess Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Caissa home"><span class="brand-mark">♞</span><span>CAISSA <b>/</b> LABS</span></a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="active" href="#arena">Arena</a><a href="#insights">Insights</a><a href="#about">About</a>
+      </nav>
+      <div class="top-actions">
+        <span class="live-dot"><i></i> Local engine</span>
+        <button class="icon-button" id="sound-toggle" type="button" aria-label="Toggle sound" aria-pressed="false">⌁</button>
+        <button class="avatar" type="button" aria-label="Player profile">JD</button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="intro" id="arena">
+        <div><p class="kicker"><span>01</span> / THE PLAYGROUND</p><h1>Think in<br><em>dimensions.</em></h1></div>
+        <div class="intro-aside"><p>A chessboard for curious minds. Read the position, find your line, and make it yours.</p><a class="text-link" href="#board-wrap">Enter the arena <span>↘</span></a></div>
+      </section>
+      <section class="arena-layout" aria-label="Chess arena">
+        <div class="board-column">
+          <div class="board-toolbar"><div class="player-card player-card-top"><div class="player-avatar engine-avatar">♟</div><div><strong>CAISSA <span class="engine-pill">ENGINE</span></strong><small>Depth 12 · 1,842 ELO</small></div></div><div class="match-status"><span class="status-pulse"></span><span id="status-label">YOUR MOVE</span></div></div>
+          <div class="board-stage" id="board-wrap"><div class="board-glow"></div><div class="chessboard" id="chessboard" role="grid" aria-label="Chess board"></div><div class="board-edge board-edge-front"></div></div>
+          <div class="board-footer"><div class="player-card player-card-bottom"><div class="player-avatar human-avatar">JD</div><div><strong>JORDAN <span class="you-pill">YOU</span></strong><small>Rating 1,204</small></div></div><div class="clock" id="clock">10:00</div><div class="board-controls"><button type="button" id="flip-board" aria-label="Flip board">⇅</button><button type="button" id="reset-game" aria-label="New game">↻</button></div></div>
+        </div>
+        <aside class="side-panel" id="insights">
+          <div class="panel-tabs" role="tablist" aria-label="Game panels"><button class="tab active" type="button" role="tab" aria-selected="true">Position</button><button class="tab" type="button" role="tab" aria-selected="false">Moves <span id="move-count">0</span></button></div>
+          <div class="position-panel">
+            <div class="eval-header"><span>Evaluation</span><strong id="evaluation-text">+0.2</strong></div><div class="eval-meter"><span id="eval-fill"></span><i></i></div><div class="eval-scale"><span>BLACK</span><span>EVEN</span><span>WHITE</span></div>
+            <div class="insight-block"><div class="block-heading"><span>ENGINE INSIGHT</span><span class="thinking"><i></i> THINKING</span></div><p id="insight-copy">The center is still open. Develop with purpose and keep your king safe.</p></div>
+            <div class="captured-block"><div class="block-heading"><span>CAPTURED PIECES</span><span id="capture-count">0</span></div><div class="captured-row" id="captured-pieces" aria-label="Captured pieces">—</div></div>
+            <div class="mode-block"><div class="block-heading"><span>GAME MODE</span></div><div class="mode-switch" role="group" aria-label="Game mode"><button type="button" class="mode-button active" data-mode="engine">VS ENGINE</button><button type="button" class="mode-button" data-mode="local">2 PLAYERS</button></div></div>
+          </div>
+          <div class="moves-panel" hidden><div class="moves-heading"><span>MOVE LOG</span><span id="move-log-state">LIVE</span></div><ol id="move-list" class="move-list"><li class="empty-moves">Your first move starts the story.</li></ol></div>
+          <div class="side-panel-footer"><span>STANDARD</span><span>·</span><span id="footer-turn">WHITE TO MOVE</span></div>
+        </aside>
+      </section>
+      <section class="below-arena" id="about"><div class="quote-mark">“</div><p>Chess is the art of analysis. <span>Play the board in front of you.</span></p><div class="coordinates"><span>37° 46′ N</span><span>122° 25′ W</span><span>CAISSA / 2024</span></div></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
