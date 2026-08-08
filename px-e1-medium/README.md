@@ -15,7 +15,7 @@ titleCase('  hello WORLD  '); // 'Hello World'
 ```
 
 ## `truncate(input, maxLength, omission?)`
-Limits text by Unicode code points. Long strings end with `…` by default, or with the supplied omission marker.
+Limits text by Unicode code points. Long strings end with `…` by default, or with the supplied omission marker. `maxLength` must be a finite integer; invalid values throw `RangeError`.
 ```ts
 truncate('A long description', 10); // 'A long de…'
 truncate('A long description', 10, '...'); // 'A long ...'

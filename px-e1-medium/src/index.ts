@@ -22,10 +22,14 @@ export function titleCase(input: string): string {
 
 /**
  * Limits a string to maxLength Unicode code points, adding an omission marker
- * when needed. Empty input is unchanged; a non-positive limit returns an empty
- * string, and a limit shorter than the marker returns the marker truncated to fit.
+ * when needed. Empty input is unchanged; a non-positive integer limit returns an
+ * empty string, and a limit shorter than the marker returns the marker truncated
+ * to fit. Non-finite and fractional limits throw a RangeError.
  */
 export function truncate(input: string, maxLength: number, omission = '…'): string {
+  if (!Number.isFinite(maxLength) || !Number.isInteger(maxLength)) {
+    throw new RangeError('maxLength must be a finite integer');
+  }
   if (maxLength <= 0) return '';
   const characters = Array.from(input);
   if (characters.length <= maxLength) return input;

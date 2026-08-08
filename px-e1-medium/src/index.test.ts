@@ -19,6 +19,9 @@ test('truncate handles empty input, unicode, and hostile limits', () => {
   assert.equal(truncate('😀 café', 5), '😀 ca…');
   assert.equal(truncate('sensitive', -100), '');
   assert.equal(truncate('abcdef', 1), '…');
+  assert.throws(() => truncate('abcdef', Number.NaN), RangeError);
+  assert.throws(() => truncate('abcdef', Infinity), RangeError);
+  assert.throws(() => truncate('abcdef', 2.5), RangeError);
 });
 
 test('wordCount handles empty input, unicode, and punctuation floods', () => {
