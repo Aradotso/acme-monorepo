@@ -36,6 +36,8 @@ test('stripHtml handles empty input, unicode, and executable blocks', () => {
   assert.equal(stripHtml('<p>こんにちは&nbsp;世界</p>'), 'こんにちは&nbsp;世界');
   assert.equal(stripHtml('Hi<!-- evil --> <script>alert(1)</script><b>there</b>'), 'Hi there');
   assert.equal(stripHtml('Keep 1 < 2 > 0 and <unfinished text'), 'Keep 1 < 2 > 0 and <unfinished text');
+  assert.equal(stripHtml('<div title=">">text</div>'), 'text');
+  assert.equal(stripHtml("<p data-note='>'>quoted</p>"), 'quoted');
 });
 
 test('escapeRegExp handles empty input, unicode, and regex injection', () => {

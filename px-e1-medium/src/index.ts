@@ -49,11 +49,15 @@ export function wordCount(input: string): number {
 
 /**
  * Removes HTML comments, script/style blocks, and tags while retaining text.
- * Empty input returns an empty string; this is text extraction, not an HTML
- * sanitizer, so callers must still escape output before inserting it as HTML.
+ * Empty input is unchanged; quoted `>` characters in attributes are treated as
+ * part of the tag, and this is text extraction rather than HTML sanitization.
+ * Callers must still escape the result before inserting it as HTML.
  */
 export function stripHtml(input: string): string {
-  return input.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '').replace(/<\/?[A-Za-z][^>]*>/g, '');
+  return input
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<(script|style)\b(?:[^"'<>]|"[^"]*"|'[^']*')*>[\s\S]*?<\/\1\s*>/gi, '')
+    .replace(/<\/?[A-Za-z](?:[^"'<>]|"[^"]*"|'[^']*')*>/g, '');
 }
 
 /**
