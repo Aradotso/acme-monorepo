@@ -113,6 +113,7 @@ export function templateFill(template: string, values: Record<string, string | n
   return template.replace(/\{\{\s*([\w.-]+)\s*\}\}/gu, (whole, key: string) => Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : whole);
 }
 
+/** Split text into words on separators and camel-case boundaries; empty or separator-only input returns an empty array. */
 function splitWords(input: string): string[] {
   return input.replace(/([a-z\d])([A-Z])/gu, '$1 $2').trim().split(/[\s_\-]+/u).filter(Boolean);
 }
