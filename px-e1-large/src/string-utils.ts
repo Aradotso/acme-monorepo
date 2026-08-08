@@ -5,7 +5,10 @@ export function slugify(input: string): string {
 
 /** Capitalize each whitespace-delimited word; repeated whitespace is normalized and empty input stays empty. */
 export function titleCase(input: string): string {
-  return input.trim().split(/\s+/u).filter(Boolean).map(word => word[0]!.toLocaleUpperCase() + word.slice(1).toLocaleLowerCase()).join(' ');
+  return input.trim().split(/\s+/u).filter(Boolean).map(word => {
+    const chars = [...word.toLocaleLowerCase()];
+    return chars.length ? chars[0]!.toLocaleUpperCase() + chars.slice(1).join('') : '';
+  }).join(' ');
 }
 
 /** Limit a string to length units, reserving space for the marker; non-positive limits return an empty string. */
@@ -55,7 +58,7 @@ export function padCenter(input: string, width: number, fill = ' '): string {
   const total = width - length;
   const left = Math.floor(total / 2);
   const fillChars = [...fill];
-  const makeFill = (count: number): string => Array.from({ length: count }, (_, index) => fillChars[index % fillChars.length]).join('').slice(0, count);
+  const makeFill = (count: number): string => Array.from({ length: count }, (_, index) => fillChars[index % fillChars.length]).join('');
   return makeFill(left) + input + makeFill(total - left);
 }
 
