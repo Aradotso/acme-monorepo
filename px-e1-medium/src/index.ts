@@ -49,7 +49,7 @@ export function wordCount(input: string): number {
  * sanitizer, so callers must still escape output before inserting it as HTML.
  */
 export function stripHtml(input: string): string {
-  return input.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '').replace(/<[^>]*>/g, '');
+  return input.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '').replace(/<\/?[A-Za-z][^>]*>/g, '');
 }
 
 /**

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { escapeRegExp, slugify, stripHtml, titleCase, truncate, wordCount } from './index.ts';
+import { escapeRegExp, slugify, stripHtml, titleCase, truncate, wordCount } from './index.js';
 
 test('slugify handles empty input, unicode, and punctuation attacks', () => {
   assert.equal(slugify(''), '');
@@ -32,6 +32,7 @@ test('stripHtml handles empty input, unicode, and executable blocks', () => {
   assert.equal(stripHtml(''), '');
   assert.equal(stripHtml('<p>こんにちは&nbsp;世界</p>'), 'こんにちは&nbsp;世界');
   assert.equal(stripHtml('Hi<!-- evil --> <script>alert(1)</script><b>there</b>'), 'Hi there');
+  assert.equal(stripHtml('Keep 1 < 2 > 0 and <unfinished text'), 'Keep 1 < 2 > 0 and <unfinished text');
 });
 
 test('escapeRegExp handles empty input, unicode, and regex injection', () => {
