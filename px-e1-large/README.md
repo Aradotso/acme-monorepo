@@ -25,3 +25,5 @@ A dependency-light TypeScript string utility library. Every utility is Unicode-a
 From this directory, run `npm install`, `npm test`, and `npm run typecheck`.
 
 The test suite includes empty input, Unicode input, and adversarial edge cases for every exported function.
+
+The package-root `index.ts` and `src/index.ts` files are barrel exports; consumers can import directly from the package root.
