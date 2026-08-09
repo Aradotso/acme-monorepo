@@ -61,15 +61,16 @@
         <input type="email" id="signup-email" placeholder="you@studio.com" required />
         <button type="submit">Subscribe</button>
       </form>
-      <p id="signup-status"></p>
+      <p id="signup-status" role="status" aria-live="polite"></p>
       <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank" rel="noopener noreferrer">privacy note</a>.</p>
     </section>
-    <script>
-      document.getElementById("signup-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const email = document.getElementById("signup-email").value;
-        document.getElementById("signup-status").textContent =
-          "Thanks! We'll write to " + email + " soon.";
+    <script type="module">
+      import { bindSignupForm } from "../js/signup.js";
+
+      bindSignupForm({
+        form: document.getElementById("signup-form"),
+        emailInput: document.getElementById("signup-email"),
+        status: document.getElementById("signup-status"),
       });
     </script>
 
