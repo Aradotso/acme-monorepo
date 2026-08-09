@@ -1,0 +1,7 @@
+/* TEAM */
+Studio: Mono Studio
+Contact: hello@mono.studio
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3
