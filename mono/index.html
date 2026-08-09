@@ -56,7 +56,7 @@
   
     <section class="signup" id="signup">
       <h2>Get the monthly letter</h2>
-      <form id="signup-form">
+      <form id="signup-form" novalidate>
         <label class="visually-hidden" for="signup-email">Email address</label>
         <input type="email" id="signup-email" placeholder="you@studio.com" required />
         <button type="submit">Subscribe</button>
@@ -64,12 +64,16 @@
       <p id="signup-status"></p>
       <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank" rel="noopener noreferrer">privacy note</a>.</p>
     </section>
-    <script>
-      document.getElementById("signup-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const email = document.getElementById("signup-email").value;
-        document.getElementById("signup-status").textContent =
-          "Thanks! We'll write to " + email + " soon.";
+    <script type="module">
+      import { subscribe } from "../src/signup.mjs";
+
+      document.getElementById("signup-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const result = subscribe(document.getElementById("signup-email").value);
+        document.getElementById("signup-status").textContent = result.match({
+          ok: (message) => message,
+          err: (message) => message,
+        });
       });
     </script>
 
