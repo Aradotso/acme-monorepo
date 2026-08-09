@@ -110,3 +110,7 @@ h3 { margin: 52px 0 16px; font-size: 2rem; font-weight: 500; letter-spacing: -.0
   .footer-meta { justify-content: space-between; align-items: start; margin-top: 52px; }
   .footer-meta p:last-child { text-align: right; }
 }
+
+.signup-status { min-height: 1.4em; margin: 14px 0 0; font-size: .85rem; }
+.signup-status.success { color: #b8d8b8; }
+.signup-status.error { color: #f0a3a3; }
