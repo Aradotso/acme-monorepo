@@ -1,0 +1,19 @@
+# Mono Studio
+
+> Mono is an independent studio shaping calm, considered digital experiences for people doing meaningful work.
+
+## Approach
+
+- Clarity: Every choice has a reason. Mono turns complexity into simple, useful moments.
+- Character: Distinctive work starts with a point of view. Quiet does not mean invisible.
+- Care: Work is built to last, with details that reward attention and respect for the everyday.
+
+## Pages
+
+- [Mono home](./): Studio overview, principles, and newsletter signup.
+- [Contact](../contact/): Contact Mono Studio about a project.
+
+## Contact
+
+- Email: hello@mono.studio
+- Locations: New York, London, and everywhere.
