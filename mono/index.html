@@ -64,12 +64,17 @@
       <p id="signup-status"></p>
       <p class="signup-note">Read our <a href="https://mono.example.com/privacy" target="_blank" rel="noopener noreferrer">privacy note</a>.</p>
     </section>
-    <script>
-      document.getElementById("signup-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const email = document.getElementById("signup-email").value;
-        document.getElementById("signup-status").textContent =
-          "Thanks! We'll write to " + email + " soon.";
+    <script type="module">
+      import { prepareSignup } from "../src/signup.js";
+
+      document.getElementById("signup-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const result = prepareSignup(document.getElementById("signup-email").value);
+        const status = document.getElementById("signup-status");
+
+        status.textContent = result.ok
+          ? "Thanks! We'll write to " + result.value + " soon."
+          : result.error;
       });
     </script>
 
