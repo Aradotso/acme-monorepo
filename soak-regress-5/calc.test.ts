@@ -10,6 +10,9 @@ test('divides two numbers', () => {
   assert.equal(divide(12, 3), 4);
 });
 
-test('returns zero when dividing by zero', () => {
-  assert.equal(divide(1, 0), 0);
+test('throws when dividing by zero', () => {
+  assert.throws(() => divide(1, 0), {
+    name: 'RangeError',
+    message: 'Cannot divide by zero',
+  });
 });
