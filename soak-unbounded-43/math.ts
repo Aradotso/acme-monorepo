@@ -18,5 +18,12 @@ export function clamp(value: number, minimum: number, maximum: number): number {
  * supported as well as interpolation.
  */
 export function lerp(start: number, end: number, progress: number): number {
-  return start + (end - start) * progress;
+  // Handle endpoints before multiplying so exact endpoint identities also hold
+  // for infinities. The weighted form avoids overflowing when finite endpoints
+  // have opposite signs and a large magnitude.
+  if (progress === 0) return start;
+  if (progress === 1) return end;
+  if (start === end) return start;
+
+  return start * (1 - progress) + end * progress;
 }

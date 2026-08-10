@@ -18,10 +18,16 @@ describe("add", () => {
     expect(add(0, -4)).toBe(-4);
   });
 
-  it("follows JavaScript number arithmetic for non-finite values", () => {
+  it("follows JavaScript number arithmetic for non-finite and extreme values", () => {
+    expect(add(Number.NaN, 1)).toBeNaN();
     expect(add(Number.POSITIVE_INFINITY, 1)).toBe(Number.POSITIVE_INFINITY);
     expect(add(Number.NEGATIVE_INFINITY, 1)).toBe(Number.NEGATIVE_INFINITY);
     expect(add(Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY)).toBeNaN();
+    expect(add(Number.MAX_VALUE, Number.MAX_VALUE)).toBe(Number.POSITIVE_INFINITY);
+    expect(add(-Number.MAX_VALUE, -Number.MAX_VALUE)).toBe(Number.NEGATIVE_INFINITY);
+    expect(Object.is(add(Number.MAX_VALUE, -Number.MAX_VALUE), 0)).toBe(true);
+    expect(Object.is(add(-0, -0), -0)).toBe(true);
+    expect(Object.is(add(-0, 0), 0)).toBe(true);
   });
 });
 
@@ -54,6 +60,26 @@ describe("clamp", () => {
     expect(() => clamp(5, 10, 0)).toThrow(RangeError);
     expect(() => clamp(5, 10, 0)).toThrow("minimum must not be greater than maximum");
   });
+
+  it("propagates NaN and clamps infinities using finite bounds", () => {
+    expect(clamp(Number.NaN, 0, 10)).toBeNaN();
+    expect(clamp(Number.NEGATIVE_INFINITY, 0, 10)).toBe(0);
+    expect(clamp(Number.POSITIVE_INFINITY, 0, 10)).toBe(10);
+  });
+
+  it("supports infinite bounds and preserves signed zero when it is in range", () => {
+    expect(clamp(-42, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY)).toBe(-42);
+    expect(clamp(Number.MAX_VALUE, 0, Number.POSITIVE_INFINITY)).toBe(Number.MAX_VALUE);
+    expect(Object.is(clamp(-0, -1, 1), -0)).toBe(true);
+    expect(Object.is(clamp(0, -1, 1), 0)).toBe(true);
+    expect(Object.is(clamp(-0, 0, 1), 0)).toBe(true);
+  });
+
+  it("rejects only ordered invalid bounds, while NaN bounds propagate NaN", () => {
+    expect(() => clamp(0, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY)).toThrow(RangeError);
+    expect(clamp(5, Number.NaN, 10)).toBeNaN();
+    expect(clamp(5, 0, Number.NaN)).toBeNaN();
+  });
 });
 
 describe("lerp", () => {
@@ -84,9 +110,19 @@ describe("lerp", () => {
     expect(lerp(-8, 24, 0.2)).toBeCloseTo(lerp(24, -8, 0.8));
   });
 
-  it("follows JavaScript number arithmetic for non-finite values", () => {
-    expect(lerp(0, 10, Number.POSITIVE_INFINITY)).toBe(Number.POSITIVE_INFINITY);
-    expect(lerp(0, 10, Number.NEGATIVE_INFINITY)).toBe(Number.NEGATIVE_INFINITY);
+  it("supports non-finite endpoints and propagates indeterminate values", () => {
+    expect(lerp(Number.POSITIVE_INFINITY, 0, 0.5)).toBe(Number.POSITIVE_INFINITY);
+    expect(lerp(0, Number.NEGATIVE_INFINITY, 0.5)).toBe(Number.NEGATIVE_INFINITY);
+    expect(lerp(Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, 0.5)).toBe(Number.POSITIVE_INFINITY);
+    expect(lerp(Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, 0.5)).toBeNaN();
     expect(lerp(0, 10, Number.NaN)).toBeNaN();
+  });
+
+  it("preserves endpoint signed zeros and avoids finite overflow at the midpoint", () => {
+    expect(Object.is(lerp(-0, 10, 0), -0)).toBe(true);
+    expect(Object.is(lerp(10, -0, 1), -0)).toBe(true);
+    expect(Object.is(lerp(-0, 0, 0.5), -0)).toBe(true);
+    expect(lerp(Number.MAX_VALUE, -Number.MAX_VALUE, 0.5)).toBe(0);
+    expect(lerp(Number.MAX_VALUE, Number.MAX_VALUE, 0.5)).toBe(Number.MAX_VALUE);
   });
 });
