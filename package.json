@@ -3,7 +3,8 @@
   "private": true,
   "description": "Acme landing pages and demos",
   "scripts": {
-    "serve": "serve -l 3000 ."
+    "serve": "serve -l 3000 .",
+    "test:soak-enumerable-6": "node --experimental-strip-types --test soak-enumerable-6/index.test.ts"
   },
   "devDependencies": {
     "serve": "13.0.2",
