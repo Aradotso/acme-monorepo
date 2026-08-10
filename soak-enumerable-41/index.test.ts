@@ -5,6 +5,7 @@ import { escapeRegExp, slugify, stripHtml, titleCase, truncate, wordCount } from
 test('slugify handles empty, Unicode, and separator injection', () => {
   assert.equal(slugify(''), '');
   assert.equal(slugify('Crème brûlée 東京'), 'creme-brulee-東京');
+  assert.equal(slugify('किताब'), 'किताब');
   assert.equal(slugify('  hello///DROP TABLE users;  '), 'hello-drop-table-users');
 });
 
@@ -24,6 +25,7 @@ test('truncate handles empty, Unicode, and tiny limits', () => {
 test('wordCount handles empty, Unicode, and regex-looking input', () => {
   assert.equal(wordCount(''), 0);
   assert.equal(wordCount('Привет мир 東京'), 3);
+  assert.equal(wordCount('किताब पढ़ना'), 2);
   assert.equal(wordCount("hello ' OR 1=1 -- <script>"), 5);
 });
 

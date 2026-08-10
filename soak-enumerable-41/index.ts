@@ -6,9 +6,9 @@
 export function slugify(input: string): string {
   return input
     .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLocaleLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, '-')
+    .replace(/(\p{Script=Latin})\p{M}+/gu, '$1')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{M}\p{N}]+/gu, '-')
     .replace(/^-+|-+$/g, '');
 }
 
@@ -43,7 +43,7 @@ export function truncate(input: string, maxLength: number, ellipsis = '…'): st
  * inside a word stay attached, while hostile regex-like text is plain text.
  */
 export function wordCount(input: string): number {
-  const words = input.match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu);
+  const words = input.match(/[\p{L}\p{M}\p{N}]+(?:['’\-][\p{L}\p{M}\p{N}]+)*/gu);
   return words?.length ?? 0;
 }
 
