@@ -1,0 +1,13 @@
+{
+  "name": "soak-enumerable-41",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "tsx --test index.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
