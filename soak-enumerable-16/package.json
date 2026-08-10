@@ -1,0 +1,8 @@
+{
+  "name": "soak-enumerable-16",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --experimental-strip-types index.test.ts"
+  }
+}
