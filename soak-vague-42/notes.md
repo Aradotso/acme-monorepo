@@ -1,0 +1,5 @@
+# What makes a good commit message
+
+A good commit message is clear, specific, and useful to someone reviewing the history later. Keep the subject brief and imperative (for example, “Handle expired session tokens”), then add a body when context matters: explain the problem, the approach, and any important trade-offs or follow-up work. Focus on why the change exists rather than repeating the diff, and mention user-visible effects, migrations, configuration changes, or compatibility concerns when relevant.
+
+One commit should describe one coherent change. Avoid vague subjects such as “Fix stuff,” misleading claims, unexplained acronyms, and references to a ticket without saying what changed. If a change is breaking, risky, reverted, generated, or intentionally has no functional effect, say so plainly; if the commit fixes an earlier commit on the same branch, it may be better to squash or clearly label it. Preserve project conventions, wrap body lines consistently, and do not include secrets, sensitive data, or unverified claims.
