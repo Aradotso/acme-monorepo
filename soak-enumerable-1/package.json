@@ -1,0 +1,10 @@
+{
+  "name": "soak-enumerable-1",
+  "private": true,
+  "scripts": {
+    "test": "tsc && node dist/tests.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
