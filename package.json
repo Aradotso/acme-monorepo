@@ -3,11 +3,13 @@
   "private": true,
   "description": "Acme landing pages and demos",
   "scripts": {
-    "serve": "serve -l 3000 ."
+    "serve": "serve -l 3000 .",
+    "test": "node --experimental-strip-types --test"
   },
   "devDependencies": {
     "serve": "13.0.2",
     "lodash": "4.17.20",
     "minimist": "1.2.5"
-  }
+  },
+  "type": "module"
 }
