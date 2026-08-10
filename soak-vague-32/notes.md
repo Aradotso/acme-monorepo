@@ -1,0 +1,5 @@
+# Writing a good commit message
+
+A good commit message is concise, specific, and useful to someone reading the history later. Put the change’s intent in an imperative subject line (roughly 50–72 characters), optionally with a clear scope, then leave a blank line before a body that explains the problem, constraints, and meaningful trade-offs—not a line-by-line description of the diff. Make the subject stand on its own, and mention user-visible effects or migration steps when they matter.
+
+Choose clarity over a rigid template: a tiny, self-explanatory change may need only a subject, while a complex change deserves context. Call out breaking changes explicitly, link relevant issues, and explain compatibility or rollout concerns. Keep unrelated work in separate commits. For a revert, identify the reverted commit and reason; for a merge or generated/vendor-only change, say so rather than pretending it was an ordinary hand-written change. Never hide risky behavior, temporary workarounds, or follow-up work behind vague wording such as “fix stuff.”
