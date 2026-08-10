@@ -27,7 +27,12 @@ export function titleCase(value: string): string {
     .trim()
     .split(/\s+/u)
     .filter(Boolean)
-    .map((word) => word.charAt(0).toLocaleUpperCase() + word.slice(1).toLocaleLowerCase())
+    .map((word) => {
+      const characters = Array.from(word);
+      return characters.length === 0
+        ? ''
+        : characters[0].toLocaleUpperCase() + characters.slice(1).join('').toLocaleLowerCase();
+    })
     .join(' ');
 }
 
@@ -73,9 +78,9 @@ export function stripHtml(value: string): string {
  * Escapes regular-expression metacharacters for use as a literal fragment.
  *
  * Edge cases: empty input returns empty, Unicode is preserved, and every
- * syntax-significant character (including a hyphen) is escaped so the result
- * is safe when inserted into a regex character class or larger expression.
+ * syntax-significant character is escaped. The hyphen is intentionally left
+ * unescaped because \-/u is an invalid Unicode-mode regex escape.
  */
 export function escapeRegExp(value: string): string {
-  return value.replace(/[\\^$.*+?()[\]{}|\-/]/g, '\\$&');
+  return value.replace(/[\\^$.*+?()[\]{}|\/]/g, '\\$&');
 }

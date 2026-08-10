@@ -10,6 +10,7 @@ describe('slugify', () => {
 describe('titleCase', () => {
   test('handles empty input', () => expect(titleCase('')).toBe(''));
   test('handles unicode casing', () => expect(titleCase('élan vital déjà vu')).toBe('Élan Vital Déjà Vu'));
+  test('does not split astral word initials', () => expect(titleCase('😀hello')).toBe('😀hello'));
   test('collapses adversarial whitespace', () => expect(titleCase('  hello\n\tWORLD  ')).toBe('Hello World'));
 });
 
@@ -39,6 +40,6 @@ describe('escapeRegExp', () => {
   test('preserves unicode literals', () => expect(escapeRegExp('café 東京')).toBe('café 東京'));
   test('escapes an adversarial regex payload', () => {
     const literal = '.*+?^${}()|[]\\-';
-    expect(new RegExp(`^${escapeRegExp(literal)}$`).test(literal)).toBe(true);
+    expect(new RegExp(`^${escapeRegExp(literal)}$`, 'u').test(literal)).toBe(true);
   });
 });
