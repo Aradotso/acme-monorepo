@@ -56,9 +56,11 @@ export function wordCount(input: string): number {
  */
 export function stripHtml(input: string): string {
   return input
-    .replace(/<!--[\s\S]*?-->/gu, '')
+    .replace(/<!--[\s\S]*?(?:-->|$)/gu, '')
     .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/giu, '')
+    .replace(/<(script|style)\b[^>]*>[\s\S]*$/giu, '')
     .replace(/<[^>]*>/gu, '')
+    .replace(/<[^>]*$/gu, '')
     .replace(/&(?:amp|lt|gt|quot|apos|nbsp);/giu, (entity) => ({
       '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'", '&nbsp;': ' ',
     }[entity.toLowerCase()] ?? entity));

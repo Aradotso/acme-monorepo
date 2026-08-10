@@ -31,6 +31,9 @@ test('stripHtml handles empty, unicode, and hostile markup', () => {
   assert.equal(stripHtml(''), '');
   assert.equal(stripHtml('<p>こんにちは &amp; мир</p>'), 'こんにちは & мир');
   assert.equal(stripHtml('<script>steal()</script><style>body{}</style><b>safe</b><!-- hidden -->'), 'safe');
+  assert.equal(stripHtml('before<script>steal(1)'), 'before');
+  assert.equal(stripHtml('before<!-- hidden'), 'before');
+  assert.equal(stripHtml('safe<div class=\"unclosed\"'), 'safe');
 });
 
 test('escapeRegExp handles empty, unicode, and adversarial patterns', () => {
