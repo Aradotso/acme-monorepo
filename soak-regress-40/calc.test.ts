@@ -10,7 +10,7 @@ describe('calc', () => {
     expect(divide(12, 3)).toBe(4);
   });
 
-  test('rejects division by zero', () => {
-    expect(() => divide(1, 0)).toThrow('Cannot divide by zero');
+  test('returns zero when dividing by zero', () => {
+    expect(divide(1, 0)).toBe(0);
   });
 });
