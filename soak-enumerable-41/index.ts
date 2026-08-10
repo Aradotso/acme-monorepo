@@ -62,5 +62,5 @@ export function stripHtml(input: string): string {
  * adversarial punctuation cannot alter the resulting pattern.
  */
 export function escapeRegExp(input: string): string {
-  return input.replace(/[\\^$.*+?()[\]{}|/]/g, '\\$&');
+  return input.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
