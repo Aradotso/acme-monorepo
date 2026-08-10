@@ -3,7 +3,8 @@
   "private": true,
   "description": "Acme landing pages and demos",
   "scripts": {
-    "serve": "serve -l 3000 ."
+    "serve": "serve -l 3000 .",
+    "test:math": "node --experimental-strip-types --test soak-unbounded-23/math.test.ts"
   },
   "devDependencies": {
     "serve": "13.0.2",
