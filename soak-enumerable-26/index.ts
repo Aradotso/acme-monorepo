@@ -19,11 +19,11 @@ export function slugify(input: string): string {
  */
 export function titleCase(input: string): string {
   return input.replace(/\S+/gu, (word) => {
-    const firstLetter = word.search(/\p{L}/u);
-    if (firstLetter === -1) return word;
-    const before = word.slice(0, firstLetter);
-    const letter = word[firstLetter].toLocaleUpperCase();
-    const after = word.slice(firstLetter + 1).toLocaleLowerCase();
+    const firstLetter = word.match(/\p{L}/u);
+    if (!firstLetter || firstLetter.index === undefined) return word;
+    const before = word.slice(0, firstLetter.index);
+    const letter = firstLetter[0].toLocaleUpperCase();
+    const after = word.slice(firstLetter.index + firstLetter[0].length).toLocaleLowerCase();
     return before + letter + after;
   });
 }

@@ -12,6 +12,7 @@ test('slugify handles empty input, Unicode, and separator injection', () => {
 test('titleCase handles empty input, Unicode, and markup-like input', () => {
   assert.equal(titleCase(''), '');
   assert.equal(titleCase('élan vital 東京'), 'Élan Vital 東京');
+  assert.equal(titleCase('𐐀𐐨 𐐀𐐨'), '𐐀𐐨 𐐀𐐨');
   assert.equal(titleCase('<script>alert(1)</script>'), '<Script>alert(1)</script>');
 });
 
