@@ -65,5 +65,5 @@ export function stripHtml(input: string): string {
  * and line breaks, hyphens, and slashes remain literal rather than forming syntax.
  */
 export function escapeRegExp(input: string): string {
-  return input.replace(/[\\^$.*+?()[\]{}|/-]/g, '\\$&');
+  return input.replace(/[\\^$.*+?()[\]{}|\/-]/g, '\\$&');
 }

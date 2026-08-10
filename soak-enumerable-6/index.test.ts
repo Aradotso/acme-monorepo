@@ -36,5 +36,6 @@ test('escapeRegExp handles empty, unicode, and adversarial input', () => {
   assert.equal(escapeRegExp(''), '');
   assert.equal(escapeRegExp('café 東京'), 'café 東京');
   const escaped = escapeRegExp('.*+?^${}()|[]\\/-');
+  assert.equal(escaped, String.raw`\.\*\+\?\^\$\{\}\(\)\|\[\]\\\/\-`);
   assert.ok(new RegExp(`^${escaped}$`).test('.*+?^${}()|[]\\/-'));
 });
