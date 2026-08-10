@@ -46,6 +46,15 @@ describe('clamp', () => {
     expect(clamp(value, 0, 10)).toBe(value);
   });
 
+  it('treats reversed bounds as the same interval in either order', () => {
+    expect(clamp(-1, 10, 0)).toBe(0);
+    expect(clamp(5, 10, 0)).toBe(5);
+    expect(clamp(11, 10, 0)).toBe(10);
+    expect(clamp(-1, 0, 10)).toBe(clamp(-1, 10, 0));
+    expect(clamp(5, 0, 10)).toBe(clamp(5, 10, 0));
+    expect(clamp(11, 0, 10)).toBe(clamp(11, 10, 0));
+  });
+
   it('supports a single-point interval', () => {
     expect(clamp(-100, 3, 3)).toBe(3);
     expect(clamp(3, 3, 3)).toBe(3);
