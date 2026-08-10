@@ -1,0 +1,5 @@
+# What makes a good commit message
+
+A good commit message is specific, concise, and useful to someone reviewing history later. The subject should use an imperative verb and summarize the change in roughly 50–72 characters; leave a blank line before the body when more context is needed. Explain the motivation, important design choices, and user-visible or operational effects—not a line-by-line account of the diff—and link relevant issues or migration notes without embedding sensitive information.
+
+Describe one logical change per commit, and make the message accurate even if the implementation is later refactored. Mention breaking changes, compatibility concerns, data migrations, configuration or rollout steps, and known limitations explicitly. Keep formatting predictable, wrap prose for readability, and use trailers only when they carry meaningful metadata (for example, a required sign-off or co-author credit). Avoid vague subjects such as “fix stuff,” misleading claims, unnecessary ticket-only text, and secrets, credentials, or volatile details that will age badly.
