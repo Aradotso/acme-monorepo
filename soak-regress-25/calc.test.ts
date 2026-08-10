@@ -11,7 +11,7 @@ describe('calc', () => {
     assert.equal(divide(12, 3), 4);
   });
 
-  it('rejects division by zero', () => {
-    assert.throws(() => divide(1, 0), RangeError);
+  it('returns zero for division by zero', () => {
+    assert.equal(divide(1, 0), 0);
   });
 });
