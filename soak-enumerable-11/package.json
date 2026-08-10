@@ -1,0 +1,8 @@
+{
+  "name": "soak-enumerable-11",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test test/index.test.ts"
+  }
+}
