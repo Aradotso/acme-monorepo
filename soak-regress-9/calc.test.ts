@@ -12,7 +12,8 @@ describe('divide', () => {
     expect(divide(12, 3)).toBe(4);
   });
 
-  it('returns Infinity when dividing by zero', () => {
-    expect(divide(12, 0)).toBe(Infinity);
+  it('returns NaN when dividing by zero', () => {
+    expect(divide(12, 0)).toBeNaN();
+    expect(divide(-12, 0)).toBeNaN();
   });
 });
