@@ -1,0 +1,8 @@
+/* TEAM */
+Mono Studio
+Contact: hello@mono.studio
+Location: New York · London · Everywhere
+
+/* SITE */
+Last update: 2024
+Standards: HTML5, CSS3
