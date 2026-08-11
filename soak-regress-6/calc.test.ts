@@ -13,7 +13,15 @@ describe('divide', () => {
     expect(divide(12, 3)).toBe(4);
   });
 
-  it('returns Infinity when dividing a positive number by zero', () => {
-    expect(divide(1, 0)).toBe(Infinity);
+  it('throws when dividing a positive number by zero', () => {
+    expect(() => divide(1, 0)).toThrow(new RangeError('Cannot divide by zero'));
+  });
+
+  it('throws when dividing a negative number by negative zero', () => {
+    expect(() => divide(-1, -0)).toThrow('Cannot divide by zero');
+  });
+
+  it('still returns zero for a zero numerator with a non-zero divisor', () => {
+    expect(divide(0, 5)).toBe(0);
   });
 });
