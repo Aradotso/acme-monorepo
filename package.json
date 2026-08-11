@@ -3,11 +3,14 @@
   "private": true,
   "description": "Acme landing pages and demos",
   "scripts": {
-    "serve": "serve -l 3000 ."
+    "serve": "serve -l 3000 .",
+    "test": "vitest run"
   },
   "devDependencies": {
     "serve": "13.0.2",
     "lodash": "4.17.20",
-    "minimist": "1.2.5"
+    "minimist": "1.2.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }
