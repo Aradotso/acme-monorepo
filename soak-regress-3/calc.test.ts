@@ -12,6 +12,6 @@ test('divide returns the quotient', () => {
   assert.equal(divide(-9, 2), -4.5);
 });
 
-test('divide returns zero for a zero divisor', () => {
-  assert.equal(divide(12, 0), 0);
+test('divide rejects a zero divisor', () => {
+  assert.throws(() => divide(12, 0), RangeError);
 });

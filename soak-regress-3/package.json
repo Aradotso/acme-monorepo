@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "tsx --test calc.test.ts"
+    "test": "tsx --test *.test.ts"
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
