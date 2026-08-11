@@ -12,6 +12,13 @@ test('divide returns the quotient', () => {
   assert.equal(divide(-9, 2), -4.5);
 });
 
-test('divide rejects a zero divisor', () => {
+// Before the refactor, divide returned 0 for a zero divisor. Keep that
+// prior contract here so this test proves the final behavior is different.
+function divideBeforeRefactor(dividend: number, divisor: number): number {
+  return divisor === 0 ? 0 : dividend / divisor;
+}
+
+test('divide changes its zero-divisor behavior from the prior contract', () => {
+  assert.equal(divideBeforeRefactor(12, 0), 0);
   assert.throws(() => divide(12, 0), RangeError);
 });
