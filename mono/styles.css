@@ -72,6 +72,8 @@ h3 { margin: 52px 0 16px; font-size: 2rem; font-weight: 500; letter-spacing: -.0
 .footer-meta { display: flex; gap: 42px; align-items: end; color: var(--muted); font-size: .72rem; }
 .footer-meta p { margin: 0; }
 
+#signup-email { border-color: var(--muted); }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
