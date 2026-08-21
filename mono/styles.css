@@ -1,6 +1,7 @@
 :root {
   --ink: #f3f0e8;
   --muted: #a6a198;
+  --accent: #e0a66b;
   --line: #3b3a36;
   --divider: #302f2c;
   --paper: #11110f;
@@ -45,8 +46,8 @@ nav a:hover, .footer-email:hover { color: var(--ink); }
 .hero { min-height: min(760px, calc(100vh - 91px)); display: flex; flex-direction: column; justify-content: space-between; padding: 84px 0 64px; }
 .eyebrow { margin: 0; color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { max-width: 940px; margin-bottom: 0; font-size: clamp(4rem, 10.3vw, 9.6rem); font-weight: 500; letter-spacing: -.085em; line-height: .87; }
-h1 em { font-style: normal; color: var(--muted); }
+h1 { max-width: 940px; margin-bottom: 0; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 10.3vw, 9.6rem); font-weight: 400; letter-spacing: -.065em; line-height: .87; }
+h1 em { font-style: normal; color: inherit; }
 .hero-bottom { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
 .intro { max-width: 330px; margin: 0; color: #c1bdb3; font-size: 1.05rem; line-height: 1.35; }
 .circle-link { display: grid; place-items: center; width: 72px; height: 72px; border: 1px solid var(--ink); border-radius: 50%; font-size: 1.5rem; }
