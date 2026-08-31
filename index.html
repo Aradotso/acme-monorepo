@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cosmic Beans — coffee for curious people and late-night dreamers." />
+    <title>Cosmic Beans — Brew beyond</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="wordmark" href="/" aria-label="Cosmic Beans home">
+          <span class="wordmark-mark" aria-hidden="true">✦</span>
+          <span>Cosmic Beans</span>
+        </a>
+        <a class="nav-link" href="#signup">Join the crew <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Small-batch coffee for big ideas</p>
+          <h1 id="hero-title">Brew beyond<br /><em>the ordinary.</em></h1>
+          <p class="tagline">Bold beans, curious minds, and a little more wonder in every cup.</p>
+          <a class="scroll-cue" href="#signup"><span>Discover your next favorite</span><span class="scroll-arrow" aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="hero-art" aria-label="Illustration of a steaming coffee cup floating in space" role="img">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="planet planet-large"></div>
+          <div class="planet planet-small"></div>
+          <div class="star star-one">✦</div>
+          <div class="star star-two">✦</div>
+          <div class="star star-three">✧</div>
+          <div class="cup-shadow"></div>
+          <div class="cup">
+            <div class="steam steam-one"></div>
+            <div class="steam steam-two"></div>
+            <div class="steam steam-three"></div>
+            <div class="coffee"></div>
+            <div class="cup-body"><span>CB</span></div>
+            <div class="cup-handle"></div>
+          </div>
+          <p class="art-caption">Roasted in small<br />batches, sent far.</p>
+        </div>
+      </section>
+
+      <section class="signup-card" id="signup" aria-labelledby="signup-title">
+        <div>
+          <p class="section-kicker">The inner circle</p>
+          <h2 id="signup-title">Stay in our orbit.</h2>
+          <p class="signup-copy">Get first sips, secret drops, and stories from the other side of the roast.</p>
+        </div>
+        <form class="signup-form" action="#signup" method="post">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Stargazer" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@theuniverse.com" required />
+          </div>
+          <button type="submit">Join the crew <span aria-hidden="true">→</span></button>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <span>© 2024 Cosmic Beans Co.</span>
+        <span>Made for the wildly awake.</span>
+      </footer>
+    </main>
+  </body>
+</html>
