@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace brutalist UI variant.">
+  <title>Ara Workspace — Brutalist Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" aria-label="Workspace header">
+    <a class="brand" href="#workspace" aria-label="Ara workspace home">
+      <span class="brand-mark">ARA</span>
+      <span class="brand-meta">ENGINEERING AGENT</span>
+    </a>
+    <nav class="top-nav" aria-label="Workspace navigation">
+      <a href="#sessions">Sessions</a>
+      <a href="#thread">Thread</a>
+      <a href="#artifacts">Artifacts</a>
+      <a href="#settings">Settings</a>
+    </nav>
+    <button class="square-button" type="button" aria-label="Open command menu">⌘</button>
+  </header>
+
+  <main class="workspace" id="workspace">
+    <aside class="session-rail" id="sessions" aria-label="Session list">
+      <div class="panel-heading">
+        <p>Workspace</p>
+        <button class="text-button" type="button">New</button>
+      </div>
+
+      <section class="identity-block" aria-label="Repository">
+        <p class="label">Repository</p>
+        <h1>Aradotso / acme-monorepo</h1>
+        <p class="mono-line">ui-variants/brutalist</p>
+      </section>
+
+      <div class="session-stack">
+        <article class="session-card active">
+          <div>
+            <p class="session-title">Main UI redesign</p>
+            <p class="session-detail">Brutalist workspace surface</p>
+          </div>
+          <span>LIVE</span>
+        </article>
+        <article class="session-card">
+          <div>
+            <p class="session-title">IDE dark alternative</p>
+            <p class="session-detail">Static route review</p>
+          </div>
+          <span>DONE</span>
+        </article>
+        <article class="session-card">
+          <div>
+            <p class="session-title">Mono landing page</p>
+            <p class="session-detail">Current production copy</p>
+          </div>
+          <span>REF</span>
+        </article>
+      </div>
+
+      <section class="rail-footer" aria-label="Workspace stats">
+        <div>
+          <p class="label">Branch</p>
+          <strong>variant</strong>
+        </div>
+        <div>
+          <p class="label">Mode</p>
+          <strong>build</strong>
+        </div>
+      </section>
+    </aside>
+
+    <section class="thread-panel" id="thread" aria-label="Chat thread">
+      <div class="thread-toolbar">
+        <div>
+          <p class="label">Primary in-app workspace</p>
+          <h2>Session / chat interface</h2>
+        </div>
+        <div class="toolbar-actions" aria-label="Thread controls">
+          <button class="square-button" type="button" aria-label="Search thread">⌕</button>
+          <button class="square-button" type="button" aria-label="Toggle split view">▥</button>
+          <button class="square-button" type="button" aria-label="More options">⋯</button>
+        </div>
+      </div>
+
+      <div class="status-strip" aria-label="Run status">
+        <p><span>STATUS</span> designing</p>
+        <p><span>MODEL</span> Ara engineer</p>
+        <p><span>CHECKS</span> visual + responsive</p>
+      </div>
+
+      <div class="message-list" aria-label="Conversation">
+        <article class="message user-message">
+          <header>
+            <span>User</span>
+            <time datetime="2026-07-18T00:00:00Z">Today</time>
+          </header>
+          <p>Redesign the Ara app main UI as a completely new standalone alternative. Brutalist minimal. Keep the same workspace features and content.</p>
+        </article>
+
+        <article class="message agent-message">
+          <header>
+            <span>Ara</span>
+            <time datetime="2026-07-18T00:04:00Z">4 min later</time>
+          </header>
+          <p>I found the static workspace surface and created a standalone variant. The layout keeps the session list, active thread, composer, run state, artifacts, and repository context, but rebuilds the interface with raw structural HTML, heavy borders, and stark system type.</p>
+          <div class="check-grid" aria-label="Implementation checklist">
+            <label><input type="checkbox" checked> Standalone route</label>
+            <label><input type="checkbox" checked> Responsive layout</label>
+            <label><input type="checkbox" checked> Same workspace affordances</label>
+            <label><input type="checkbox" checked> No decorative styling</label>
+          </div>
+        </article>
+
+        <article class="message system-message">
+          <header>
+            <span>Run log</span>
+            <time datetime="2026-07-18T00:06:00Z">Now</time>
+          </header>
+          <ol class="run-list">
+            <li>Inspect repository</li>
+            <li>Create branch</li>
+            <li>Build brutalist UI</li>
+            <li>Capture evidence</li>
+          </ol>
+        </article>
+      </div>
+
+      <form class="composer" aria-label="Message composer">
+        <label for="prompt">Prompt</label>
+        <textarea id="prompt" rows="4">Make the workspace feel raw, direct, and operational.</textarea>
+        <div class="composer-actions">
+          <button class="text-button" type="button">Attach</button>
+          <button class="send-button" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="artifact-rail" id="artifacts" aria-label="Artifacts and task state">
+      <section class="artifact-panel">
+        <div class="panel-heading">
+          <p>Plan</p>
+          <span>4 / 4</span>
+        </div>
+        <ol class="task-list">
+          <li><span></span> Locate app UI</li>
+          <li><span></span> Preserve current surface</li>
+          <li><span></span> Build brutalist variant</li>
+          <li><span></span> Verify and ship</li>
+        </ol>
+      </section>
+
+      <section class="artifact-panel">
+        <div class="panel-heading">
+          <p>Artifacts</p>
+          <span>Files</span>
+        </div>
+        <a class="file-row" href="index.html">
+          <span>HTML</span>
+          <strong>index.html</strong>
+        </a>
+        <a class="file-row" href="styles.css">
+          <span>CSS</span>
+          <strong>styles.css</strong>
+        </a>
+      </section>
+
+      <section class="artifact-panel" id="settings">
+        <div class="panel-heading">
+          <p>Settings</p>
+          <span>Raw</span>
+        </div>
+        <div class="setting-row">
+          <span>Theme</span>
+          <strong>Black / white</strong>
+        </div>
+        <div class="setting-row">
+          <span>Motion</span>
+          <strong>None</strong>
+        </div>
+        <div class="setting-row">
+          <span>Density</span>
+          <strong>High</strong>
+        </div>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>
