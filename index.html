@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cosmic Beans — coffee for the curious." />
+    <title>Cosmic Beans — Coffee for the curious</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Cosmic Beans home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Cosmic Beans</span>
+        </a>
+        <span class="nav-note">Est. somewhere beyond the moon</span>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Small-batch / stellar-grade</p>
+          <h1 id="hero-title">Good coffee<br /><em>out there.</em></h1>
+          <p class="tagline">A little gravity for your mornings. Cosmic Beans makes bright, curious coffee for people going places.</p>
+
+          <form class="signup-form" action="#" method="post" onsubmit="return false;">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Nova Star" />
+              </div>
+              <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@somewhere.space" />
+              </div>
+            </div>
+            <button type="submit">Join the crew <span aria-hidden="true">↗</span></button>
+            <p class="form-note">No spam. Just good beans and occasional transmissions.</p>
+          </form>
+        </div>
+
+        <div class="hero-art" aria-label="Illustration of a coffee planet in space" role="img">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="planet-glow"></div>
+          <div class="planet">
+            <div class="planet-ring"></div>
+            <div class="planet-surface"></div>
+            <div class="planet-shadow"></div>
+            <div class="planet-crater crater-one"></div>
+            <div class="planet-crater crater-two"></div>
+            <div class="planet-crater crater-three"></div>
+          </div>
+          <span class="star star-one">✦</span>
+          <span class="star star-two">✧</span>
+          <span class="star star-three">·</span>
+          <span class="star star-four">✦</span>
+          <span class="art-caption">ROASTED IN<br />LOW GRAVITY</span>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>01 / The morning mission</span>
+        <span class="footer-line" aria-hidden="true"></span>
+        <span>100% arabica · zero terrestrial boredom</span>
+      </footer>
+    </main>
+  </body>
+</html>
