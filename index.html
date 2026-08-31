@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Windows Desktop Pane</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop" aria-label="Live Windows desktop pane demo">
+      <section class="wallpaper" aria-hidden="true">
+        <span class="beam beam-a"></span>
+        <span class="beam beam-b"></span>
+        <span class="glow"></span>
+      </section>
+
+      <div class="desktop-icons" aria-label="Desktop shortcuts">
+        <button class="desktop-icon" data-window="explorer">
+          <span class="icon folder"></span>
+          <span>Projects</span>
+        </button>
+        <button class="desktop-icon" data-window="terminal">
+          <span class="icon terminal"></span>
+          <span>Terminal</span>
+        </button>
+        <button class="desktop-icon" data-window="dashboard">
+          <span class="icon chart"></span>
+          <span>System</span>
+        </button>
+        <button class="desktop-icon" data-window="notes">
+          <span class="icon note"></span>
+          <span>Notes</span>
+        </button>
+      </div>
+
+      <section class="window explorer" data-id="explorer" style="--x: 100px; --y: 70px; --w: 520px; --h: 420px;">
+        <header class="titlebar">
+          <span class="app-mark folder"></span>
+          <strong>File Explorer</strong>
+          <div class="window-actions">
+            <button aria-label="Minimize">-</button>
+            <button aria-label="Maximize">□</button>
+            <button aria-label="Close">×</button>
+          </div>
+        </header>
+        <div class="explorer-body">
+          <aside>
+            <span class="selected">Home</span>
+            <span>Desktop</span>
+            <span>Downloads</span>
+            <span>OneDrive</span>
+          </aside>
+          <div class="file-grid">
+            <article><span class="file folder"></span><b>Designs</b><small>12 items</small></article>
+            <article><span class="file doc"></span><b>Launch brief</b><small>Updated now</small></article>
+            <article><span class="file image"></span><b>Pane mockup</b><small>4.8 MB</small></article>
+            <article><span class="file sheet"></span><b>Metrics</b><small>Live data</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="window dashboard active" data-id="dashboard" style="--x: 595px; --y: 105px; --w: 470px; --h: 360px;">
+        <header class="titlebar">
+          <span class="app-mark chart"></span>
+          <strong>Performance</strong>
+          <div class="window-actions">
+            <button aria-label="Minimize">-</button>
+            <button aria-label="Maximize">□</button>
+            <button aria-label="Close">×</button>
+          </div>
+        </header>
+        <div class="dashboard-body">
+          <div class="meter">
+            <span>CPU</span>
+            <b id="cpuValue">42%</b>
+            <i style="--level: 42%"></i>
+          </div>
+          <div class="meter">
+            <span>Memory</span>
+            <b id="memoryValue">67%</b>
+            <i style="--level: 67%"></i>
+          </div>
+          <div class="status-row">
+            <span>Network</span>
+            <strong id="networkValue">248 Mbps</strong>
+          </div>
+          <canvas id="activityChart" width="420" height="120" aria-label="Animated activity chart"></canvas>
+        </div>
+      </section>
+
+      <section class="window terminal" data-id="terminal" style="--x: 245px; --y: 400px; --w: 500px; --h: 270px;">
+        <header class="titlebar">
+          <span class="app-mark terminal"></span>
+          <strong>Windows Terminal</strong>
+          <div class="window-actions">
+            <button aria-label="Minimize">-</button>
+            <button aria-label="Maximize">□</button>
+            <button aria-label="Close">×</button>
+          </div>
+        </header>
+        <pre id="terminalOutput"></pre>
+      </section>
+
+      <section class="window notes" data-id="notes" style="--x: 805px; --y: 440px; --w: 330px; --h: 210px;">
+        <header class="titlebar">
+          <span class="app-mark note"></span>
+          <strong>Sticky Notes</strong>
+          <div class="window-actions">
+            <button aria-label="Minimize">-</button>
+            <button aria-label="Maximize">□</button>
+            <button aria-label="Close">×</button>
+          </div>
+        </header>
+        <div class="note-body">
+          <b>Live pane checklist</b>
+          <label><input type="checkbox" checked> Taskbar clock updates</label>
+          <label><input type="checkbox" checked> Windows drag forward</label>
+          <label><input type="checkbox"> Ship demo review</label>
+        </div>
+      </section>
+
+      <aside class="quick-panel" id="quickPanel" aria-label="Quick settings">
+        <div class="quick-grid">
+          <button class="on">Wi-Fi</button>
+          <button class="on">Bluetooth</button>
+          <button>Airplane</button>
+          <button class="on">Focus</button>
+        </div>
+        <label>Brightness <input id="brightness" type="range" min="72" max="112" value="100"></label>
+        <label>Volume <input type="range" min="0" max="100" value="64"></label>
+      </aside>
+
+      <aside class="notification" id="notification">
+        <strong>Windows Security</strong>
+        <span>Protection is current. Last scan completed just now.</span>
+      </aside>
+
+      <nav class="taskbar" aria-label="Taskbar">
+        <button class="start" id="startButton" aria-label="Start">⊞</button>
+        <button class="task active" data-window="dashboard">Performance</button>
+        <button class="task" data-window="explorer">Explorer</button>
+        <button class="task" data-window="terminal">Terminal</button>
+        <button class="task" data-window="notes">Notes</button>
+        <button class="system-tray" id="trayButton" aria-label="Open quick settings">
+          <span>Wi-Fi</span>
+          <span id="clock">--:--</span>
+        </button>
+      </nav>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
