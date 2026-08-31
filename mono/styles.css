@@ -65,10 +65,13 @@ h3 { margin: 52px 0 16px; font-size: 2rem; font-weight: 500; letter-spacing: -.0
 .feature-mark { position: absolute; right: 24px; bottom: 24px; font-size: 1.5rem; font-weight: 300; transition: transform .35s ease; }
 .feature-card:hover .feature-mark { transform: rotate(90deg); }
 
-.site-footer { display: flex; justify-content: space-between; gap: 40px; padding: 28px 0 48px; border-top: 1px solid var(--ink); }
+.site-footer { display: flex; justify-content: space-between; align-items: end; gap: 40px; padding: 28px 0 48px; border-top: 1px solid var(--ink); }
 .footer-email { display: inline-block; margin-top: 20px; font-size: clamp(1.5rem, 3vw, 2.5rem); letter-spacing: -.06em; }
 .footer-email span { display: inline-block; margin-left: 8px; font-size: .7em; transition: transform .25s ease; }
 .footer-email:hover span { transform: translate(4px, -4px); }
+.footer-links { display: flex; gap: 24px; color: var(--muted); font-size: .72rem; }
+.footer-links a { transition: color .25s ease; }
+.footer-links a:hover { color: var(--ink); }
 .footer-meta { display: flex; gap: 42px; align-items: end; color: var(--muted); font-size: .72rem; }
 .footer-meta p { margin: 0; }
 
@@ -107,6 +110,7 @@ h3 { margin: 52px 0 16px; font-size: 2rem; font-weight: 500; letter-spacing: -.0
   .feature-card:last-child { border-bottom: 0; }
   h3 { margin-top: 34px; }
   .site-footer { display: block; padding-bottom: 32px; }
+  .footer-links { margin-top: 40px; }
   .footer-meta { justify-content: space-between; align-items: start; margin-top: 52px; }
   .footer-meta p:last-child { text-align: right; }
 }
