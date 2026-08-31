@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Windows Desktop Pane</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop" aria-label="Live Windows desktop pane demo">
+      <section class="desktop-icons" aria-label="Desktop shortcuts">
+        <button class="shortcut" data-window="ops">
+          <span class="shortcut-icon">OP</span>
+          <span>Ops Center</span>
+        </button>
+        <button class="shortcut" data-window="files">
+          <span class="shortcut-icon">FL</span>
+          <span>File Sync</span>
+        </button>
+        <button class="shortcut" data-window="metrics">
+          <span class="shortcut-icon">MX</span>
+          <span>Metrics</span>
+        </button>
+      </section>
+
+      <section class="window active" id="window-ops" data-window="ops" style="--x: 96px; --y: 74px; --w: 560px; --h: 386px;">
+        <header class="titlebar">
+          <div>
+            <span class="app-dot teal"></span>
+            <span class="title">Operations pane</span>
+          </div>
+          <div class="window-controls" aria-label="Window controls">
+            <button data-action="minimize" aria-label="Minimize operations pane"></button>
+            <button data-action="maximize" aria-label="Maximize operations pane"></button>
+            <button data-action="close" aria-label="Close operations pane"></button>
+          </div>
+        </header>
+        <div class="window-body ops-grid">
+          <article class="status-panel">
+            <span>Live health</span>
+            <strong id="health-score">98%</strong>
+            <small>Service mesh nominal</small>
+          </article>
+          <article class="status-panel">
+            <span>Requests</span>
+            <strong id="request-count">24.8k</strong>
+            <small>Last 15 minutes</small>
+          </article>
+          <article class="status-panel wide">
+            <span>Deployment stream</span>
+            <ul class="event-list" id="event-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="window" id="window-files" data-window="files" style="--x: 700px; --y: 122px; --w: 430px; --h: 330px;">
+        <header class="titlebar">
+          <div>
+            <span class="app-dot amber"></span>
+            <span class="title">File sync</span>
+          </div>
+          <div class="window-controls" aria-label="Window controls">
+            <button data-action="minimize" aria-label="Minimize file sync"></button>
+            <button data-action="maximize" aria-label="Maximize file sync"></button>
+            <button data-action="close" aria-label="Close file sync"></button>
+          </div>
+        </header>
+        <div class="window-body">
+          <div class="sync-head">
+            <span>Workspace backup</span>
+            <strong id="sync-percent">72%</strong>
+          </div>
+          <div class="progress"><span id="sync-bar"></span></div>
+          <ul class="file-list">
+            <li><span>design-system.fig</span><em>Synced</em></li>
+            <li><span>quarterly-plan.xlsx</span><em>Queued</em></li>
+            <li><span>incident-notes.md</span><em>Uploading</em></li>
+            <li><span>build-artifacts.zip</span><em>Paused</em></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="window" id="window-metrics" data-window="metrics" style="--x: 342px; --y: 492px; --w: 520px; --h: 220px;">
+        <header class="titlebar">
+          <div>
+            <span class="app-dot blue"></span>
+            <span class="title">Metrics monitor</span>
+          </div>
+          <div class="window-controls" aria-label="Window controls">
+            <button data-action="minimize" aria-label="Minimize metrics"></button>
+            <button data-action="maximize" aria-label="Maximize metrics"></button>
+            <button data-action="close" aria-label="Close metrics"></button>
+          </div>
+        </header>
+        <div class="window-body">
+          <div class="chart" id="chart" aria-label="Live activity chart"></div>
+        </div>
+      </section>
+
+      <aside class="toast" id="toast" role="status" aria-live="polite">Live desktop ready</aside>
+
+      <nav class="taskbar" aria-label="Taskbar">
+        <button class="start-button" aria-label="Start">⊞</button>
+        <button class="task active" data-window="ops">Ops Center</button>
+        <button class="task" data-window="files">File Sync</button>
+        <button class="task" data-window="metrics">Metrics</button>
+        <div class="system-tray">
+          <span id="clock">--:--</span>
+        </div>
+      </nav>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
