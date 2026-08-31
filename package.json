@@ -6,8 +6,8 @@
     "serve": "serve -l 3000 ."
   },
   "devDependencies": {
-    "serve": "13.0.2",
-    "lodash": "4.17.20",
-    "minimist": "1.2.5"
+    "lodash": "4.18.1",
+    "minimist": "1.2.8",
+    "serve": "14.2.6"
   }
 }
