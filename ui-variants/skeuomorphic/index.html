@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace skeuomorphic UI variant.">
+  <title>Ara Workspace - Skeuomorphic Tactile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="workbench" aria-label="Ara primary workspace">
+    <aside class="satchel" aria-label="Workspace navigation">
+      <section class="brand-badge" aria-label="Ara">
+        <span class="rivet top-left"></span>
+        <span class="rivet top-right"></span>
+        <p class="eyebrow">Ara</p>
+        <h1>Repo engineer</h1>
+        <p class="badge-copy">Acme monorepo session mounted on a tactile command desk.</p>
+      </section>
+
+      <nav class="sessions" aria-label="Sessions">
+        <a class="session is-active" href="#">
+          <span class="lamp green"></span>
+          <span>
+            <strong>Acme monorepo</strong>
+            <small>Working branch live</small>
+          </span>
+          <em>03</em>
+        </a>
+        <a class="session" href="#">
+          <span class="lamp amber"></span>
+          <span>
+            <strong>Design review</strong>
+            <small>Preview waiting</small>
+          </span>
+          <em>01</em>
+        </a>
+        <a class="session" href="#">
+          <span class="lamp steel"></span>
+          <span>
+            <strong>Release notes</strong>
+            <small>Draft saved</small>
+          </span>
+          <em>12</em>
+        </a>
+      </nav>
+
+      <section class="mode-bank" aria-label="Workspace modes">
+        <button class="switch is-on" type="button" aria-pressed="true"><span></span>Code</button>
+        <button class="switch" type="button" aria-pressed="false"><span></span>Review</button>
+      </section>
+
+      <section class="tool-roll" aria-label="Workspace tools">
+        <button type="button">Files</button>
+        <button type="button">Tests</button>
+        <button type="button">Preview</button>
+        <button type="button">PR</button>
+      </section>
+    </aside>
+
+    <main class="desk" aria-label="Active session">
+      <header class="instrument-panel">
+        <div class="branch-plate">
+          <p class="eyebrow">Branch</p>
+          <h2>ui-variants/skeuomorphic</h2>
+          <small>Static standalone workspace alternative</small>
+        </div>
+        <div class="gauge" aria-label="Verification progress">
+          <span class="needle"></span>
+          <strong>86%</strong>
+          <small>verified</small>
+        </div>
+        <div class="toggle-stack" aria-label="Run settings">
+          <label><input type="checkbox" checked> Browser</label>
+          <label><input type="checkbox" checked> Commit</label>
+          <label><input type="checkbox"> Deploy</label>
+        </div>
+      </header>
+
+      <section class="main-grid">
+        <article class="ledger" aria-labelledby="thread-title">
+          <div class="metal-cap">
+            <span class="screw"></span>
+            <h3 id="thread-title">Session thread</h3>
+            <span class="screw"></span>
+          </div>
+
+          <div class="message user">
+            <p class="speaker">Adi</p>
+            <p>Redesign the Ara app main UI as a standalone tactile alternative. Keep the same workspace features, but make the whole thing feel physical.</p>
+          </div>
+
+          <div class="message ara">
+            <p class="speaker">Ara</p>
+            <p>I found the static workspace surface and mounted the core session flow here: session list, active chat, command composer, artifacts, verification, preview, and pull request state.</p>
+          </div>
+
+          <div class="message ara note">
+            <p class="speaker">Ara</p>
+            <p>The interface is rebuilt as stitched leather, brushed metal, felt work mats, inset paper, beveled controls, glowing lamps, and analog progress instruments.</p>
+          </div>
+
+          <form class="composer" aria-label="Send message">
+            <label for="prompt">Command</label>
+            <div class="composer-row">
+              <input id="prompt" name="prompt" value="Ship complete, working, responsive code." aria-label="Command prompt">
+              <button type="button">Send</button>
+            </div>
+          </form>
+        </article>
+
+        <aside class="right-rail" aria-label="Workspace details">
+          <section class="preview-case">
+            <div class="metal-cap">
+              <span class="screw"></span>
+              <h3>Live preview</h3>
+              <span class="screw"></span>
+            </div>
+            <div class="preview-glass" aria-label="Preview miniature">
+              <div class="mini-nav"></div>
+              <div class="mini-thread">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="artifact-drawer" aria-labelledby="artifact-title">
+            <h3 id="artifact-title">Artifacts</h3>
+            <ul>
+              <li><span class="pin"></span>index.html rewritten</li>
+              <li><span class="pin"></span>styles.css tactile system</li>
+              <li><span class="pin"></span>desktop and mobile shots</li>
+            </ul>
+          </section>
+
+          <section class="controls" aria-label="Agent controls">
+            <h3>Run controls</h3>
+            <div class="knobs">
+              <div class="knob"><span></span><small>Focus</small></div>
+              <div class="knob mid"><span></span><small>Risk</small></div>
+              <div class="knob high"><span></span><small>Speed</small></div>
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <footer class="status-strip" aria-label="Repository status">
+        <div><span class="lamp green"></span><strong>Code changed</strong><small>2 files</small></div>
+        <div><span class="lamp green"></span><strong>Visual pass</strong><small>Responsive</small></div>
+        <div><span class="lamp amber"></span><strong>PR package</strong><small>Evidence ready</small></div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
