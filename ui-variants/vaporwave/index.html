@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ara workspace vaporwave UI variant.">
+  <title>Ara Workspace — Vaporwave Variant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="horizon" aria-hidden="true"></div>
+  <div class="app-shell">
+    <aside class="rail" aria-label="Workspace navigation">
+      <a class="brand" href="#top" aria-label="Ara workspace home">
+        <span class="brand-mark">ア</span>
+        <span>Ara</span>
+      </a>
+      <nav class="rail-nav" aria-label="Primary">
+        <a class="is-active" href="#sessions">Sessions</a>
+        <a href="#files">Files</a>
+        <a href="#activity">Activity</a>
+        <a href="#settings">Settings</a>
+      </nav>
+      <div class="rail-card">
+        <p class="kicker">Dream state</p>
+        <strong>Repo synced</strong>
+        <span>main · 14 branches</span>
+      </div>
+    </aside>
+
+    <main class="workspace" id="top">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Tokyo-86 / Ara cloud agent</p>
+          <h1>Acme workspace</h1>
+        </div>
+        <div class="topbar-actions" aria-label="Workspace actions">
+          <button type="button">Share</button>
+          <button class="primary" type="button">New session</button>
+        </div>
+      </header>
+
+      <section class="workspace-grid" aria-label="Session workspace">
+        <aside class="sessions panel" id="sessions" aria-label="Session list">
+          <div class="panel-heading">
+            <p class="kicker">Sessions</p>
+            <span>3 live</span>
+          </div>
+          <article class="session is-selected">
+            <span class="session-status"></span>
+            <div>
+              <h2>Main UI redesign</h2>
+              <p>Vaporwave workspace variant</p>
+            </div>
+            <time>Now</time>
+          </article>
+          <article class="session">
+            <span class="session-status teal"></span>
+            <div>
+              <h2>Landing polish</h2>
+              <p>Mono homepage pass</p>
+            </div>
+            <time>12m</time>
+          </article>
+          <article class="session">
+            <span class="session-status violet"></span>
+            <div>
+              <h2>Branch cleanup</h2>
+              <p>Review stale UI concepts</p>
+            </div>
+            <time>1h</time>
+          </article>
+          <div class="stat-strip">
+            <span><strong>28</strong> commits</span>
+            <span><strong>6</strong> PRs</span>
+          </div>
+        </aside>
+
+        <section class="chat panel" aria-label="Session chat">
+          <div class="chat-hero">
+            <img src="assets/venus-bust.svg" alt="" aria-hidden="true">
+            <div>
+              <p class="kicker">Neon kaiwa / session interface</p>
+              <h2>Redesign the Ara app main UI</h2>
+              <p>Primary in-app workspace with session context, repo activity, status, and chat preserved in a pastel arcade dream.</p>
+            </div>
+          </div>
+
+          <div class="message user">
+            <div class="avatar">AS</div>
+            <div class="bubble">
+              <p>Redesign the Ara app main UI as a completely new standalone alternative. Keep the same features and content.</p>
+              <span>Adi · 9:41</span>
+            </div>
+          </div>
+          <div class="message agent">
+            <div class="avatar">ア</div>
+            <div class="bubble">
+              <p>I found the workspace surface and am building the vaporwave variant in a separate route.</p>
+              <div class="tool-log">
+                <span>✓ Branch prepared</span>
+                <span>✓ Static route added</span>
+                <span>↻ Visual verification queued</span>
+              </div>
+            </div>
+          </div>
+          <div class="message agent">
+            <div class="avatar">ア</div>
+            <div class="bubble code">
+              <p>ui-variants/vaporwave</p>
+              <pre><code>index.html
+styles.css
+assets/venus-bust.svg</code></pre>
+            </div>
+          </div>
+
+          <form class="composer" aria-label="Message composer">
+            <button type="button" aria-label="Attach file">＋</button>
+            <input type="text" value="Ask Ara to continue the redesign..." aria-label="Message">
+            <button class="send" type="submit">Send</button>
+          </form>
+        </section>
+
+        <aside class="context panel" aria-label="Session context">
+          <section id="files">
+            <div class="panel-heading">
+              <p class="kicker">Files</p>
+              <span>changed</span>
+            </div>
+            <ul class="file-list">
+              <li><span>HTML</span> ui-variants/vaporwave/index.html</li>
+              <li><span>CSS</span> ui-variants/vaporwave/styles.css</li>
+              <li><span>SVG</span> assets/venus-bust.svg</li>
+            </ul>
+          </section>
+
+          <section class="status-card" id="activity">
+            <p class="kicker">Activity</p>
+            <h2>Cloud session</h2>
+            <p>Running visual checks across desktop and mobile before the pull request.</p>
+            <div class="meter"><span></span></div>
+          </section>
+
+          <section class="mini-terminal" id="settings" aria-label="Run output">
+            <p>~/acme-monorepo</p>
+            <span>$ ara-capture shot</span>
+            <span>$ git push origin ui-variants/vaporwave</span>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
