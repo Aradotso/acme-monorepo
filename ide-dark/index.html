@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A quiet space for clear thinking.">
+  <title>Mono — IDE dark mode alternative</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Mono home">
+      <span class="prompt" aria-hidden="true">~/mono</span>
+      <strong>index.html</strong>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#principles">principles.ts</a>
+      <a href="#contact">contact.env</a>
+    </nav>
+  </header>
+
+  <main id="top" class="editor-shell">
+    <aside class="file-tree" aria-label="Site files">
+      <div class="panel-title">Explorer</div>
+      <a class="tree-item active" href="#top"><span>01</span>home.jsx</a>
+      <a class="tree-item" href="#principles"><span>02</span>principles.ts</a>
+      <a class="tree-item" href="#contact"><span>03</span>contact.env</a>
+      <div class="tree-group">
+        <p>tokens</p>
+        <span>--ink</span>
+        <span>--signal</span>
+        <span>--care</span>
+      </div>
+    </aside>
+
+    <section class="workspace" aria-label="Mono marketing page">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="editor-tabs" aria-hidden="true">
+          <span class="tab active">home.jsx</span>
+          <span class="tab">studio.config</span>
+          <span class="tab">README.md</span>
+        </div>
+
+        <div class="code-window">
+          <ol class="code-lines" aria-hidden="true">
+            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+          </ol>
+          <div class="hero-code">
+            <p><span class="muted">const</span> <span class="token">studio</span> <span class="muted">=</span> <span class="brace">{</span></p>
+            <p class="indent"><span class="key">name</span><span class="muted">:</span> <span class="string">'Mono'</span><span class="muted">,</span></p>
+            <p class="indent"><span class="key">since</span><span class="muted">:</span> <span class="string">'Independent studio / 2024-now'</span><span class="muted">,</span></p>
+            <p class="indent"><span class="key">mission</span><span class="muted">:</span></p>
+            <h1 id="hero-title">Make room<br>for <em>what matters.</em></h1>
+            <p class="indent"><span class="key">intro</span><span class="muted">:</span> <span class="string">'We shape calm, considered digital experiences for people doing meaningful work.'</span></p>
+            <p><span class="brace">}</span><span class="cursor" aria-hidden="true"></span></p>
+          </div>
+        </div>
+
+        <div class="terminal-grid" aria-label="Studio summary">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <strong>terminal</strong>
+            </div>
+            <p><span>$</span> mono run approach</p>
+            <p class="success">Less noise. More signal.</p>
+          </div>
+          <a class="run-button" href="#principles" aria-label="Explore our principles">
+            <span>run principles</span>
+            <strong>⌘↵</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="principles" id="principles" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Our approach</p>
+          <h2 id="principles-title">Less noise.<br>More signal.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <p class="feature-number">token.01</p>
+            <h3>Clarity</h3>
+            <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
+            <code>--clarity: reason;</code>
+          </article>
+          <article class="feature-card">
+            <p class="feature-number">token.02</p>
+            <h3>Character</h3>
+            <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
+            <code>--character: point-of-view;</code>
+          </article>
+          <article class="feature-card">
+            <p class="feature-number">token.03</p>
+            <h3>Care</h3>
+            <p>Built to last, with details that reward attention and respect for the everyday.</p>
+            <code>--care: durable;</code>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <p class="eyebrow">Start a conversation</p>
+      <a class="footer-email" href="mailto:hello@mono.studio">hello@mono.studio <span>↗</span></a>
+    </div>
+    <div class="footer-meta">
+      <p>New York · London · Everywhere</p>
+      <p>© 2024 Mono Studio</p>
+    </div>
+  </footer>
+</body>
+</html>
