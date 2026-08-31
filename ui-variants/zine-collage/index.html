@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A maximalist zine-collage alternative for the Ara workspace UI.">
+  <title>Ara Workspace - Zine Collage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="app-shell" id="top">
+    <a class="wordmark sticker" href="#top" aria-label="Ara workspace home">
+      <span>Ara</span>
+      <small>workspace</small>
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="#session">Session</a>
+      <a href="#principles">Principles</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="status-strip" aria-label="Workspace status">
+      <span class="pulse"></span>
+      Live thread
+    </div>
+  </header>
+
+  <main>
+    <section class="workspace-grid" id="session" aria-labelledby="hero-title">
+      <aside class="rail paper-panel torn-right" aria-label="Session list">
+        <p class="eyebrow">Independent studio / 2024-now</p>
+        <h2>Inbox</h2>
+        <a class="session-pill active" href="#session">
+          <span>01</span>
+          Make room
+        </a>
+        <a class="session-pill" href="#principles">
+          <span>02</span>
+          Less noise
+        </a>
+        <a class="session-pill" href="#contact">
+          <span>03</span>
+          Start a conversation
+        </a>
+      </aside>
+
+      <section class="conversation-stack" aria-label="Current session">
+        <div class="hero-card paper-panel rip-top">
+          <p class="eyebrow slash">Primary workspace</p>
+          <h1 id="hero-title">Make room<br><em>for what matters.</em></h1>
+          <p class="intro">We shape calm, considered digital experiences for people doing meaningful work.</p>
+          <div class="hero-actions">
+            <a class="stamp-button" href="#principles">Explore principles</a>
+            <a class="icon-button" href="#contact" aria-label="Jump to contact">↓</a>
+          </div>
+        </div>
+
+        <div class="message-row assistant-message">
+          <div class="avatar">A</div>
+          <article class="message paper-panel tape-left">
+            <p class="label">Ara</p>
+            <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
+          </article>
+        </div>
+
+        <div class="message-row user-message">
+          <article class="message neon-note tape-right">
+            <p class="label">Studio note</p>
+            <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
+          </article>
+          <div class="avatar burst">M</div>
+        </div>
+      </section>
+
+      <aside class="context-board" aria-label="Workspace context">
+        <div class="ticket paper-panel">
+          <span class="ticket-number">2024-now</span>
+          <strong>New York</strong>
+          <span>London</span>
+          <span>Everywhere</span>
+        </div>
+        <div class="sticker-note">Less noise / more signal</div>
+        <div class="meter paper-panel">
+          <span>Signal</span>
+          <div><i></i></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="principles" id="principles" aria-labelledby="principles-title">
+      <div class="section-heading">
+        <p class="eyebrow">01 / Our approach</p>
+        <h2 id="principles-title">Less noise.<br>More signal.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card paper-panel">
+          <p class="feature-number">01</p>
+          <h3>Clarity</h3>
+          <p>Every choice has a reason. We turn complexity into simple, useful moments.</p>
+          <span class="feature-mark" aria-hidden="true">+</span>
+        </article>
+        <article class="feature-card paper-panel hot-card">
+          <p class="feature-number">02</p>
+          <h3>Character</h3>
+          <p>Distinctive work starts with a point of view. Quiet does not mean invisible.</p>
+          <span class="feature-mark" aria-hidden="true">+</span>
+        </article>
+        <article class="feature-card paper-panel">
+          <p class="feature-number">03</p>
+          <h3>Care</h3>
+          <p>Built to last, with details that reward attention and respect for the everyday.</p>
+          <span class="feature-mark" aria-hidden="true">+</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer paper-panel" id="contact">
+    <div>
+      <p class="eyebrow">Start a conversation</p>
+      <a class="footer-email" href="mailto:hello@mono.studio">hello@mono.studio <span>↗</span></a>
+    </div>
+    <div class="footer-meta">
+      <p>New York · London · Everywhere</p>
+      <p>© 2024 Mono Studio</p>
+    </div>
+  </footer>
+</body>
+</html>
