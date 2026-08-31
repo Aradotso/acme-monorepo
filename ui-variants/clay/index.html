@@ -93,8 +93,11 @@
     </div>
     <div class="footer-meta">
       <p>New York · London · Everywhere</p>
-      <p>© 2024 Mono Studio</p>
+      <p>© <span id="copyright-year">2024</span> Mono Studio</p>
     </div>
   </footer>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
