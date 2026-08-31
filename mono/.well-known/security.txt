@@ -1,0 +1,4 @@
+Contact: mailto:hello@mono.studio
+Expires: 2027-03-11T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://mono.example.com/.well-known/security.txt
