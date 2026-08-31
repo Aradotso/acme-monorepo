@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Windows Desktop Pane Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop-shell" aria-label="Live Windows desktop pane demo">
+      <section class="window" aria-label="Acme workspace">
+        <header class="titlebar">
+          <div class="window-controls" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="titlebar-title">Acme Live Desktop</div>
+          <div class="titlebar-actions">
+            <button type="button" data-theme-toggle aria-label="Toggle night mode">◐</button>
+            <button type="button" data-refresh aria-label="Refresh status">↻</button>
+          </div>
+        </header>
+
+        <div class="workspace">
+          <aside class="pane nav-pane" aria-label="Desktop navigation">
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div>
+                <strong>Ara control</strong>
+                <span data-local-time>--:--</span>
+              </div>
+            </div>
+            <nav>
+              <button type="button" class="active">Overview</button>
+              <button type="button">Windows</button>
+              <button type="button">Activity</button>
+              <button type="button">Settings</button>
+            </nav>
+            <div class="meter-card">
+              <span>Pane load</span>
+              <strong data-load>68%</strong>
+              <div class="meter"><i data-load-bar></i></div>
+            </div>
+          </aside>
+
+          <section class="pane live-pane" aria-label="Live desktop preview">
+            <div class="pane-heading">
+              <div>
+                <p>Live desktop pane</p>
+                <h1>Windows are streaming</h1>
+              </div>
+              <span class="status-pill"><i></i><span data-status>Live</span></span>
+            </div>
+
+            <div class="desktop-preview">
+              <article class="mini-window editor-window">
+                <header>
+                  <span>Editor</span>
+                  <b></b>
+                </header>
+                <div class="code-lines" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </article>
+
+              <article class="mini-window terminal-window">
+                <header>
+                  <span>Terminal</span>
+                  <b></b>
+                </header>
+                <pre data-terminal-log>> sync panes
+> render desktop
+> stream active</pre>
+              </article>
+
+              <article class="mini-window metrics-window">
+                <header>
+                  <span>Metrics</span>
+                  <b></b>
+                </header>
+                <div class="bars" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <aside class="pane inspector-pane" aria-label="Desktop inspector">
+            <div class="pane-heading compact">
+              <div>
+                <p>Inspector</p>
+                <h2>Session signals</h2>
+              </div>
+            </div>
+
+            <div class="signal-grid">
+              <div>
+                <span>Latency</span>
+                <strong data-latency>24 ms</strong>
+              </div>
+              <div>
+                <span>Frames</span>
+                <strong data-frames>60 fps</strong>
+              </div>
+              <div>
+                <span>Windows</span>
+                <strong>3 open</strong>
+              </div>
+              <div>
+                <span>Mode</span>
+                <strong data-mode>Day</strong>
+              </div>
+            </div>
+
+            <label class="slider-row">
+              Pane scale
+              <input type="range" min="88" max="112" value="100" data-scale>
+            </label>
+
+            <button class="primary-action" type="button" data-focus-demo>Focus active window</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
