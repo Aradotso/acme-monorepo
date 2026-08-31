@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live macOS desktop pane demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop-shell" aria-label="Live macOS desktop pane demo">
+      <section class="desktop" aria-label="macOS desktop">
+        <header class="menu-bar">
+          <div class="menu-left">
+            <span class="apple" aria-hidden="true">●</span>
+            <strong>Finder</strong>
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Go</span>
+            <span>Window</span>
+            <span>Help</span>
+          </div>
+          <div class="menu-right">
+            <span class="status-dot"></span>
+            <span>Wi-Fi</span>
+            <span>93%</span>
+            <time id="clock" datetime="">--:--</time>
+          </div>
+        </header>
+
+        <div class="desktop-grid" aria-label="Desktop shortcuts">
+          <button class="desktop-icon active" type="button" data-app="finder" aria-label="Open Finder pane">
+            <span class="icon icon-folder"></span>
+            <span>Projects</span>
+          </button>
+          <button class="desktop-icon" type="button" data-app="notes" aria-label="Open Notes pane">
+            <span class="icon icon-note"></span>
+            <span>Notes</span>
+          </button>
+          <button class="desktop-icon" type="button" data-app="activity" aria-label="Open Activity pane">
+            <span class="icon icon-activity"></span>
+            <span>Activity</span>
+          </button>
+        </div>
+
+        <section class="window" aria-label="Active desktop pane">
+          <div class="titlebar">
+            <div class="traffic" aria-hidden="true">
+              <span class="close"></span>
+              <span class="minimize"></span>
+              <span class="zoom"></span>
+            </div>
+            <div class="window-title">
+              <span id="pane-title">Projects</span>
+              <small id="pane-subtitle">Live workspace</small>
+            </div>
+            <div class="toolbar-actions" aria-label="Window controls">
+              <button class="toolbar-button" id="minimize-window" type="button" aria-label="Minimize pane">–</button>
+              <button class="toolbar-button" id="shuffle" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <div class="window-body">
+            <aside class="sidebar" aria-label="Finder sidebar">
+              <button class="sidebar-item selected" type="button" data-view="recents">Recents</button>
+              <button class="sidebar-item" type="button" data-view="desktop">Desktop</button>
+              <button class="sidebar-item" type="button" data-view="documents">Documents</button>
+              <button class="sidebar-item" type="button" data-view="downloads">Downloads</button>
+            </aside>
+
+            <div class="pane-content">
+              <div class="pane-head">
+                <div>
+                  <p class="eyebrow" id="pane-eyebrow">Now viewing</p>
+                  <h1 id="view-title">Recents</h1>
+                </div>
+                <div class="live-pill"><span></span> Live <strong id="live-count">0</strong></div>
+              </div>
+              <div class="metrics-row" aria-label="Live desktop metrics">
+                <div>
+                  <span id="cpu-meter">18%</span>
+                  <small>CPU</small>
+                </div>
+                <div>
+                  <span id="memory-meter">6.1 GB</span>
+                  <small>Memory</small>
+                </div>
+                <div>
+                  <span id="sync-meter">Synced</span>
+                  <small>Status</small>
+                </div>
+              </div>
+              <div class="file-grid" id="file-grid" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+        <button class="restore-chip" id="restore-window" type="button" hidden>Show desktop pane</button>
+
+        <nav class="dock" aria-label="Dock">
+          <button class="dock-icon finder selected" type="button" data-app="finder" aria-label="Finder"></button>
+          <button class="dock-icon notes" type="button" data-app="notes" aria-label="Notes"></button>
+          <button class="dock-icon activity" type="button" data-app="activity" aria-label="Activity"></button>
+          <button class="dock-icon calendar" type="button" data-app="calendar" aria-label="Calendar"></button>
+        </nav>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
