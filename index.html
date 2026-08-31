@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cosmic Beans — small-batch coffee for big ideas.">
+  <title>Cosmic Beans — Coffee for the curious</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="star-field" aria-hidden="true">
+    <span class="star star-one"></span>
+    <span class="star star-two"></span>
+    <span class="star star-three"></span>
+    <span class="star star-four"></span>
+    <span class="star star-five"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Cosmic Beans home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>Cosmic Beans</span>
+    </a>
+    <p class="header-note">Roasted on Earth <span>·</span> Brewed everywhere</p>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Small batch / Infinite flavor</p>
+        <p class="tagline">Coffee for the curious.</p>
+        <h1 id="hero-title">Find your<br><em>inner orbit.</em></h1>
+        <p class="intro">Thoughtfully roasted beans for early starts, late nights, and every bright idea in between.</p>
+        <a class="scroll-cue" href="#join"><span>↓</span> Join the crew</a>
+      </div>
+
+      <div class="orbit-stage" aria-hidden="true">
+        <div class="orbit orbit-wide"></div>
+        <div class="orbit orbit-small"></div>
+        <div class="planet-glow"></div>
+        <div class="coffee-planet">
+          <div class="planet-highlight"></div>
+          <div class="planet-crater crater-one"></div>
+          <div class="planet-crater crater-two"></div>
+          <div class="planet-crater crater-three"></div>
+        </div>
+        <div class="bean bean-one"></div>
+        <div class="bean bean-two"></div>
+        <p class="orbit-label">No. 07<br><span>Stellar blend</span></p>
+      </div>
+    </section>
+
+    <section class="join-section" id="join" aria-labelledby="join-title">
+      <div class="join-intro">
+        <p class="eyebrow">02 / Stay in the loop</p>
+        <h2 id="join-title">A little<br><em>something</em><br>extra.</h2>
+        <p>New drops, brew guides, and dispatches from the dark side of the moon. No noise. Just good coffee.</p>
+      </div>
+
+      <form class="signup-card" id="crew-form" action="#join" method="post">
+        <div class="card-topline">
+          <span>Join the crew</span>
+          <span class="signal" aria-label="Signal open">●</span>
+        </div>
+        <div class="field-group">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Nova Star" required>
+        </div>
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere.space" required>
+        </div>
+        <button type="submit">Join the crew <span aria-hidden="true">↗</span></button>
+        <p class="fine-print">By joining, you agree to receive occasional transmissions from Cosmic Beans.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CB / 2024—∞</p>
+    <p>Stay caffeinated, stay curious <span aria-hidden="true">✦</span></p>
+  </footer>
+</body>
+</html>
